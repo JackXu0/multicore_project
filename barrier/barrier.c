@@ -19,22 +19,26 @@ int main(int argc, char *argv[])
     {
         printf ("start thread %i \n", omp_get_thread_num());
         #pragma omp for
-        for (i=0; i<4; i++)
+        for (i=0; i<10; i++)
         {
             printf ("start %i \n", i);
-            unsigned int time_to_sleep = i; // sleep 10 seconds
-            while(time_to_sleep)
-                time_to_sleep = sleep(time_to_sleep);
+            if(i == 0){
+                unsigned int time_to_sleep = 5; // sleep 10 seconds
+                while(time_to_sleep)
+                    time_to_sleep = sleep(time_to_sleep);
+            }
             printf ("end %i \n", i);
         }
         #pragma omp barrier
         #pragma omp for
-        for (i=0; i<4; i++)
+        for (i=0; i<10; i++)
         {
             printf ("start %i \n", i);
-            unsigned int time_to_sleep = 4 - i; // sleep 10 seconds
-            while(time_to_sleep)
-                time_to_sleep = sleep(time_to_sleep);
+            if(i == 9){
+                unsigned int time_to_sleep = 5; // sleep 10 seconds
+                while(time_to_sleep)
+                    time_to_sleep = sleep(time_to_sleep);
+            }
             printf ("end %i \n", i);
         }
         printf ("end thread %i \n", omp_get_thread_num());
