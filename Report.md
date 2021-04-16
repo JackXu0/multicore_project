@@ -26,9 +26,27 @@ To prove the accuracy of our method, we then construct another program with seve
 
 ## Experimental Setup
 
-### Profiling tools:
+### Profiling tools
 
-> - perf
+> - perf is a standard profiling infrastructure on Linux. It supports a huge number of events that could be recorded for measuring the performance of a machien or a task.
+>
+> > perf event list:
+> >
+> > - cpu-clock: total time spent on the cpu
+> >
+> > - task-clock: time spent on the profiled task
+> >
+> > - context-switches: storing a state of a process.
+> >
+> > - mutex_acquired: number of times threads tried to acquire mutex.
+> >
+> > - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory.
+> >
+> > - etc...
+> >
+> > We could use the statistics of some events to determine the type of bottleneck in the provided task.
+> > Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
+>
 > - valgrind
 > - gprof
 
