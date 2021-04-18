@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         {
             printf ("start %i \n", i);
             if(i == 0){
-                unsigned int time_to_sleep = 5; 
+                unsigned int time_to_sleep = 2; 
                 while(time_to_sleep)
                     time_to_sleep = sleep(time_to_sleep);
             }
