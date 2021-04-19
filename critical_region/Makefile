@@ -1,8 +1,9 @@
 TARGET = critical_region
 
-# build an executable named myprog from myprog.c
-all: $(TARGET).c 
-	gcc -fopenmp -Wall -std=c99 -pg -o $(TARGET) $(TARGET).c
+all: $(TARGET).c no_$(TARGET).c
+	gcc -fopenmp -Wall -std=c99 -ggdb $(TARGET).c -o $(TARGET)
+	gcc -fopenmp -Wall -std=c99 -ggdb no_$(TARGET).c -o no_$(TARGET)
 
 clean: 
 	$(RM) $(TARGET)
+	$(RM) no_$(TARGET)

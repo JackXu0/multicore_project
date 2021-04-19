@@ -24,23 +24,20 @@ int main(int argc, char *argv[])
         printf("%d\n", a[i]);
     }
 
-    #pragma omp parallel num_threads(num_of_threads) private(i)
+    #pragma omp parallel num_threads(num_of_threads) private(i) shared(a,b)
     {
         int pid = omp_get_thread_num();
         int batch = SIZE / num_of_threads;
         int start = pid * batch;
         int end = (pid+1) * batch;
         for(i = start; i < end;) {
-            
-            b[i] = a[i];
-            printf("thread %i has reached the barrier 1\n", pid);
-            # pragma omp barrier
-            i++;
-            printf("thread %i has reached the barrier 2\n", pid);
-            # pragma omp barrier
-        
-            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
-            
+            #pragma omp critical
+            {
+                printf("thread %i has entered the critical region\n", pid);
+                b[i] = a[i];
+                i++;
+                printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+            }
         }
     }
 
