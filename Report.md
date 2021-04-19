@@ -32,8 +32,6 @@ To prove the accuracy of our method, we then construct another program with seve
 >
 > > perf event list:
 > >
-> > - cpu-clock: total time spent on the cpu
-> >
 > > - task-clock: time spent on the profiled task
 > >
 > > - context-switches: storing a state of a process.
@@ -42,15 +40,57 @@ To prove the accuracy of our method, we then construct another program with seve
 > >
 > > - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory.
 > >
+> > - sched:sched_stat_wait: time spent in waiting states
+> >
 > > - etc...
 > >
 > > We could use the statistics of some events to determine the type of bottleneck in the provided task.
 > > Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
 >
 > - valgrind
+>
 > - gprof
+>
+
+> Perf command:
+
+> sudo perf record -e task-clock,page-faults,context-switches,sched:sched_stat_blocked,sched:sched_stat_iowait,sched:sched_stat_runtime,sched:sched_stat_sleep,sched:sched_stat_wait,sched:sched_wait_task,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex,writeback:writeback_wait -s ${executable} ${number of threads} && sudo perf report -T --sort=dso > ${report_filename}
 
 ## Experiments & Analysis
+
+### Barrier
+
+From the statistics measured using perf, we can find that the code with barrier has some traits comparing to the version without barrier:
+
+- the run time of each thread is very balanced
+- has more total waiting and sleeping time of all threads, the distribution of waiting time among all the threads are less diverse
+- has a huge number occurances of calling futex and getting blocked, and a significant amount was raised by OpenMP library
+- context switching and page faults happens a lot more
+
+### Critical Region
+
+We use the same methods as the techniques in the previous section trying to find the deterministic features that could help identify the code with huge critical region. And from the controlled experiment we have found that code with huge critical section generally has:
+
+- a great number of wakening without inter-processor interrupt
+- a lot more futex system call and almost entirely raised by OpenMP library
+- a large number of page faults
+
+### Ordered Construct
+
+We use the same task which is duplication of a int array as an example to show how ordered parallel section could influence the efficiency of multi-thread program. We find that a ordered parallel section with ordered construct have the following characteristics:
+
+- significantly slower
+- a lot of futex system calls and most of them are called by OpenMP library
+- many wakening of threads that are not due to inter-processor interrupt
+- threads spent a lot more time sleeping and waiting on a runqueue
+- a great number of context switches
+
+### Unbalanced task
+
+The statistics from our experiment on unbalanced task for each threads show us that code with unbalanced task could result in:
+
+- higher running time
+- more time in waiting state
 
 ## Conclusions
 
