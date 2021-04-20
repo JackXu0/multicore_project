@@ -1,0 +1,656 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 31K of event 'task-clock'
+# Event count (approx.): 7963000000
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+    99.67%    26.72%  libgomp.so.1.0.0 
+            |          
+            |--47.60%--0x7ffad62ef77e
+            |          |          
+            |           --47.16%--0x7ffad62f23b6
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                     |--46.48%--__x64_sys_futex
+            |                     |          |          
+            |                     |           --46.46%--do_futex
+            |                     |                     |          
+            |                     |                      --46.46%--futex_wake
+            |                     |                                |          
+            |                     |                                 --45.97%--wake_up_q
+            |                     |                                           |          
+            |                     |                                            --45.76%--try_to_wake_up
+            |                     |                                                      |          
+            |                     |                                                       --45.69%--_raw_spin_unlock_irqrestore
+            |                     |          
+            |                      --0.65%--syscall_trace_enter
+            |                                |          
+            |                                 --0.62%--perf_syscall_enter
+            |                                           |          
+            |                                            --0.58%--perf_tp_event
+            |                                                      |          
+            |                                                       --0.53%--perf_swevent_overflow
+            |                                                                 |          
+            |                                                                  --0.52%--__perf_event_overflow
+            |                                                                            |          
+            |                                                                             --0.50%--perf_event_output_forward
+            |          
+            |--20.15%--0x7ffad62f231c
+            |          |          
+            |           --19.61%--entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                     |--11.45%--__x64_sys_futex
+            |                     |          |          
+            |                     |           --11.26%--do_futex
+            |                     |                     |          
+            |                     |                      --10.90%--futex_wait
+            |                     |                                |          
+            |                     |                                |--9.86%--futex_wait_queue_me
+            |                     |                                |          |          
+            |                     |                                |           --9.41%--schedule
+            |                     |                                |                     |          
+            |                     |                                |                      --9.32%--__schedule
+            |                     |                                |                                |          
+            |                     |                                |                                 --9.20%--finish_task_switch
+            |                     |                                |          
+            |                     |                                 --0.70%--futex_wait_setup
+            |                     |          
+            |                      --7.60%--syscall_trace_enter
+            |                                |          
+            |                                 --6.95%--perf_syscall_enter
+            |                                           |          
+            |                                            --6.19%--perf_tp_event
+            |                                                      |          
+            |                                                       --5.76%--perf_swevent_overflow
+            |                                                                 |          
+            |                                                                  --5.70%--__perf_event_overflow
+            |                                                                            |          
+            |                                                                             --5.48%--perf_event_output_forward
+            |                                                                                       |          
+            |                                                                                        --4.41%--perf_prepare_sample
+            |                                                                                                  |          
+            |                                                                                                  |--3.05%--perf_callchain
+            |                                                                                                  |          |          
+            |                                                                                                  |           --2.98%--get_perf_callchain
+            |                                                                                                  |                     |          
+            |                                                                                                  |                      --2.40%--__softirqentry_text_end
+            |                                                                                                  |          
+            |                                                                                                   --0.87%--__perf_event_header__init_id.isra.92
+            |                                                                                                             |          
+            |                                                                                                              --0.55%--perf_event_pid_type
+            |          
+            |--19.77%--0x7ffad62f22da
+            |          
+            |--5.67%--GOMP_parallel
+            |          |          
+            |           --5.61%--0x7ffad62f23b6
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                      --5.55%--__x64_sys_futex
+            |                                do_futex
+            |                                futex_wake
+            |                                |          
+            |                                 --5.52%--wake_up_q
+            |                                           |          
+            |                                            --5.49%--try_to_wake_up
+            |                                                      |          
+            |                                                       --5.49%--_raw_spin_unlock_irqrestore
+            |          
+             --3.96%--0x7ffad62f22de
+
+    72.75%    72.75%  [kernel.kallsyms]
+            |          
+            |--47.42%--0
+            |          |          
+            |           --47.16%--0x7ffad62ef77e
+            |                     0x7ffad62f23b6
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                     |--46.48%--__x64_sys_futex
+            |                     |          |          
+            |                     |           --46.46%--do_futex
+            |                     |                     |          
+            |                     |                      --46.46%--futex_wake
+            |                     |                                |          
+            |                     |                                 --45.97%--wake_up_q
+            |                     |                                           |          
+            |                     |                                            --45.76%--try_to_wake_up
+            |                     |                                                      |          
+            |                     |                                                       --45.69%--_raw_spin_unlock_irqrestore
+            |                     |          
+            |                      --0.65%--syscall_trace_enter
+            |                                |          
+            |                                 --0.62%--perf_syscall_enter
+            |                                           |          
+            |                                            --0.58%--perf_tp_event
+            |                                                      |          
+            |                                                       --0.53%--perf_swevent_overflow
+            |                                                                 |          
+            |                                                                  --0.52%--__perf_event_overflow
+            |                                                                            |          
+            |                                                                             --0.50%--perf_event_output_forward
+            |          
+            |--19.64%--0x7ffad62f231c
+            |          |          
+            |           --19.61%--entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                     |--11.45%--__x64_sys_futex
+            |                     |          |          
+            |                     |           --11.26%--do_futex
+            |                     |                     |          
+            |                     |                      --10.90%--futex_wait
+            |                     |                                |          
+            |                     |                                |--9.86%--futex_wait_queue_me
+            |                     |                                |          |          
+            |                     |                                |           --9.41%--schedule
+            |                     |                                |                     |          
+            |                     |                                |                      --9.32%--__schedule
+            |                     |                                |                                |          
+            |                     |                                |                                 --9.20%--finish_task_switch
+            |                     |                                |          
+            |                     |                                 --0.70%--futex_wait_setup
+            |                     |          
+            |                      --7.60%--syscall_trace_enter
+            |                                |          
+            |                                 --6.95%--perf_syscall_enter
+            |                                           |          
+            |                                            --6.19%--perf_tp_event
+            |                                                      |          
+            |                                                       --5.76%--perf_swevent_overflow
+            |                                                                 |          
+            |                                                                  --5.70%--__perf_event_overflow
+            |                                                                            |          
+            |                                                                             --5.48%--perf_event_output_forward
+            |                                                                                       |          
+            |                                                                                        --4.41%--perf_prepare_sample
+            |                                                                                                  |          
+            |                                                                                                  |--3.05%--perf_callchain
+            |                                                                                                  |          |          
+            |                                                                                                  |           --2.98%--get_perf_callchain
+            |                                                                                                  |                     |          
+            |                                                                                                  |                      --2.40%--__softirqentry_text_end
+            |                                                                                                  |          
+            |                                                                                                   --0.87%--__perf_event_header__init_id.isra.92
+            |                                                                                                             |          
+            |                                                                                                              --0.55%--perf_event_pid_type
+            |          
+             --5.62%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       |          
+                        --5.61%--0x7ffad62f23b6
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  |          
+                                   --5.55%--__x64_sys_futex
+                                             do_futex
+                                             futex_wake
+                                             |          
+                                              --5.52%--wake_up_q
+                                                        |          
+                                                         --5.49%--try_to_wake_up
+                                                                   |          
+                                                                    --5.49%--_raw_spin_unlock_irqrestore
+
+    54.12%     0.00%  [unknown]        
+            |          
+            |--48.34%--0
+            |          |          
+            |           --48.07%--0x7ffad62ef77e
+            |                     |          
+            |                      --47.20%--0x7ffad62f23b6
+            |                                |          
+            |                                 --47.16%--entry_SYSCALL_64_after_hwframe
+            |                                           do_syscall_64
+            |                                           |          
+            |                                           |--46.48%--__x64_sys_futex
+            |                                           |          |          
+            |                                           |           --46.46%--do_futex
+            |                                           |                     |          
+            |                                           |                      --46.46%--futex_wake
+            |                                           |                                |          
+            |                                           |                                 --45.97%--wake_up_q
+            |                                           |                                           |          
+            |                                           |                                            --45.76%--try_to_wake_up
+            |                                           |                                                      |          
+            |                                           |                                                       --45.69%--_raw_spin_unlock_irqrestore
+            |                                           |          
+            |                                            --0.65%--syscall_trace_enter
+            |                                                      |          
+            |                                                       --0.62%--perf_syscall_enter
+            |                                                                 |          
+            |                                                                  --0.58%--perf_tp_event
+            |                                                                            |          
+            |                                                                             --0.53%--perf_swevent_overflow
+            |                                                                                       |          
+            |                                                                                        --0.52%--__perf_event_overflow
+            |                                                                                                  |          
+            |                                                                                                   --0.50%--perf_event_output_forward
+            |          
+             --5.75%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       |          
+                        --5.61%--0x7ffad62f23b6
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  |          
+                                   --5.55%--__x64_sys_futex
+                                             do_futex
+                                             futex_wake
+                                             |          
+                                              --5.52%--wake_up_q
+                                                        |          
+                                                         --5.49%--try_to_wake_up
+                                                                   |          
+                                                                    --5.49%--_raw_spin_unlock_irqrestore
+
+     0.52%     0.51%  barrier          
+     0.31%     0.03%  libc-2.31.so     
+     0.02%     0.00%  ld-2.31.so       
+
+
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 348
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+    79.89%    79.89%  libc-2.31.so     
+            |
+            ---0x7ffad6271af0
+
+    19.54%    19.54%  ld-2.31.so       
+            |          
+            |--15.80%--0x54495f00312e6f73
+            |          0x7ffad633028a
+            |          
+            |--3.45%--0x7ffad6324108
+            |          |          
+            |          |--2.59%--0x7ffad633f6f0
+            |          |          
+            |          |--0.57%--0x7ffad6325128
+            |          |          
+            |           --0.29%--0x7ffad6324e18
+            |          
+             --0.29%--0x7ffad6324100
+
+    16.38%     0.00%  [unknown]        
+            |          
+            |--15.80%--0x54495f00312e6f73
+            |          0x7ffad633028a
+            |          
+             --0.57%--0x7f13865a52fb
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_execve
+                       __do_execve_file.isra.41
+                       search_binary_handler
+                       load_elf_binary
+                       __clear_user
+
+     0.57%     0.57%  [kernel.kallsyms]
+            |
+            ---0x7f13865a52fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+
+
+# Samples: 50K of event 'context-switches'
+# Event count (approx.): 304330
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |          
+             --99.97%--0x7ffad62f231c
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       |          
+                        --99.96%--__x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  schedule
+
+   100.00%     0.00%  libgomp.so.1.0.0 
+            |          
+             --99.97%--0x7ffad62f231c
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       |          
+                        --99.96%--__x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  schedule
+
+     0.01%     0.00%  [unknown]        
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 177K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 13534993000
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |          
+            |--98.47%--0x7ffad62f231c
+            |          |          
+            |           --98.47%--entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                      --98.28%--__x64_sys_futex
+            |                                |          
+            |                                 --98.28%--do_futex
+            |                                           |          
+            |                                            --98.28%--futex_wait
+            |                                                      |          
+            |                                                       --98.27%--futex_wait_queue_me
+            |                                                                 |          
+            |                                                                  --98.27%--schedule
+            |                                                                            |          
+            |                                                                             --98.27%--__schedule
+            |                                                                                       |          
+            |                                                                                        --98.23%--dequeue_task_fair
+            |                                                                                                  dequeue_entity
+            |                                                                                                  update_curr
+            |                                                                                                  update_curr
+            |          
+             --0.98%--0
+                       |          
+                        --0.80%--0x7ffad62ef77e
+                                  |          
+                                   --0.80%--0x7ffad62f23b6
+                                             entry_SYSCALL_64_after_hwframe
+                                             do_syscall_64
+                                             |          
+                                              --0.79%--__x64_sys_futex
+                                                        do_futex
+                                                        futex_wake
+                                                        |          
+                                                         --0.79%--wake_up_q
+                                                                   |          
+                                                                    --0.79%--try_to_wake_up
+
+    99.64%     0.00%  libgomp.so.1.0.0 
+            |          
+            |--98.47%--0x7ffad62f231c
+            |          |          
+            |           --98.47%--entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     |          
+            |                      --98.28%--__x64_sys_futex
+            |                                |          
+            |                                 --98.28%--do_futex
+            |                                           |          
+            |                                            --98.28%--futex_wait
+            |                                                      |          
+            |                                                       --98.27%--futex_wait_queue_me
+            |                                                                 |          
+            |                                                                  --98.27%--schedule
+            |                                                                            |          
+            |                                                                             --98.27%--__schedule
+            |                                                                                       |          
+            |                                                                                        --98.23%--dequeue_task_fair
+            |                                                                                                  dequeue_entity
+            |                                                                                                  update_curr
+            |                                                                                                  update_curr
+            |          
+             --0.80%--0x7ffad62ef77e
+                       |          
+                        --0.80%--0x7ffad62f23b6
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  |          
+                                   --0.79%--__x64_sys_futex
+                                             do_futex
+                                             futex_wake
+                                             |          
+                                              --0.79%--wake_up_q
+                                                        |          
+                                                         --0.79%--try_to_wake_up
+
+     1.20%     0.00%  [unknown]        
+            |          
+             --0.98%--0
+                       |          
+                        --0.80%--0x7ffad62ef77e
+                                  |          
+                                   --0.80%--0x7ffad62f23b6
+                                             entry_SYSCALL_64_after_hwframe
+                                             do_syscall_64
+                                             |          
+                                              --0.79%--__x64_sys_futex
+                                                        do_futex
+                                                        futex_wake
+                                                        |          
+                                                         --0.79%--wake_up_q
+                                                                   |          
+                                                                    --0.79%--try_to_wake_up
+
+     0.25%     0.00%  libc-2.31.so     
+     0.07%     0.00%  barrier          
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 1K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1708
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |          
+            |--88.64%--0
+            |          0x7ffad62ef77e
+            |          0x7ffad62f23b6
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wake
+            |          wake_up_q
+            |          try_to_wake_up
+            |          ttwu_do_wakeup
+            |          check_preempt_curr
+            |          resched_curr
+            |          resched_curr
+            |          
+             --11.36%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       0x7ffad62f23b6
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wake
+                       wake_up_q
+                       try_to_wake_up
+                       ttwu_do_wakeup
+                       check_preempt_curr
+                       resched_curr
+                       resched_curr
+
+   100.00%     0.00%  [unknown]        
+            |          
+            |--88.64%--0
+            |          0x7ffad62ef77e
+            |          0x7ffad62f23b6
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wake
+            |          wake_up_q
+            |          try_to_wake_up
+            |          ttwu_do_wakeup
+            |          check_preempt_curr
+            |          resched_curr
+            |          resched_curr
+            |          
+             --11.36%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       0x7ffad62f23b6
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wake
+                       wake_up_q
+                       try_to_wake_up
+                       ttwu_do_wakeup
+                       check_preempt_curr
+                       resched_curr
+                       resched_curr
+
+   100.00%     0.00%  libgomp.so.1.0.0 
+            |          
+            |--88.64%--0x7ffad62ef77e
+            |          0x7ffad62f23b6
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wake
+            |          wake_up_q
+            |          try_to_wake_up
+            |          ttwu_do_wakeup
+            |          check_preempt_curr
+            |          resched_curr
+            |          resched_curr
+            |          
+             --11.36%--GOMP_parallel
+                       0x7ffad62f23b6
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wake
+                       wake_up_q
+                       try_to_wake_up
+                       ttwu_do_wakeup
+                       check_preempt_curr
+                       resched_curr
+                       resched_curr
+
+
+
+# Samples: 198K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 198158
+#
+# Children      Self  Shared Object   
+# ........  ........  ................
+#
+   100.00%   100.00%  libgomp.so.1.0.0
+            |          
+            |--89.90%--0x7ffad62f231c
+            |          
+            |--9.03%--0
+            |          |          
+            |           --9.03%--0x7ffad62ef77e
+            |                     0x7ffad62f23b6
+            |          
+             --1.07%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       |          
+                        --1.07%--0x7ffad62f23b6
+
+    10.10%     0.00%  [unknown]       
+            |          
+            |--9.03%--0
+            |          |          
+            |           --9.03%--0x7ffad62ef77e
+            |                     0x7ffad62f23b6
+            |          
+             --1.07%--0x66334873643c9869
+                       0x7ffe501604f0
+                       GOMP_parallel
+                       |          
+                        --1.07%--0x7ffad62f23b6
+
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  18555  18559                   7783875                     16854                            3245034               16917549                9585985                28617026                 894911430                 10292015                   2621200           6969592      6086348   380000643
+  18555  18557                       440                     13328                                716                    921               14445146                19377126                 579406355                 19821392                   3580319          22004842      6203490   368168232
+  18555  18555                  20292325                  16890435                           26478406               17402985               70162596                23734879                 754442278                 11054359                  53272259           7330517      8499284   386190922
+  18555  18561                       141                      9808                                312                    343                9731636                 9487267                 635497450                  6277289                   1709000           9347796      2736302   301261602
+  18555  18558                        86                      9948                                359                    652                1227555                 6770002                 684450387                 12743773                   1488100           4893616      3661500   343629801
+  18555  18556                       523                      8871                                585                    936               11405922                17602933                 466391751                 24605722                  15932805          21010300     15023601   293864909
+  18555  18564                       267                      7631                                329                    350                8164813                 5860519                 489791593                 10081659                   4697202          12200720     13549600   303855806
+  18555  18562                       208                      7662                                420                    801                4545092                17852878                 462986691                 16124708                   3681904          13053541      9249303   291942802
+  18555  18563                       276                      7330                                517                    433                 755712                12348819                 459638522                  9753359                  10668801          12884260     12137300   277103600

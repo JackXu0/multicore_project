@@ -1,0 +1,1178 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 399  of event 'task-clock'
+# Event count (approx.): 99750000
+#
+# Children      Self  Shared Object     
+# ........  ........  ..................
+#
+    96.49%     0.00%  [unknown]         
+            |          
+            |--85.21%--0
+            |          |          
+            |          |--74.19%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--24.56%--0x7f5ce47499ed
+            |          |          |          
+            |          |          |--18.05%--0x7f5ce47499f9
+            |          |          |          
+            |          |          |--16.29%--0x7f5ce47499e2
+            |          |          |          
+            |          |          |--7.77%--GOMP_critical_end
+            |          |          |          
+            |          |          |--3.51%--GOMP_critical_start
+            |          |          |          
+            |          |          |--1.00%--0x7f5ce4749b1a
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          __x64_sys_futex
+            |          |          |          do_futex
+            |          |          |          futex_wake
+            |          |          |          wake_up_q
+            |          |          |          try_to_wake_up
+            |          |          |          _raw_spin_unlock_irqrestore
+            |          |          |          
+            |          |          |--0.75%--0x7f5ce47499e0
+            |          |          |          
+            |          |          |--0.50%--0x7f5ce47499f2
+            |          |          |          
+            |          |           --0.50%--main._omp_fn.0
+            |          |          
+            |           --10.03%--__clone
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_clone
+            |                     _do_fork
+            |                     |          
+            |                      --9.77%--copy_process
+            |                                |          
+            |                                 --9.27%--perf_event_init_task
+            |                                           inherit_group.isra.120
+            |                                           inherit_event.isra.119
+            |                                           |          
+            |                                           |--8.77%--perf_event_alloc
+            |                                           |          |          
+            |                                           |          |--8.27%--perf_try_init_event
+            |                                           |          |          perf_tp_event_init
+            |                                           |          |          perf_trace_init
+            |                                           |          |          
+            |                                           |           --0.50%--task_active_pid_ns
+            |                                           |          
+            |                                            --0.50%--_raw_spin_unlock_irqrestore
+            |          
+             --11.28%--0x66334873643c9869
+                       0x7ffcefe43260
+                       GOMP_parallel
+                       |          
+                       |--4.76%--0x7f5ce47499ed
+                       |          
+                       |--2.26%--0x7f5ce47499f9
+                       |          
+                       |--1.50%--0x7f5ce47499e2
+                       |          
+                       |--1.25%--GOMP_critical_end
+                       |          
+                       |--0.50%--0x7f5ce47499e6
+                       |          
+                        --0.50%--GOMP_critical_start
+
+    86.72%    83.46%  libgomp.so.1.0.0  
+            |          
+            |--72.43%--0
+            |          |          
+            |           --72.18%--0x7f5ce474777e
+            |                     |          
+            |                     |--24.56%--0x7f5ce47499ed
+            |                     |          
+            |                     |--18.05%--0x7f5ce47499f9
+            |                     |          
+            |                     |--16.29%--0x7f5ce47499e2
+            |                     |          
+            |                     |--7.77%--GOMP_critical_end
+            |                     |          
+            |                     |--3.51%--GOMP_critical_start
+            |                     |          
+            |                     |--0.75%--0x7f5ce47499e0
+            |                     |          
+            |                      --0.50%--0x7f5ce47499f2
+            |          
+            |--10.78%--0x66334873643c9869
+            |          0x7ffcefe43260
+            |          GOMP_parallel
+            |          |          
+            |          |--4.76%--0x7f5ce47499ed
+            |          |          
+            |          |--2.26%--0x7f5ce47499f9
+            |          |          
+            |          |--1.50%--0x7f5ce47499e2
+            |          |          
+            |          |--1.25%--GOMP_critical_end
+            |          |          
+            |          |--0.50%--0x7f5ce47499e6
+            |          |          
+            |           --0.50%--GOMP_critical_start
+            |          
+            |--2.01%--0x7f5ce474777e
+            |          |          
+            |          |--1.00%--0x7f5ce4749b1a
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wake
+            |          |          wake_up_q
+            |          |          try_to_wake_up
+            |          |          _raw_spin_unlock_irqrestore
+            |          |          
+            |           --0.50%--main._omp_fn.0
+            |          
+             --0.50%--GOMP_parallel
+
+    13.78%    13.78%  [kernel.kallsyms] 
+            |          
+            |--11.78%--0
+            |          |          
+            |          |--10.03%--__clone
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_clone
+            |          |          _do_fork
+            |          |          |          
+            |          |           --9.77%--copy_process
+            |          |                     |          
+            |          |                      --9.27%--perf_event_init_task
+            |          |                                inherit_group.isra.120
+            |          |                                inherit_event.isra.119
+            |          |                                |          
+            |          |                                |--8.77%--perf_event_alloc
+            |          |                                |          |          
+            |          |                                |          |--8.27%--perf_try_init_event
+            |          |                                |          |          perf_tp_event_init
+            |          |                                |          |          perf_trace_init
+            |          |                                |          |          
+            |          |                                |           --0.50%--task_active_pid_ns
+            |          |                                |          
+            |          |                                 --0.50%--_raw_spin_unlock_irqrestore
+            |          |          
+            |           --1.25%--0x7f5ce474777e
+            |                     |          
+            |                      --1.00%--0x7f5ce4749b1a
+            |                                entry_SYSCALL_64_after_hwframe
+            |                                do_syscall_64
+            |                                __x64_sys_futex
+            |                                do_futex
+            |                                futex_wake
+            |                                wake_up_q
+            |                                try_to_wake_up
+            |                                _raw_spin_unlock_irqrestore
+            |          
+             --0.75%--__libc_start_main
+                       main
+                       |          
+                        --0.50%--page_fault
+                                  __do_page_fault
+                                  handle_mm_fault
+                                  __handle_mm_fault
+
+    13.03%     1.50%  libc-2.31.so      
+            |          
+            |--10.03%--__clone
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_clone
+            |          _do_fork
+            |          |          
+            |           --9.77%--copy_process
+            |                     |          
+            |                      --9.27%--perf_event_init_task
+            |                                inherit_group.isra.120
+            |                                inherit_event.isra.119
+            |                                |          
+            |                                |--8.77%--perf_event_alloc
+            |                                |          |          
+            |                                |          |--8.27%--perf_try_init_event
+            |                                |          |          perf_tp_event_init
+            |                                |          |          perf_trace_init
+            |                                |          |          
+            |                                |           --0.50%--task_active_pid_ns
+            |                                |          
+            |                                 --0.50%--_raw_spin_unlock_irqrestore
+            |          
+             --2.01%--__libc_start_main
+                       |          
+                       |--1.00%--main
+                       |          |          
+                       |           --0.50%--page_fault
+                       |                     __do_page_fault
+                       |                     handle_mm_fault
+                       |                     __handle_mm_fault
+                       |          
+                        --0.75%--random
+
+     2.01%     1.25%  critical_region   
+            |          
+            |--0.75%--main
+            |          |          
+            |           --0.50%--page_fault
+            |                     __do_page_fault
+            |                     handle_mm_fault
+            |                     __handle_mm_fault
+            |          
+             --0.75%--0
+                       0x7f5ce474777e
+                       |          
+                        --0.50%--main._omp_fn.0
+
+     0.25%     0.00%  ld-2.31.so        
+     0.25%     0.00%  [vdso]            
+     0.25%     0.00%  libpthread-2.31.so
+
+
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 295
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+    57.97%     0.00%  libc-2.31.so     
+            |          
+            |--57.63%--__libc_start_main
+            |          main
+            |          
+             --0.34%--0x7f5ce4584a27
+                       0x7f5ce47605d4
+
+    57.63%    57.63%  critical_region  
+            |
+            ---__libc_start_main
+               main
+
+    41.02%    41.02%  ld-2.31.so       
+            |          
+            |--32.54%--0x7f5ce478561b
+            |          0x7f5ce47827b2
+            |          
+            |--5.42%--0x41e589480000b264
+            |          0x7f5ce4797c3b
+            |          0x7f5ce477e110
+            |          
+            |--2.37%--0x7f5ce477c108
+            |          0x7f5ce477d128
+            |          
+             --0.68%--0x7f5ce477c100
+
+     6.44%     0.00%  [unknown]        
+            |          
+            |--5.42%--0x41e589480000b264
+            |          0x7f5ce4797c3b
+            |          0x7f5ce477e110
+            |          
+             --1.02%--0x7fcbdafcc2fb
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_execve
+                       __do_execve_file.isra.41
+                       search_binary_handler
+                       load_elf_binary
+                       |          
+                       |--0.68%--__clear_user
+                       |          
+                        --0.34%--copy_user_generic_unrolled
+
+     1.02%     1.02%  [kernel.kallsyms]
+            |
+            ---0x7fcbdafcc2fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.68%--__clear_user
+               |          
+                --0.34%--copy_user_generic_unrolled
+
+     0.34%     0.34%  libgomp.so.1.0.0 
+            |
+            ---0x7f5ce4584a27
+               0x7f5ce47605d4
+
+
+
+# Samples: 46  of event 'context-switches'
+# Event count (approx.): 49
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |          
+            |--48.98%--0
+            |          |          
+            |          |--32.65%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--28.57%--0x7f5ce4749a34
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          __x64_sys_futex
+            |          |          |          do_futex
+            |          |          |          futex_wait
+            |          |          |          futex_wait_queue_me
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--2.04%--0x7f5ce47499ed
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |           --2.04%--GOMP_critical_start
+            |          |                     swapgs_restore_regs_and_return_to_usermode
+            |          |                     prepare_exit_to_usermode
+            |          |                     exit_to_usermode_loop
+            |          |                     schedule
+            |          |                     schedule
+            |          |          
+            |           --16.33%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     schedule
+            |          
+            |--22.45%--0x7f5ce474a31c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--16.33%--0x7f5ce474a14e
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--8.16%--0x7f5ce4749ac3
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+             --4.08%--0x66334873643c9869
+                       0x7ffcefe43260
+                       GOMP_parallel
+                       |          
+                       |--2.04%--0x7f5ce474a14e
+                       |          entry_SYSCALL_64_after_hwframe
+                       |          do_syscall_64
+                       |          __x64_sys_futex
+                       |          do_futex
+                       |          futex_wait
+                       |          futex_wait_queue_me
+                       |          schedule
+                       |          schedule
+                       |          
+                        --2.04%--0x7f5ce4749a34
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  __x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  schedule
+
+   100.00%     0.00%  libgomp.so.1.0.0 
+            |          
+            |--32.65%--0x7f5ce474a14e
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--32.65%--0x7f5ce474777e
+            |          |          
+            |          |--28.57%--0x7f5ce4749a34
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          schedule
+            |          |          
+            |          |--2.04%--0x7f5ce47499ed
+            |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          prepare_exit_to_usermode
+            |          |          exit_to_usermode_loop
+            |          |          schedule
+            |          |          schedule
+            |          |          
+            |           --2.04%--GOMP_critical_start
+            |                     swapgs_restore_regs_and_return_to_usermode
+            |                     prepare_exit_to_usermode
+            |                     exit_to_usermode_loop
+            |                     schedule
+            |                     schedule
+            |          
+            |--22.45%--0x7f5ce474a31c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--8.16%--0x7f5ce4749ac3
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+             --4.08%--GOMP_parallel
+                       |          
+                       |--2.04%--0x7f5ce474a14e
+                       |          entry_SYSCALL_64_after_hwframe
+                       |          do_syscall_64
+                       |          __x64_sys_futex
+                       |          do_futex
+                       |          futex_wait
+                       |          futex_wait_queue_me
+                       |          schedule
+                       |          schedule
+                       |          
+                        --2.04%--0x7f5ce4749a34
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  __x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  schedule
+
+    53.06%     0.00%  [unknown]        
+            |          
+            |--48.98%--0
+            |          |          
+            |          |--32.65%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--28.57%--0x7f5ce4749a34
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          __x64_sys_futex
+            |          |          |          do_futex
+            |          |          |          futex_wait
+            |          |          |          futex_wait_queue_me
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--2.04%--0x7f5ce47499ed
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |           --2.04%--GOMP_critical_start
+            |          |                     swapgs_restore_regs_and_return_to_usermode
+            |          |                     prepare_exit_to_usermode
+            |          |                     exit_to_usermode_loop
+            |          |                     schedule
+            |          |                     schedule
+            |          |          
+            |           --16.33%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     schedule
+            |          
+             --4.08%--0x66334873643c9869
+                       0x7ffcefe43260
+                       GOMP_parallel
+                       |          
+                       |--2.04%--0x7f5ce474a14e
+                       |          entry_SYSCALL_64_after_hwframe
+                       |          do_syscall_64
+                       |          __x64_sys_futex
+                       |          do_futex
+                       |          futex_wait
+                       |          futex_wait_queue_me
+                       |          schedule
+                       |          schedule
+                       |          
+                        --2.04%--0x7f5ce4749a34
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  __x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  schedule
+
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 81  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 107507800
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |          
+            |--69.54%--0
+            |          |          
+            |          |--53.04%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--44.81%--0x7f5ce4749a34
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          __x64_sys_futex
+            |          |          |          do_futex
+            |          |          |          futex_wait
+            |          |          |          futex_wait_queue_me
+            |          |          |          schedule
+            |          |          |          __schedule
+            |          |          |          |          
+            |          |          |          |--35.35%--dequeue_task_fair
+            |          |          |          |          dequeue_entity
+            |          |          |          |          update_curr
+            |          |          |          |          update_curr
+            |          |          |          |          
+            |          |          |           --9.42%--pick_next_task_fair
+            |          |          |                     newidle_balance
+            |          |          |                     load_balance
+            |          |          |                     |          
+            |          |          |                      --9.36%--dequeue_task_fair
+            |          |          |                                dequeue_entity
+            |          |          |                                update_curr
+            |          |          |                                update_curr
+            |          |          |          
+            |          |           --8.11%--GOMP_critical_start
+            |          |                     hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |          |--13.17%--__clone
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_clone
+            |          |          _do_fork
+            |          |          copy_process
+            |          |          |          
+            |          |          |--10.40%--sched_fork
+            |          |          |          task_fork_fair
+            |          |          |          update_curr
+            |          |          |          update_curr
+            |          |          |          
+            |          |           --2.60%--copy_semundo
+            |          |                     hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |           --3.33%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     __schedule
+            |                     dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--14.08%--0x7f5ce474a31c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          |          
+            |           --14.07%--dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--7.71%--0x66334873643c9869
+            |          0x7ffcefe43260
+            |          GOMP_parallel
+            |          |          
+            |          |--6.80%--0x7f5ce4749a34
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          __schedule
+            |          |          dequeue_task_fair
+            |          |          dequeue_entity
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --0.85%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     __schedule
+            |                     dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--6.94%--0x7f5ce4749ac3
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          dequeue_task_fair
+            |          dequeue_entity
+            |          update_curr
+            |          update_curr
+            |          
+            |--0.88%--0x7f5ce474a14e
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          dequeue_task_fair
+            |          dequeue_entity
+            |          update_curr
+            |          update_curr
+            |          
+             --0.64%--_exit
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_exit_group
+                       do_group_exit
+                       zap_other_threads
+                       signal_wake_up_state
+                       try_to_wake_up
+                       ttwu_do_activate
+                       activate_task
+                       enqueue_task_fair
+                       enqueue_entity
+                       update_curr
+                       update_curr
+
+    86.19%     0.00%  libgomp.so.1.0.0 
+            |          
+            |--53.04%--0x7f5ce474777e
+            |          |          
+            |          |--44.81%--0x7f5ce4749a34
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          __schedule
+            |          |          |          
+            |          |          |--35.35%--dequeue_task_fair
+            |          |          |          dequeue_entity
+            |          |          |          update_curr
+            |          |          |          update_curr
+            |          |          |          
+            |          |           --9.42%--pick_next_task_fair
+            |          |                     newidle_balance
+            |          |                     load_balance
+            |          |                     |          
+            |          |                      --9.36%--dequeue_task_fair
+            |          |                                dequeue_entity
+            |          |                                update_curr
+            |          |                                update_curr
+            |          |          
+            |           --8.11%--GOMP_critical_start
+            |                     hv_stimer0_callback_vector
+            |                     hv_stimer0_vector_handler
+            |                     hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     tick_sched_timer
+            |                     update_process_times
+            |                     scheduler_tick
+            |                     task_tick_fair
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--14.08%--0x7f5ce474a31c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          |          
+            |           --14.07%--dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--7.71%--GOMP_parallel
+            |          |          
+            |          |--6.80%--0x7f5ce4749a34
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          __schedule
+            |          |          dequeue_task_fair
+            |          |          dequeue_entity
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --0.85%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     __schedule
+            |                     dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--6.94%--0x7f5ce4749ac3
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          dequeue_task_fair
+            |          dequeue_entity
+            |          update_curr
+            |          update_curr
+            |          
+             --4.21%--0x7f5ce474a14e
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wait
+                       futex_wait_queue_me
+                       schedule
+                       __schedule
+                       dequeue_task_fair
+                       dequeue_entity
+                       update_curr
+                       update_curr
+
+    77.25%     0.00%  [unknown]        
+            |          
+            |--69.54%--0
+            |          |          
+            |          |--53.04%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--44.81%--0x7f5ce4749a34
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          __x64_sys_futex
+            |          |          |          do_futex
+            |          |          |          futex_wait
+            |          |          |          futex_wait_queue_me
+            |          |          |          schedule
+            |          |          |          __schedule
+            |          |          |          |          
+            |          |          |          |--35.35%--dequeue_task_fair
+            |          |          |          |          dequeue_entity
+            |          |          |          |          update_curr
+            |          |          |          |          update_curr
+            |          |          |          |          
+            |          |          |           --9.42%--pick_next_task_fair
+            |          |          |                     newidle_balance
+            |          |          |                     load_balance
+            |          |          |                     |          
+            |          |          |                      --9.36%--dequeue_task_fair
+            |          |          |                                dequeue_entity
+            |          |          |                                update_curr
+            |          |          |                                update_curr
+            |          |          |          
+            |          |           --8.11%--GOMP_critical_start
+            |          |                     hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |          |--13.17%--__clone
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_clone
+            |          |          _do_fork
+            |          |          copy_process
+            |          |          |          
+            |          |          |--10.40%--sched_fork
+            |          |          |          task_fork_fair
+            |          |          |          update_curr
+            |          |          |          update_curr
+            |          |          |          
+            |          |           --2.60%--copy_semundo
+            |          |                     hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |           --3.33%--0x7f5ce474a14e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     __schedule
+            |                     dequeue_task_fair
+            |                     dequeue_entity
+            |                     update_curr
+            |                     update_curr
+            |          
+             --7.71%--0x66334873643c9869
+                       0x7ffcefe43260
+                       GOMP_parallel
+                       |          
+                       |--6.80%--0x7f5ce4749a34
+                       |          entry_SYSCALL_64_after_hwframe
+                       |          do_syscall_64
+                       |          __x64_sys_futex
+                       |          do_futex
+                       |          futex_wait
+                       |          futex_wait_queue_me
+                       |          schedule
+                       |          __schedule
+                       |          dequeue_task_fair
+                       |          dequeue_entity
+                       |          update_curr
+                       |          update_curr
+                       |          
+                        --0.85%--0x7f5ce474a14e
+                                  entry_SYSCALL_64_after_hwframe
+                                  do_syscall_64
+                                  __x64_sys_futex
+                                  do_futex
+                                  futex_wait
+                                  futex_wait_queue_me
+                                  schedule
+                                  __schedule
+                                  dequeue_task_fair
+                                  dequeue_entity
+                                  update_curr
+                                  update_curr
+
+    13.81%     0.00%  libc-2.31.so     
+            |          
+            |--13.17%--__clone
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_clone
+            |          _do_fork
+            |          copy_process
+            |          |          
+            |          |--10.40%--sched_fork
+            |          |          task_fork_fair
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --2.60%--copy_semundo
+            |                     hv_stimer0_callback_vector
+            |                     hv_stimer0_vector_handler
+            |                     hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     tick_sched_timer
+            |                     update_process_times
+            |                     scheduler_tick
+            |                     task_tick_fair
+            |                     update_curr
+            |                     update_curr
+            |          
+             --0.64%--_exit
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_exit_group
+                       do_group_exit
+                       zap_other_threads
+                       signal_wake_up_state
+                       try_to_wake_up
+                       ttwu_do_activate
+                       activate_task
+                       enqueue_task_fair
+                       enqueue_entity
+                       update_curr
+                       update_curr
+
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+# Samples: 1  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1
+#
+# Children      Self  Shared Object    
+# ........  ........  .................
+#
+   100.00%   100.00%  [kernel.kallsyms]
+            |
+            ---0
+               0x7f5ce474777e
+               0x7f5ce4749b1a
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  [unknown]        
+            |
+            ---0
+               0x7f5ce474777e
+               0x7f5ce4749b1a
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  libgomp.so.1.0.0 
+            |
+            ---0x7f5ce474777e
+               0x7f5ce4749b1a
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+
+
+# Samples: 291  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 291
+#
+# Children      Self  Shared Object   
+# ........  ........  ................
+#
+   100.00%   100.00%  libgomp.so.1.0.0
+            |          
+            |--79.73%--0
+            |          |          
+            |          |--76.29%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--66.32%--0x7f5ce4749b1a
+            |          |          |          
+            |          |           --9.97%--0x7f5ce4749a34
+            |          |          
+            |          |--3.09%--0x7f5ce474a14e
+            |          |          
+            |           --0.34%--0x7f5ce474a3b6
+            |          
+            |--11.68%--0x66334873643c9869
+            |          0x7ffcefe43260
+            |          GOMP_parallel
+            |          |          
+            |          |--10.65%--0x7f5ce4749b1a
+            |          |          
+            |          |--0.69%--0x7f5ce4749a34
+            |          |          
+            |           --0.34%--0x7f5ce474a14e
+            |          
+            |--3.09%--0x7f5ce474a31c
+            |          
+            |--2.75%--0x7f5ce474a14e
+            |          
+            |--2.41%--0x7f5ce4749ac3
+            |          
+             --0.34%--0x7f5ce474a1a7
+
+    91.41%     0.00%  [unknown]       
+            |          
+            |--79.73%--0
+            |          |          
+            |          |--76.29%--0x7f5ce474777e
+            |          |          |          
+            |          |          |--66.32%--0x7f5ce4749b1a
+            |          |          |          
+            |          |           --9.97%--0x7f5ce4749a34
+            |          |          
+            |          |--3.09%--0x7f5ce474a14e
+            |          |          
+            |           --0.34%--0x7f5ce474a3b6
+            |          
+             --11.68%--0x66334873643c9869
+                       0x7ffcefe43260
+                       GOMP_parallel
+                       |          
+                       |--10.65%--0x7f5ce4749b1a
+                       |          
+                       |--0.69%--0x7f5ce4749a34
+                       |          
+                        --0.34%--0x7f5ce474a14e
+
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Shared Object
+# ........  ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  19635  19640                         0                        30                                  0                      0                      0                       0                   1646600                        0                         0                 1            0     1674000
+  19635  19641                         0                        25                                  0                      0                      0                       0                   5386800                        0                         0                 4            0     6634200
+  19635  19636                         0                        21                                  0                      0                      0                       0                  10578700                        0                         0                 5            0     9033000
+  19635  19638                         0                        37                                  0                      0                      0                       0                  11258300                        0                         0                 5            0           0
+  19635  19637                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  19635  19635                  15068501                         0                                  0                      0               14809400                       0                    692400                        0                       294                 0            1      643800
+  19635  19643                         0                        30                                  0                      0                      0                       0                   6431600                        0                         0                 3            0     9966100
+  19635  19644                         0                        22                                  1                      0                      0                       0                  10203100                        0                         0                 4            0     9560700
+  19635  19642                         0                        18                                  0                      0                      0                       0                   8761000                        0                         0                 2            0     5122800
