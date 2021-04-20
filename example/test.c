@@ -27,16 +27,6 @@ int main(int argc, char *argv[])
     #pragma omp parallel num_threads(num_of_threads) private(i, pid, left, right)
     {
         pid = omp_get_thread_num();
-        // if (pid == 0) {
-        //     left = 0;
-        //     right = assign[pid];
-        // } else if (pid == num_of_threads - 1) {
-        //     left = assign[pid-1];
-        //     right = SIZE;
-        // } else {
-        //     left = assign[pid-1];
-        //     right = assign[pid];
-        // }
         left = (pid == 0)? 0: assign[pid-1];
         right = (pid == num_of_threads - 1)? SIZE: assign[pid];
         
