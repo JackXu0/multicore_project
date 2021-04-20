@@ -4,31 +4,31 @@
 # Total Lost Samples: 0
 #
 # Samples: 27K of event 'task-clock'
-# Event count (approx.): 6984000000
+# Event count (approx.): 6949250000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    75.71%  [kernel.kallsyms]
-    23.73%  libgomp.so.1.0.0 
-     0.54%  barrier          
-     0.01%  libc-2.31.so     
-     0.00%  ld-2.31.so       
+    75.22%  [kernel.kallsyms]
+    24.15%  libgomp.so.1.0.0 
+     0.60%  barrier          
+     0.03%  libc-2.31.so     
+     0.01%  ld-2.31.so       
 
 
-# Samples: 8  of event 'page-faults'
-# Event count (approx.): 380
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 302
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    58.16%  barrier          
-    41.05%  ld-2.31.so       
-     0.79%  [kernel.kallsyms]
+    62.91%  barrier          
+    36.09%  ld-2.31.so       
+     0.99%  [kernel.kallsyms]
 
 
-# Samples: 49K of event 'context-switches'
-# Event count (approx.): 289506
+# Samples: 53K of event 'context-switches'
+# Event count (approx.): 341270
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -53,7 +53,7 @@
 
 
 # Samples: 179K of event 'sched:sched_stat_runtime'
-# Event count (approx.): 12982860100
+# Event count (approx.): 12938588700
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -85,8 +85,8 @@
 #
 
 
-# Samples: 998  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 998
+# Samples: 1K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1015
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -95,7 +95,7 @@
 
 
 # Samples: 198K of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 198834
+# Event count (approx.): 198845
 #
 # Overhead  Shared Object   
 # ........  ................
@@ -115,12 +115,12 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  14071  14072                  10394719                  27805918                            5998580               34881745               15117002                33362500                1054805701                 64524300                   4253072          11568588      5806399   298319603
-  14071  14073                   2750950                  17630767                             111092               14416457                5565900                19725002                1144037700                 16796202                   2890827           7020865       471702   323608700
-  14071  14074                   8601637                   8681152                            9315396               14005374               10531400                19929700                 761486000                 14241000                   2404259              7649          129   291074810
-  14071  14077                   3535840                  27178873                            4391155               15028566                6108500                21494602                 871174200                 24758300                        46              7539           78   208811112
-  14071  14080                   9966292                  28006666                           20121374               23206943               76346101                29524702                 849657700                 27525000                       132           8217079          315   191741394
-  14071  14071                  23375150                  27401566                            9885164               23535939               62703800                49857100                 749238400                 51247400                       276              5446          146   186873903
-  14071  14076                         0                      6584                                 28                      0                      0                       0                 435778400                        0                       238              6203          584   235980332
-  14071  14075                         0                      6450                                 36                      0                      0                       0                 413584900                        0                         7              6011          382   221109322
-  14071  14079                         0                      5425                                 26                      0                      0                       0                 365734200                        0                       146              5379          355   205393449
+  17132  17133                  39158516                  18164118                            3841790               28437089               27362100                       0                 429588500                        0                       533              6451           56   227461532
+  17132  17135                   5486722                  21154059                            2464086                    417                2328840                     358                 369741100                        0                        83              5058           27   213322389
+  17132  17134                   1826848                   8705765                                266                    180                     18                       0                 465959400                        0                        29              6065          217   270835995
+  17132  17139                  21861142                   6156651                             748511               21196314               14287902                 2725172                 774094059                 10897484                    240487           5889809      5980314   342084742
+  17132  17132                   5196281                  38804710                           43388118                7828084                2781489                22169230                 709838543                  5436310                  14620888          11196058     26507428   241307504
+  17132  17141                   4346879                  12162055                                246                    156                1560643                 7625152                 471926556                        0                        80              5348          248   180565676
+  17132  17136                   1305516                     11584                                 61                    151                 686040                       0                 424521100                        0                        18              5940           14   231930689
+  17132  17137                         0                      5073                                 36                      0                      0                       0                 331521900                        0                       305              5103         1103   183529529
+  17132  17138                         0                      7506                                 39                      0                      0                       0                 505369500                        0                       170              6740          352   285689284

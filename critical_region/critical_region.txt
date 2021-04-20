@@ -3,33 +3,33 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 488  of event 'task-clock'
-# Event count (approx.): 122000000
+# Samples: 373  of event 'task-clock'
+# Event count (approx.): 93250000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    77.05%  libgomp.so.1.0.0 
-    18.44%  [kernel.kallsyms]
-     2.25%  libc-2.31.so     
-     2.05%  critical_region  
-     0.20%  ld-2.31.so       
+    82.84%  libgomp.so.1.0.0 
+    14.48%  [kernel.kallsyms]
+     1.61%  critical_region  
+     0.80%  libc-2.31.so     
+     0.27%  ld-2.31.so       
 
 
-# Samples: 13  of event 'page-faults'
-# Event count (approx.): 296
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 572
 #
 # Overhead  Shared Object     
 # ........  ..................
 #
-    67.91%  critical_region   
-    16.89%  ld-2.31.so        
-    14.19%  libpthread-2.31.so
-     1.01%  [kernel.kallsyms] 
+    50.52%  libpthread-2.31.so
+    39.86%  libc-2.31.so      
+     9.09%  ld-2.31.so        
+     0.52%  [kernel.kallsyms] 
 
 
-# Samples: 43  of event 'context-switches'
-# Event count (approx.): 43
+# Samples: 76  of event 'context-switches'
+# Event count (approx.): 88
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -53,8 +53,8 @@
 #
 
 
-# Samples: 80  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 135118000
+# Samples: 120  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 105831900
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -86,16 +86,17 @@
 #
 
 
-# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 0
+# Samples: 1  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1
 #
-# Overhead  Shared Object
-# ........  .............
+# Overhead  Shared Object    
+# ........  .................
 #
+   100.00%  [kernel.kallsyms]
 
 
-# Samples: 165  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 165
+# Samples: 480  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 480
 #
 # Overhead  Shared Object   
 # ........  ................
@@ -115,12 +116,12 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  14482  14484                         0                        16                                  0                      0                      0                       0                  10585900                        0                         0                 5            0    12528500
-  14482  14488                         0                        17                                  0                      0                      0                       0                   6013200                        0                         0                 4            0     5853500
-  14482  14485                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  14482  14487                         0                        17                                  0                      0                      0                       0                  12550500                        0                         0                 1            0    12485100
-  14482  14486                         0                         9                                  4                      0                      0                       0                   3772701                        0                         0                 4      1654000     3639000
-  14482  14482                         0                        15                                296                      0                      0                       0                  32192201                        0                         0                 1     24962100     6858800
-  14482  14483                         0                        22                                  0                      0                      0                       0                  15257600                        0                         0                 0            0      162700
-  14482  14491                         0                        18                                  0                      0                      0                       0                  14246700                        0                         0                 4            0    13467300
-  14482  14489                         0                        10                                  0                      0                      0                       0                   9046500                        0                         0                 4            0     8757300
+  17298  17299                         0                        46                                  1                      0                      0                       0                     56700                        0                         0                 1            0      267100
+  17298  17303                         0                        37                                  0                      0                      0                       0                   8406900                        0                         0                 7            0     8400400
+  17298  17302                         0                        54                                  0                      0                      0                       0                   6532400                        0                         0                 6            0      251200
+  17298  17300                         0                        53                                  0                      0                      0                       0                  12882900                        0                         0                11            0    11466700
+  17298  17298                       297                        57                                  0                      0               11150101                       0                  10146900                        0                  10887200                 1            0     5699100
+  17298  17307                         0                        26                                  0                      0                      0                       0                  10670200                        0                         0                 2            0     8733800
+  17298  17305                         0                        36                                  0                      0                      0                       0                   2824500                        0                         0                 6            0     3171700
+  17298  17304                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0       29100
+  17298  17306                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0

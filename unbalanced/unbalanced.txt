@@ -3,31 +3,31 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 72  of event 'task-clock'
-# Event count (approx.): 18000000
+# Samples: 65  of event 'task-clock'
+# Event count (approx.): 16250000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    86.11%  [kernel.kallsyms]
-     9.72%  libc-2.31.so     
-     2.78%  unbalanced       
-     1.39%  ld-2.31.so       
+    87.69%  [kernel.kallsyms]
+     6.15%  libc-2.31.so     
+     4.62%  unbalanced       
+     1.54%  ld-2.31.so       
 
 
-# Samples: 9  of event 'page-faults'
-# Event count (approx.): 312
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 302
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    70.51%  unbalanced       
-    28.53%  ld-2.31.so       
-     0.96%  [kernel.kallsyms]
+    59.27%  unbalanced       
+    39.74%  ld-2.31.so       
+     0.99%  [kernel.kallsyms]
 
 
-# Samples: 25  of event 'context-switches'
-# Event count (approx.): 25
+# Samples: 27  of event 'context-switches'
+# Event count (approx.): 27
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,7 +52,7 @@
 
 
 # Samples: 39  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 20904300
+# Event count (approx.): 18859400
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -92,8 +92,8 @@
 #
 
 
-# Samples: 27  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 27
+# Samples: 29  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 29
 #
 # Overhead  Shared Object   
 # ........  ................
@@ -113,12 +113,12 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  15547  15554                         0                         2                                  0                      0                      0                       0                    281800                        0                         0                 0            0           0
-  15547  15551                         0                         3                                  0                      0                      0                       0                    346400                        0                         0                 3            0      162100
-  15547  15550                         0                         3                                  0                      0                      0                       0                         0                        0                         0                 0            0      887000
-  15547  15552                         0                         2                                  0                      0                      0                       0                    339600                        0                         0                 2            0      878200
-  15547  15549                         0                         3                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  15547  15548                         0                         3                                  0                      0                      0                       0                    314200                        0                         0                 3            0     1725000
-  15547  15553                         0                         1                                  0                      0                      0                       0                     90100                        0                         0                 1            0       46100
-  15547  15555                         0                         1                                  0                      0                      0                       0                    152400                        0                         0                 1            0      113800
-  15547  15556                         0                         3                                  0                      0                      0                       0                    564400                        0                         0                 2            0      668200
+  17625  17629                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  17625  17630                         0                         3                                  0                      0                      0                       0                    436500                        0                         0                 3            0      186000
+  17625  17627                         0                         3                                  0                      0                      0                       0                    293300                        0                         0                 3            0      211800
+  17625  17628                         0                         3                                  0                      0                      0                       0                         0                        0                         0                 2            0      255400
+  17625  17631                         0                         2                                  0                      0                      0                       0                    181400                        0                         0                 2            0       68300
+  17625  17632                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  17625  17633                         0                         3                                  0                      0                      0                       0                    400700                        0                         0                 3            0      110200
+  17625  17634                         0                         3                                  0                      0                      0                       0                    509500                        0                         0                 2            0      332100
+  17625  17626                         0                         1                                  0                      0                      0                       0                     93600                        0                         0                 1            0       41600

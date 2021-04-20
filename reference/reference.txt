@@ -3,32 +3,32 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 185  of event 'task-clock'
-# Event count (approx.): 46250000
+# Samples: 116  of event 'task-clock'
+# Event count (approx.): 29000000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    59.46%  libgomp.so.1.0.0 
-    32.43%  [kernel.kallsyms]
-     4.86%  reference        
-     2.70%  libc-2.31.so     
-     0.54%  ld-2.31.so       
+    47.41%  libgomp.so.1.0.0 
+    43.97%  [kernel.kallsyms]
+     4.31%  reference        
+     3.45%  libc-2.31.so     
+     0.86%  ld-2.31.so       
 
 
-# Samples: 8  of event 'page-faults'
-# Event count (approx.): 456
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 372
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    58.99%  reference        
-    40.57%  ld-2.31.so       
-     0.44%  [kernel.kallsyms]
+    70.70%  reference        
+    28.49%  ld-2.31.so       
+     0.81%  [kernel.kallsyms]
 
 
 # Samples: 28  of event 'context-switches'
-# Event count (approx.): 28
+# Event count (approx.): 29
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,8 +52,8 @@
 #
 
 
-# Samples: 51  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 48993300
+# Samples: 49  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 31525500
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -114,12 +114,12 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  16393  16394                         0                         3                                  0                      0                      0                       0                   3979600                        0                         0                 3            0     4127400
-  16393  16398                         0                         3                                  0                      0                      0                       0                   3985700                        0                         0                 4            0     3781000
-  16393  16396                         0                         3                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  16393  16400                         0                         3                                  0                      0                      0                       0                   3819500                        0                         0                 3            0     3631000
-  16393  16393                         0                         1                                  0               15914101                      0                       0                    296800                 15600100                         0                 0            1     1294895
-  16393  16397                         0                         3                                  0                      0                      0                       0                   4012300                        0                         0                 3            0     3895900
-  16393  16402                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0       16300
-  16393  16399                         0                         3                                  0                      0                      0                       0                   3999500                        0                         0                 3            0     3726200
-  16393  16401                         0                         3                                  0                      0                      0                       0                    272600                        0                         0                 3            0      470800
+  16981  16985                         0                         3                                  0                      0                      0                       0                   2426300                        0                         0                 3            0     3120200
+  16981  16987                         0                         3                                  0                      0                      0                       0                   2349300                        0                         0                 3            0     2799100
+  16981  16988                         0                         3                                  0                      0                      0                       0                    308000                        0                         0                 2            0      293500
+  16981  16984                         0                         3                                  0                      0                      0                       0                   2320400                        0                         0                 3            0     3066900
+  16981  16981                         0                         1                           12176101                      0                      0                       0                  13752100                        0                         0                 1          297     1437900
+  16981  16982                         0                         3                                  0                      0                      0                       0                   2504400                        0                         0                 3            0     3606100
+  16981  16990                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  16981  16989                         0                         3                                  0                      0                      0                       0                    234900                        0                         0                 3            0       89600
+  16981  16986                         0                         3                                  0                      0                      0                       0                   2378800                        0                         0                 4            0     4406000
