@@ -3,32 +3,32 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 1K of event 'task-clock'
-# Event count (approx.): 255000000
-#
-# Overhead  Shared Object     
-# ........  ..................
-#
-    85.59%  [kernel.kallsyms] 
-     7.55%  libgomp.so.1.0.0  
-     5.78%  libc-2.31.so      
-     0.59%  barrier           
-     0.39%  libpthread-2.31.so
-     0.10%  ld-2.31.so        
-
-
-# Samples: 7  of event 'page-faults'
-# Event count (approx.): 215
+# Samples: 27K of event 'task-clock'
+# Event count (approx.): 6984000000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    98.60%  ld-2.31.so       
-     1.40%  [kernel.kallsyms]
+    75.71%  [kernel.kallsyms]
+    23.73%  libgomp.so.1.0.0 
+     0.54%  barrier          
+     0.01%  libc-2.31.so     
+     0.00%  ld-2.31.so       
 
 
-# Samples: 1K of event 'context-switches'
-# Event count (approx.): 19599
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 380
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    58.16%  barrier          
+    41.05%  ld-2.31.so       
+     0.79%  [kernel.kallsyms]
+
+
+# Samples: 49K of event 'context-switches'
+# Event count (approx.): 289506
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,8 +52,8 @@
 #
 
 
-# Samples: 4K of event 'sched:sched_stat_runtime'
-# Event count (approx.): 407204900
+# Samples: 179K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 12982860100
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -85,8 +85,8 @@
 #
 
 
-# Samples: 932  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 932
+# Samples: 998  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 998
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -94,14 +94,13 @@
    100.00%  [kernel.kallsyms]
 
 
-# Samples: 6K of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 6191
+# Samples: 198K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 198834
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-    67.24%  libc-2.31.so    
-    32.76%  libgomp.so.1.0.0
+   100.00%  libgomp.so.1.0.0
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -115,13 +114,13 @@
 #
 # (Cannot load tips.txt file, please install perf!)
 #
-#  PID   TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  5073  5075                    481509                       571                             253967                      3                 644703                   47402                  32220100                   316701                    225907             84193            4    21582900
-  5073  5074                    249703                    605341                                 37                1079908                1294309                 1811416                  28558504                  1577609                    691505           1017767       387700    17429216
-  5073  5076                   1103612                    282687                            1011239                 650806                1033706                 1897211                  25429614                   431800                    192019               154           16     8039412
-  5073  5082                         0                       530                              72856                      0                      0                       0                  34716900                        0                         0               315            2    17806800
-  5073  5073                     24816                    103385                             330015                1363009               16390110                  183704                  35139103                  1083205                  15890809             45047       209306    25474710
-  5073  5078                         5                     78767                                 38                 441704                 328002                 1670615                  32183602                   265801                    256400            924366       120100    17897206
-  5073  5080                    213601                   1051477                             480753                 179202                 304903                 1251805                  27443600                   599403                    128903            318400            5    18107504
-  5073  5079                         0                    645797                              84545                 157302                 864405                  418700                  32460907                   663205                    469500               308       525802    19433903
-  5073  5081                    697103                    917599                             136640                 199404                1959713                 1671311                  20422700                   604600                    898006            878509       256002     9863806
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  14071  14072                  10394719                  27805918                            5998580               34881745               15117002                33362500                1054805701                 64524300                   4253072          11568588      5806399   298319603
+  14071  14073                   2750950                  17630767                             111092               14416457                5565900                19725002                1144037700                 16796202                   2890827           7020865       471702   323608700
+  14071  14074                   8601637                   8681152                            9315396               14005374               10531400                19929700                 761486000                 14241000                   2404259              7649          129   291074810
+  14071  14077                   3535840                  27178873                            4391155               15028566                6108500                21494602                 871174200                 24758300                        46              7539           78   208811112
+  14071  14080                   9966292                  28006666                           20121374               23206943               76346101                29524702                 849657700                 27525000                       132           8217079          315   191741394
+  14071  14071                  23375150                  27401566                            9885164               23535939               62703800                49857100                 749238400                 51247400                       276              5446          146   186873903
+  14071  14076                         0                      6584                                 28                      0                      0                       0                 435778400                        0                       238              6203          584   235980332
+  14071  14075                         0                      6450                                 36                      0                      0                       0                 413584900                        0                         7              6011          382   221109322
+  14071  14079                         0                      5425                                 26                      0                      0                       0                 365734200                        0                       146              5379          355   205393449

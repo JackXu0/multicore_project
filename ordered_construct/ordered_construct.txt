@@ -3,33 +3,33 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 431  of event 'task-clock'
-# Event count (approx.): 107750000
-#
-# Overhead  Shared Object     
-# ........  ..................
-#
-    82.60%  [kernel.kallsyms] 
-    10.90%  libgomp.so.1.0.0  
-     4.18%  libc-2.31.so      
-     1.62%  ordered_construct 
-     0.46%  ld-2.31.so        
-     0.23%  libpthread-2.31.so
-
-
-# Samples: 9  of event 'page-faults'
-# Event count (approx.): 178
+# Samples: 14K of event 'task-clock'
+# Event count (approx.): 3748250000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    53.93%  libc-2.31.so     
-    44.38%  ld-2.31.so       
-     1.69%  [kernel.kallsyms]
+    79.39%  [kernel.kallsyms]
+    19.94%  libgomp.so.1.0.0 
+     0.63%  ordered_construct
+     0.04%  libc-2.31.so     
 
 
-# Samples: 962  of event 'context-switches'
-# Event count (approx.): 1174
+# Samples: 14  of event 'page-faults'
+# Event count (approx.): 313
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    61.02%  ordered_construct
+    20.77%  libc-2.31.so     
+    16.93%  ld-2.31.so       
+     0.96%  [kernel.kallsyms]
+     0.32%  libgomp.so.1.0.0 
+
+
+# Samples: 39K of event 'context-switches'
+# Event count (approx.): 99624
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -53,8 +53,8 @@
 #
 
 
-# Samples: 1K of event 'sched:sched_stat_runtime'
-# Event count (approx.): 195830900
+# Samples: 99K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 6798424400
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -86,8 +86,8 @@
 #
 
 
-# Samples: 489  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 489
+# Samples: 1K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1177
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -95,14 +95,13 @@
    100.00%  [kernel.kallsyms]
 
 
-# Samples: 2K of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 2364
+# Samples: 199K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 199143
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-    85.79%  libgomp.so.1.0.0
-    14.21%  libc-2.31.so    
+   100.00%  libgomp.so.1.0.0
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -116,13 +115,13 @@
 #
 # (Cannot load tips.txt file, please install perf!)
 #
-#  PID   TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  5573  5575                         0                       235                                  9                      0                      0                       0                  12791500                        0                         0               118            0     9216200
-  5573  5577                         0                       235                                  6                      0                      0                       0                  16306700                        0                         0               110            0     7336400
-  5573  5578                         0                       201                                  1                      0                      0                       0                  13820300                        0                         0                63            0     5851300
-  5573  5573                         0                       225                                528                      0                      0                       0                  37039600                        0                         0                84     17136112    12788900
-  5573  5574                         0                       246                                  3                      0                      0                       0                  15240300                        0                         0               118            1     9446000
-  5573  5580                         0                       148                                  4                      0                      0                       0                   5266000                        0                         0                47            0     3072100
-  5573  5579                         0                       166                                  1                      0                      0                       0                   6864500                        0                         0                55            0     4143100
-  5573  5582                         0                        56                                  2                      0                      0                       0                   3604100                        0                         0                29            0     2389300
-  5573  5576                        12                        77                                  3                      2                      0                       0                  22959500                        0                         0                43            0    23061900
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  14933  14934                         0                     19924                                140                      0                      0                       0                 645171400                        0                         0              9656            0   262480100
+  14933  14938                         0                     19153                                108                      0                      0                       0                 652430500                        0                         0              9570            0   362310300
+  14933  14936                         0                     19918                                135                      0                      0                       0                 670618800                        0                         0              9904            0   374677100
+  14933  14935                         0                     18771                                100                      0                      0                       0                 638740300                        0                         0              9266            0   357562000
+  14933  14937                         0                     15187                                128                      0                      0                       0                 648149600                        0                         0              9546            0   361761400
+  14933  14939                         0                     19339                                 77                      0                      0                       0                 656808300                        0                         0              9662            0   367641200
+  14933  14941                         0                     19127                                111                      0                      0                       0                 657309500                        0                         0              9560            0   369227100
+  14933  14940                         0                     19237                                107                      0                      0                       0                 655935400                        0                         0              9610            0   365948100
+  14933  14942                         0                     19656                                120                      0                      0                       0                 663360500                        0                         0              9824            0   370880000

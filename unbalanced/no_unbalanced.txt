@@ -3,32 +3,31 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 149  of event 'task-clock'
-# Event count (approx.): 37250000
-#
-# Overhead  Shared Object     
-# ........  ..................
-#
-    87.25%  [kernel.kallsyms] 
-     9.40%  libc-2.31.so      
-     2.01%  ld-2.31.so        
-     0.67%  libgomp.so.1.0.0  
-     0.67%  libpthread-2.31.so
-
-
-# Samples: 8  of event 'page-faults'
-# Event count (approx.): 170
+# Samples: 50  of event 'task-clock'
+# Event count (approx.): 12500000
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    52.35%  libc-2.31.so     
-    46.47%  ld-2.31.so       
-     1.18%  [kernel.kallsyms]
+    88.00%  [kernel.kallsyms]
+     6.00%  libc-2.31.so     
+     4.00%  no_unbalanced    
+     2.00%  libgomp.so.1.0.0 
 
 
-# Samples: 249  of event 'context-switches'
-# Event count (approx.): 324
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 675
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    73.19%  no_unbalanced    
+    25.93%  ld-2.31.so       
+     0.89%  [kernel.kallsyms]
+
+
+# Samples: 28  of event 'context-switches'
+# Event count (approx.): 28
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,8 +51,8 @@
 #
 
 
-# Samples: 342  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 52262800
+# Samples: 42  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 14890700
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -85,23 +84,21 @@
 #
 
 
-# Samples: 104  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 104
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
 #
-# Overhead  Shared Object    
-# ........  .................
+# Overhead  Shared Object
+# ........  .............
 #
-   100.00%  [kernel.kallsyms]
 
 
-# Samples: 641  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 641
+# Samples: 29  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 29
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-    95.48%  libc-2.31.so    
-     4.52%  libgomp.so.1.0.0
+   100.00%  libgomp.so.1.0.0
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -115,13 +112,13 @@
 #
 # (Cannot load tips.txt file, please install perf!)
 #
-#  PID   TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  6063  6064                         0                        56                                  2                      0                      0                       0                   2842200                        0                         0                22            0     1646600
-  6063  6065                    586807                    184144                                  1                      2                 281300                   68100                   2395800                   200102                        12                19            0     1249400
-  6063  6067                         0                        55                                  1                      7                      0                       0                   2353900                   180903                         0                23            0      991900
-  6063  6066                         0                        49                                  2                      0                      0                       0                   2256400                        0                         0                18            0     1602000
-  6063  6071                         0                        48                                  1                      0                      0                       0                   2361800                        0                         0                 9            0      618600
-  6063  6063                       104                        89                                 90                      0               18533701                       0                   5473000                        0                  17945900                24            0     7099900
-  6063  6070                         0                        40                             117904                      0                      0                       0                   2254800                   169802                         0                24            3      710200
-  6063  6072                         0                        33                                  1                      0                      0                       0                   2397900                        0                         0                13            0     1800400
-  6063  6069                         0                        11                                  0                      0                  92802                       0                    516401                    73202                     26200                 6        13700      281100
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  15590  15595                         0                         3                                  0                      0                      0                       0                    358400                        0                         0                 2            0      114000
+  15590  15592                         0                         3                                  0                      0                      0                       0                    365700                        0                         0                 3            0      228000
+  15590  15593                         0                         3                                  0                      0                      0                       0                    326000                        0                         0                 1            0           0
+  15590  15594                         0                         3                                  0                      0                      0                       0                    346800                        0                         0                 3            0      172600
+  15590  15591                         0                         3                                  0                      0                      0                       0                    252200                        0                         0                 3            0      103300
+  15590  15599                         0                         3                                  0                      0                      0                       0                    418200                        0                         0                 2            0      272500
+  15590  15596                         0                         3                                  0                      0                      0                       0                    293600                        0                         0                 3            0      149700
+  15590  15598                         0                         2                                  0                      0                      0                       0                    284500                        0                         0                 1            0      297700
+  15590  15597                         0                         3                                  0                      0                      0                       0                    307100                        0                         0                 4            0      487200
