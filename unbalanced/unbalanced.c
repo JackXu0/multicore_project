@@ -65,9 +65,9 @@ int main(int argc, char *argv[])
         printf("Thread %i duplicates %i integers\n", pid, right-left);
     }
 
-    // for (i=0; i<SIZE; i++){
-    //     printf("a[%i]=%i\tb[%i]=%i\n", i, a[i], i, b[i]);
-    // }
+    for (i=0; i<SIZE; i++){
+        printf("a[%i]=%i\tb[%i]=%i\n", i, a[i], i, b[i]);
+    }
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);

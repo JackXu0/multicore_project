@@ -1,0 +1,128 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 431  of event 'task-clock'
+# Event count (approx.): 107750000
+#
+# Overhead  Shared Object     
+# ........  ..................
+#
+    82.60%  [kernel.kallsyms] 
+    10.90%  libgomp.so.1.0.0  
+     4.18%  libc-2.31.so      
+     1.62%  ordered_construct 
+     0.46%  ld-2.31.so        
+     0.23%  libpthread-2.31.so
+
+
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 178
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    53.93%  libc-2.31.so     
+    44.38%  ld-2.31.so       
+     1.69%  [kernel.kallsyms]
+
+
+# Samples: 962  of event 'context-switches'
+# Event count (approx.): 1174
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 1K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 195830900
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 489  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 489
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 2K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 2364
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+    85.79%  libgomp.so.1.0.0
+    14.21%  libc-2.31.so    
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#  PID   TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  5573  5575                         0                       235                                  9                      0                      0                       0                  12791500                        0                         0               118            0     9216200
+  5573  5577                         0                       235                                  6                      0                      0                       0                  16306700                        0                         0               110            0     7336400
+  5573  5578                         0                       201                                  1                      0                      0                       0                  13820300                        0                         0                63            0     5851300
+  5573  5573                         0                       225                                528                      0                      0                       0                  37039600                        0                         0                84     17136112    12788900
+  5573  5574                         0                       246                                  3                      0                      0                       0                  15240300                        0                         0               118            1     9446000
+  5573  5580                         0                       148                                  4                      0                      0                       0                   5266000                        0                         0                47            0     3072100
+  5573  5579                         0                       166                                  1                      0                      0                       0                   6864500                        0                         0                55            0     4143100
+  5573  5582                         0                        56                                  2                      0                      0                       0                   3604100                        0                         0                29            0     2389300
+  5573  5576                        12                        77                                  3                      2                      0                       0                  22959500                        0                         0                43            0    23061900

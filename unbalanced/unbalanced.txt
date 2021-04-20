@@ -1,0 +1,127 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 239  of event 'task-clock'
+# Event count (approx.): 59750000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    92.47%  [kernel.kallsyms]
+     6.69%  libc-2.31.so     
+     0.42%  libgomp.so.1.0.0 
+     0.42%  unbalanced       
+
+
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 132
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    50.00%  libc-2.31.so     
+    46.97%  ld-2.31.so       
+     2.27%  [kernel.kallsyms]
+     0.76%  libgomp.so.1.0.0 
+
+
+# Samples: 209  of event 'context-switches'
+# Event count (approx.): 236
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 272  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 82269400
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 63  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 63
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 485  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 485
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+    94.02%  libc-2.31.so    
+     5.98%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#  PID   TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  6017  6020                         0                        15                                  0                      0                      0                       0                   1980400                        0                         0                 9            0     1049400
+  6017  6018                         0                    672163                                  1                      0                      0                 1334803                   4825400                        0                         0                14            0      498300
+  6017  6022                         0                        25                                  1                 347303                      0                  721606                   1869500                   101400                         0            235010            0     1162100
+  6017  6019                         0                         8                                  0                      0                      0                       0                    547700                        0                         0                 6            0      154100
+  6017  6017                    255301                        48                                108                      5                 160900                  230201                  40392201                   507003                         2            201912     20299301    15747900
+  6017  6024                         0                        11                                  0                      0                      0                       0                   1405900                        0                         0                 3            0     1247500
+  6017  6023                         0                        15                                  0                      0                      0                       0                   1074400                        0                         0                 8            0      621700
+  6017  6025                         0                        84                                  4                      0                      0                       0                   6588600                        0                         0                40            0     3765800
+  6017  6026                         0                        24                                  1                      0                      0                       0                   2200500                        0                         0                11            0     1759300
