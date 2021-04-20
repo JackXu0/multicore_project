@@ -3,6 +3,7 @@
 int main(int argc, char *argv[])
 {
     int num_of_threads = atoi(argv[1]);
+    int size = (argc == 2)? SIZE: atoi(argv[2]);
 
     struct timeval stop, start;
     gettimeofday(&start, NULL);
@@ -10,9 +11,9 @@ int main(int argc, char *argv[])
     printf ("%s \n", "start");
 
     int i;
-    int a[SIZE], b[SIZE];
+    int a[size], b[size];
 
-    for (i = 0; i < SIZE; i++) {
+    for (i = 0; i < size; i++) {
         a[i] = rand();
         // printf("%d\n", a[i]);
     }
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
     #pragma omp parallel num_threads(num_of_threads) private(i)
     {
         int pid = omp_get_thread_num();
-        int batch = SIZE / num_of_threads;
+        int batch = size / num_of_threads;
         int start = pid * batch;
         int end = (pid+1) * batch;
         for(i = start; i < end;) {
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    checkCorrectness(a, b);
+    checkCorrectness(a, b, size);
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
