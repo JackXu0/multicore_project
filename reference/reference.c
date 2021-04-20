@@ -10,26 +10,16 @@ int main(int argc, char *argv[])
     printf ("%s \n", "start");
 
     int i;
-    int a[SIZE], b[SIZE];
+    int a[SIZE]={0}, b[SIZE]={0};
 
     for (i = 0; i < SIZE; i++) {
         a[i] = rand();
         // printf("%d\n", a[i]);
     }
 
-    #pragma omp parallel num_threads(num_of_threads) private(i)
-    {
-        int pid = omp_get_thread_num();
-        int batch = SIZE / num_of_threads;
-        int start = pid * batch;
-        int end = (pid+1) * batch;
-        for(i = start; i < end;) {
-            
-            b[i] = a[i];
-            i++;
-        
-            // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
-        }
+    #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic)
+    for(i = 0; i < SIZE; i++) {
+        b[i] = a[i];
     }
 
     checkCorrectness(a, b);
