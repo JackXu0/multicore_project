@@ -66,13 +66,23 @@ A barrier defines a point in code where all active threads will stop until all t
 }
 ```
 
-### Bottleneck Profiling
+### Performance analyze tools
 
-// TODO
+A range of performance profiling tools exists for parallel programs due to their complexity. Parallel machines not only have many copies of resources, such as CPU, and I/O system, that can cause bottlenecks in sequential programs, but they also include unique bottleneck contributors such as interconnected network and coherence protocols. Adding to the complexity is the diversity of the hardware being used in today's parallel computers. In all, they lead to a variety of different approaches in parallel performance tools. In general, these tools can be divided into three categories: performance matrix, search-based tools, and performance visualization.
+
+Performance Matrix tools collect statistical data about a parallel program. Typical profiled resources include CPU utilization, synchronization time, disk operations, cache performances, etc. gprof [] is a tool to collect timing statistics. Basically, it looks into each of the functions and inserts code at the head and end of each one to collect time information. However, gprof requires recompiling the entire application, which may impose much overhead if the program is large. Strace [] is another profiling tool that focuses on monitoring and tampering with interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state. We use strace to generate syscall dumps per running thread with precise time stamps and duration for each syscall. Valgrind [] is an instrumentation framework for building dynamic analysis tools. It is a great tool for collecting memory and cache-related data.
+
+Search-based tools treat the problem of finding bottlenecks as a search problem. Instead of offering an abundance of statistics. They attempt to identify the problem and provide users with guidance. One example is Performance Consultant [], It uses a hierarchical three-axis search model (the why, where, when of a performance bottleneck). The 'why' bottleneck represents hypotheses about potential bottlenecks in a paralleled program. The 'Where' axis indicates a collection of resource hierarchies, such as CPU, interconnect, and memory, that could cause a bottleneck. The 'when' axis isolates the bottleneck to a specific phase of program execution. We did not find a runnable implementation of Performance Consultant online. Instead, we adopted the idea of the Performance Consultant and emulated the process manually.
+
+Performance visualization displays the consumption of resources in a human-friendly way. One example is PIE [], PIE provides colorful views of parallel computation. It visualizes CPU status at every point of time, and makes it intuitive to know when the CPU is spinning, in use, or blocked.
+
+Perf is a performance profiling tool that provides all three functionalities. It can collect a wide range of statistics, while it also provides an interface to search for bottlenecks using the keyword 'annotate'. Meanwhile, it can generate a call graph that visualizes the resource consumption hierarchy. Moreover, it exploits facilities provided by the Linux kernel to do statistical profiling, which creates a much lower overhead compared with other tools []. 
+
+
 
 ## Proposed Idea
 
-Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the matrix. Matrix helps to find out the reason for the bottlenecks and makes it easier for precise bottleneck locating. 
+Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the matrix. The Matrix provides insights to programmers to help them understand why their progras does not run fast enough.
 
 From all the research we have done, we have listed multiple types of bottleneck that could theoretically have a negative influence on the program.
 
