@@ -1,23 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <omp.h>
-#include <unistd.h>
-#include <sys/time.h>
-
-#define SIZE 1000
-
-int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)a - *(int*)b );
-}
-
-void allocate(int *result, int number_of_threads)
-{
-    for (int i = 0; i < number_of_threads; i++)
-        result[i] = rand() % SIZE;
-
-    qsort(result, number_of_threads, sizeof(int), cmpfunc);
-}
+#include "../general.h"
 
 int main(int argc, char *argv[])
 {
@@ -59,15 +40,13 @@ int main(int argc, char *argv[])
         
         for(i = left; i < right; i++) {
             b[i] = a[i];
-            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+            // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
         }
 
-        printf("Thread %i duplicates %i integers\n", pid, right-left);
+        // printf("Thread %i duplicates %i integers\n", pid, right-left);
     }
 
-    for (i=0; i<SIZE; i++){
-        printf("a[%i]=%i\tb[%i]=%i\n", i, a[i], i, b[i]);
-    }
+    checkCorrectness(a, b);
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
