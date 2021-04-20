@@ -6,19 +6,21 @@ Parallel computing is usually taken as a method of acceleration in order to demi
 
 ## Introduction
 
-Parallel computing is a surging topic in science and engineer for faster application processing. Parallel computing breaks a computational problem into multiple pieces and solves each of them on a separate CPU simultaneously. OpenMP is a simple and flexible API for creating paralleled programs. Paralleled blocks in OpenMP typically start with the keyword "#pragma omp". Inside such blocks, programmers can define tasks to parallelize. Creating an OpenMP program is easy, but the resulting code may not deliver the expected level of performance. Ideally, tasks defined in each OpenMP block will achieve nearly X times speed up with X computation resources (CPUs or cores). However, this is more often not the case. 
+Parallel computing is a surging topic in science and engineer for faster application processing. Parallel computing breaks a computational problem into multiple pieces and solves each of them on a separate CPU simultaneously.
+
+OpenMP is a simple and flexible API for creating paralleled programs. Paralleled blocks in OpenMP typically start with the keyword **#pragma omp**. Inside such blocks, programmers can define tasks to parallelize. Creating an OpenMP program is easy, but the resulting code may not deliver the expected level of performance. Ideally, tasks defined in each OpenMP block will achieve nearly X times speed up with X computation resources (CPUs or cores). However, this is more often not the case.
 
 Lots of factors can negatively affect the performance of a parallel computing task, such as memory conflicts, synchronization overhead, load unbalancing, and limited shared resources. These problems appear on the code as bottlenecks, which refer to lines or blocks of code that constrain the parallel computing task to scale or speed up. Programmers can eliminate many of these bottlenecks if they know where these bottlenecks are. This project aims to find a way to locate potential bottlenecks in parallel programs and helps programmers improve the code.
 
 ## Literature Survey
 
-### Reasons for Bottlenecks 
+### Reasons for Bottlenecks
 
 #### Shared menory and data locality
 
-Memory is a prominent factor that limits the performance of a shared memory program [] and prevents it from scalable speedup. On scalable architecture, the latency and bandwidth of memory access depend on the locality of data access []. To achieve a good speedup of shared memory, data locality is an essential element. Data locality defines how close compute and input data are []. In distributed systems, initial data distribution determines on which node the memory is placed. Data locality at this level can be strengthened by algorithms such as first touch and explicit page placement. 
+Memory is a prominent factor that limits the performance of a shared memory program [] and prevents it from scalable speedup. On scalable architecture, the latency and bandwidth of memory access depend on the locality of data access []. To achieve a good speedup of shared memory, data locality is an essential element. Data locality defines how close compute and input data are []. In distributed systems, initial data distribution determines on which node the memory is placed. Data locality at this level can be strengthened by algorithms such as first touch and explicit page placement.
 
-During execution, data locality is mainly affected by scheduling algorithms and cache friendless. Scheduling algorithms determine which thread access which data. Effective scheduling algorithms such as work stealing [] can achieve good data locality and overall performance. Cache friendliness, on the other way, determines how often the main memory is accessed. In achieving cache friendliness, a high locality of references and low contention is required. The locality of reference is achieved by exploiting the spatial locality and temporal locality, and low cache contention avoids sharing cache lines among different objects. High cache friendliness improves the performance in both serial and parallel loops. Besides cache friendliness, page locality also plays an important role in affecting performance. In applications with full-page locality, pages accessed by a process are on the same node as the process, and no page is accessed by more than one process. Great page locality can bring both low memory latency and high scalability of memory bandwidth. 
+During execution, data locality is mainly affected by scheduling algorithms and cache friendless. Scheduling algorithms determine which thread access which data. Effective scheduling algorithms such as work stealing [] can achieve good data locality and overall performance. Cache friendliness, on the other way, determines how often the main memory is accessed. In achieving cache friendliness, a high locality of references and low contention is required. The locality of reference is achieved by exploiting the spatial locality and temporal locality, and low cache contention avoids sharing cache lines among different objects. High cache friendliness improves the performance in both serial and parallel loops. Besides cache friendliness, page locality also plays an important role in affecting performance. In applications with full-page locality, pages accessed by a process are on the same node as the process, and no page is accessed by more than one process. Great page locality can bring both low memory latency and high scalability of memory bandwidth.
 
 #### Wait and load unbalance
 
@@ -30,9 +32,9 @@ Mutual exclusion makes sure that if one process is using a shared variable or fi
 
 ```c
 #pragma omp parallel{
-		# pragma omp critical{
-		
-		}
+    # pragma omp critical{
+
+    }
 }
 ```
 
@@ -42,27 +44,28 @@ In OpenMP, the ordered construct serializes and orders the execution of the orde
 
 ```c
 #pragma omp parallel
-    {
-        #pragma omp for ordered
-        for (n=0;n<10;n++)
-            #pragma omp ordered
+{
+    #pragma omp for ordered
+    for (n=0;n<10;n++)
+        #pragma omp ordered
+}
 ```
 
 - ##### Barrier and unbalanced loop
 
-A barrier defines a point in code where all active threads will stop until all the threads have arrived at that point. With barrier, certain calculations are guaranteed to finish. A barrier will idle CPU resources if the parallel task is unbalanced. 
+A barrier defines a point in code where all active threads will stop until all the threads have arrived at that point. With barrier, certain calculations are guaranteed to finish. A barrier will idle CPU resources if the parallel task is unbalanced.
 
 ```c
 # pragma omp parallel{
-		# pragma omp for 
-		for(int i=0; i<4; i++){
-				if(i == 0){
-					long_task();
-				}else{
-					short_task();
-				}
-		}
-		# pragma omp barrier
+    # pragma omp for 
+    for(int i=0; i<4; i++) {
+        if(i == 0) {
+            long_task();
+        } else {
+            short_task();
+        }
+    }
+  # pragma omp barrier
 }
 ```
 
@@ -72,7 +75,7 @@ A barrier defines a point in code where all active threads will stop until all t
 
 ## Proposed Idea
 
-Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the matrix. Matrix helps to find out the reason for the bottlenecks and makes it easier for precise bottleneck locating. 
+Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the matrix. Matrix helps to find out the reason for the bottlenecks and makes it easier for precise bottleneck locating.
 
 From all the research we have done, we have listed multiple types of bottleneck that could theoretically have a negative influence on the program.
 
@@ -88,37 +91,43 @@ For each potential bottleneck we construct a example that contains this bottlene
 
 To prove the accuracy of our method, we then construct another program with several parallel section, each presents a different type of bottleneck. Then we analyze this program with our method as an experiment to see if we can correctly get all the bottleneck types presented in this file.
 
+We would also conduct experiments with different hyperparameters like task size and number of threads if applicable, and using the tendency of the speedup to determine what the bottlenecks in the program.
+
 ## Experimental Setup
 
 ### Profiling tools
 
-> - perf is a standard profiling infrastructure on Linux. It supports a huge number of events that could be recorded for measuring the performance of a machien or a task.
+- #### Perf
+
+perf is a standard profiling infrastructure on Linux. It supports a huge number of events that could be recorded for measuring the performance of a machien or a task.
+
+> perf event list:
 >
-> > perf event list:
-> >
-> > - task-clock: time spent on the profiled task
-> >
-> > - context-switches: storing a state of a process.
-> >
-> > - mutex_acquired: number of times threads tried to acquire mutex.
-> >
-> > - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory.
-> >
-> > - sched:sched_stat_wait: time spent in waiting states
-> >
-> > - etc...
-> >
-> > We could use the statistics of some events to determine the type of bottleneck in the provided task.
-> > Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
+> - task-clock: time spent on the profiled task
 >
-> - valgrind
+> - context-switches: storing a state of a process.
 >
-> - gprof
+> - mutex_acquired: number of times threads tried to acquire mutex.
 >
+> - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory.
+>
+> - sched:sched_stat_wait: time spent in waiting states
+>
+> - etc...
+
+We could use the statistics of some events to determine the type of bottleneck in the provided task.
+
+Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
 
 > Perf command:
+>
+> ``` sudo perf record -e task-clock,page-faults,context-switches,sched:sched_stat_blocked,sched:sched_stat_iowait,sched:sched_stat_runtime,sched:sched_stat_sleep,sched:sched_stat_wait,sched:sched_wait_task,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex,writeback:writeback_wait -s ${executable} ${number of threads} && sudo perf report -T --sort=dso > ${report_filename} ```
+>
+> ``` sudo perf stat -e task-clock,page-faults,context-switches,sched:sched_stat_runtime,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex ${executable} ${number of threads} ```
 
-> sudo perf record -e task-clock,page-faults,context-switches,sched:sched_stat_blocked,sched:sched_stat_iowait,sched:sched_stat_runtime,sched:sched_stat_sleep,sched:sched_stat_wait,sched:sched_wait_task,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex,writeback:writeback_wait -s ${executable} ${number of threads} && sudo perf report -T --sort=dso > ${report_filename}
+- #### valgrind
+
+- #### gprof
 
 ## Experiments & Analysis
 
