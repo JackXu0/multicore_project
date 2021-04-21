@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     int i;
 
     #pragma omp parallel for ordered schedule(dynamic) num_threads(num_of_threads) 
-    for(i = 0; i < 20; i++){
+    for(i = 0; i < 4; i++){
         printf ("start %i thread %i \n", i, omp_get_thread_num());
         unsigned int time_to_sleep = 1; // sleep 10 seconds
         while(time_to_sleep)

@@ -14,11 +14,10 @@ int main(int argc, char *argv[])
 
     printf ("%s \n", "start");
     int i = 0;
-
-    #pragma omp parallel num_threads(num_of_threads) private(i) 
+    # pragma omp parallel num_threads(num_of_threads) private(i) 
     {
         printf ("start thread %i \n", omp_get_thread_num());
-        #pragma omp for
+        #pragma omp for nowait
         for (i=0; i<10; i++)
         {
             printf ("start %i \n", i);
@@ -29,13 +28,13 @@ int main(int argc, char *argv[])
             }
             printf ("end %i \n", i);
         }
-        #pragma omp barrier
-        #pragma omp for
+        // #pragma omp barrier
+        #pragma omp for nowait
         for (i=0; i<10; i++)
         {
             printf ("start %i \n", i);
             if(i == 9){
-                unsigned int time_to_sleep = 5; // sleep 10 seconds
+                unsigned int time_to_sleep = 1; // sleep 10 seconds
                 while(time_to_sleep)
                     time_to_sleep = sleep(time_to_sleep);
             }

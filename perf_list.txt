@@ -1,0 +1,249 @@
+  alignment-faults                                   [Software event]
+  bpf-output                                         [Software event]
+  context-switches OR cs                             [Software event]
+  cpu-clock                                          [Software event]
+  cpu-migrations OR migrations                       [Software event]
+  dummy                                              [Software event]
+  emulation-faults                                   [Software event]
+  major-faults                                       [Software event]
+  minor-faults                                       [Software event]
+  page-faults OR faults                              [Software event]
+  task-clock                                         [Software event]
+  duration_time                                      [Tool event]
+  msr/pperf/                                         [Kernel PMU event]
+  msr/smi/                                           [Kernel PMU event]
+  msr/tsc/                                           [Kernel PMU event]
+  rNNN                                               [Raw hardware event descriptor]
+  cpu/t1=v1[,t2=v2,t3 ...]/modifier                  [Raw hardware event descriptor]
+  mem:<addr>[/len][:access]                          [Hardware breakpoint]
+  sdt_libc:lll_lock_wait_private                     [SDT event]
+  sdt_libc:longjmp                                   [SDT event]
+  sdt_libc:longjmp_target                            [SDT event]
+  sdt_libc:memory_arena_new                          [SDT event]
+  sdt_libc:memory_arena_retry                        [SDT event]
+  sdt_libc:memory_arena_reuse                        [SDT event]
+  sdt_libc:memory_arena_reuse_free_list              [SDT event]
+  sdt_libc:memory_arena_reuse_wait                   [SDT event]
+  sdt_libc:memory_calloc_retry                       [SDT event]
+  sdt_libc:memory_heap_free                          [SDT event]
+  sdt_libc:memory_heap_less                          [SDT event]
+  sdt_libc:memory_heap_more                          [SDT event]
+  sdt_libc:memory_heap_new                           [SDT event]
+  sdt_libc:memory_malloc_retry                       [SDT event]
+  sdt_libc:memory_mallopt                            [SDT event]
+  sdt_libc:memory_mallopt_arena_max                  [SDT event]
+  sdt_libc:memory_mallopt_arena_test                 [SDT event]
+  sdt_libc:memory_mallopt_free_dyn_thresholds        [SDT event]
+  sdt_libc:memory_mallopt_mmap_max                   [SDT event]
+  sdt_libc:memory_mallopt_mmap_threshold             [SDT event]
+  sdt_libc:memory_mallopt_mxfast                     [SDT event]
+  sdt_libc:memory_mallopt_perturb                    [SDT event]
+  sdt_libc:memory_mallopt_top_pad                    [SDT event]
+  sdt_libc:memory_mallopt_trim_threshold             [SDT event]
+  sdt_libc:memory_memalign_retry                     [SDT event]
+  sdt_libc:memory_realloc_retry                      [SDT event]
+  sdt_libc:memory_sbrk_less                          [SDT event]
+  sdt_libc:memory_sbrk_more                          [SDT event]
+  sdt_libc:memory_tcache_double_free                 [SDT event]
+  sdt_libc:memory_tunable_tcache_count               [SDT event]
+  sdt_libc:memory_tunable_tcache_max_bytes           [SDT event]
+  sdt_libc:memory_tunable_tcache_unsorted_limit      [SDT event]
+  sdt_libc:setjmp                                    [SDT event]
+  sdt_libpthread:cond_broadcast                      [SDT event]
+  sdt_libpthread:cond_destroy                        [SDT event]
+  sdt_libpthread:cond_init                           [SDT event]
+  sdt_libpthread:cond_signal                         [SDT event]
+  sdt_libpthread:cond_wait                           [SDT event]
+  sdt_libpthread:lll_lock_wait                       [SDT event]
+  sdt_libpthread:lll_lock_wait_private               [SDT event]
+  sdt_libpthread:mutex_acquired                      [SDT event]
+  sdt_libpthread:mutex_clocklock_entry               [SDT event]
+  sdt_libpthread:mutex_destroy                       [SDT event]
+  sdt_libpthread:mutex_entry                         [SDT event]
+  sdt_libpthread:mutex_init                          [SDT event]
+  sdt_libpthread:mutex_release                       [SDT event]
+  sdt_libpthread:mutex_timedlock_acquired            [SDT event]
+  sdt_libpthread:mutex_timedlock_entry               [SDT event]
+  sdt_libpthread:pthread_create                      [SDT event]
+  sdt_libpthread:pthread_join                        [SDT event]
+  sdt_libpthread:pthread_join_ret                    [SDT event]
+  sdt_libpthread:pthread_start                       [SDT event]
+  sdt_libpthread:rdlock_acquire_read                 [SDT event]
+  sdt_libpthread:rdlock_entry                        [SDT event]
+  sdt_libpthread:rwlock_destroy                      [SDT event]
+  sdt_libpthread:rwlock_unlock                       [SDT event]
+  sdt_libpthread:wrlock_acquire_write                [SDT event]
+  sdt_libpthread:wrlock_entry                        [SDT event]
+
+Metric Groups:
+
+BrMispredicts:
+  Branch_Misprediction_Cost
+       [Branch Misprediction Cost: Fraction of TopDown slots wasted per non-speculative branch misprediction (jeclear)]
+  IpMispredict
+       [Number of Instructions per non-speculative Branch Misprediction (JEClear)]
+BrMispredicts_SMT:
+  Branch_Misprediction_Cost_SMT
+       [Branch Misprediction Cost: Fraction of TopDown slots wasted per non-speculative branch misprediction (jeclear)]
+Branches:
+  BpTB
+       [Branch instructions per taken branch]
+  IpB
+       [Instructions per Branch (lower number means higher occurance rate)]
+  IpCall
+       [Instruction per (near) call (lower number means higher occurance rate)]
+  IpTB
+       [Instruction per taken branch]
+Cache_Misses:
+  L1MPKI
+       [L1 cache true misses per kilo instruction for retired demand loads]
+  L2HPKI_All
+       [L2 cache hits per kilo instruction for all request types (including speculative)]
+  L2MPKI
+       [L2 cache true misses per kilo instruction for retired demand loads]
+  L2MPKI_All
+       [L2 cache misses per kilo instruction for all request types (including speculative)]
+  L3MPKI
+       [L3 cache true misses per kilo instruction for retired demand loads]
+DSB:
+  DSB_Coverage
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop Cache)]
+FLOPS:
+  FLOPc
+       [Floating Point Operations Per Cycle]
+  GFLOPs
+       [Giga Floating Point Operations Per Second]
+FLOPS_SMT:
+  FLOPc_SMT
+       [Floating Point Operations Per Cycle]
+Fetch_BW:
+  DSB_Coverage
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop Cache)]
+  IpTB
+       [Instruction per taken branch]
+IcMiss:
+  IFetch_Line_Utilization
+       [Rough Estimation of fraction of fetched lines bytes that were likely (includes speculatively fetches) consumed by program instructions]
+Instruction_Type:
+  IpB
+       [Instructions per Branch (lower number means higher occurance rate)]
+  IpL
+       [Instructions per Load (lower number means higher occurance rate)]
+  IpS
+       [Instructions per Store (lower number means higher occurance rate)]
+Memory_BW:
+  DRAM_BW_Use
+       [Average external Memory Bandwidth Use for reads and writes [GB / sec]]
+  DRAM_Parallel_Reads
+       [Average number of parallel data read requests to external memory. Accounts for demand loads and L1/L2 prefetches]
+  L1D_Cache_Fill_BW
+       [Average data fill bandwidth to the L1 data cache [GB / sec]]
+  L2_Cache_Fill_BW
+       [Average data fill bandwidth to the L2 cache [GB / sec]]
+  L3_Cache_Access_BW
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  L3_Cache_Fill_BW
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  MLP
+       [Memory-Level-Parallelism (average number of L1 miss demand load when there is at least one such miss. Per-Logical Processor)]
+Memory_Bound:
+  Load_Miss_Real_Latency
+       [Actual Average Latency for L1 data-cache miss demand loads (in core cycles)]
+  MLP
+       [Memory-Level-Parallelism (average number of L1 miss demand load when there is at least one such miss. Per-Logical Processor)]
+Memory_Lat:
+  Load_Miss_Real_Latency
+       [Actual Average Latency for L1 data-cache miss demand loads (in core cycles)]
+No_group:
+  IpFarBranch
+       [Instructions per Far Branch ( Far Branches apply upon transition from application to operating system, handling interrupts, exceptions. )]
+PGO:
+  BpTB
+       [Branch instructions per taken branch]
+  IFetch_Line_Utilization
+       [Rough Estimation of fraction of fetched lines bytes that were likely (includes speculatively fetches) consumed by program instructions]
+  IpTB
+       [Instruction per taken branch]
+Pipeline:
+  CPI
+       [Cycles Per Instruction (per Logical Processor)]
+  ILP
+       [Instruction-Level-Parallelism (average number of uops executed when there is at least 1 uop executed)]
+  UPI
+       [Uops Per Instruction]
+Power:
+  C2_Pkg_Residency
+       [C2 residency percent per package]
+  C3_Core_Residency
+       [C3 residency percent per core]
+  C3_Pkg_Residency
+       [C3 residency percent per package]
+  C6_Core_Residency
+       [C6 residency percent per core]
+  C6_Pkg_Residency
+       [C6 residency percent per package]
+  C7_Core_Residency
+       [C7 residency percent per core]
+  C7_Pkg_Residency
+       [C7 residency percent per package]
+  Turbo_Utilization
+       [Average Frequency Utilization relative nominal frequency]
+Retire:
+  UPI
+       [Uops Per Instruction]
+SMT:
+  CORE_CLKS
+       [Core actual clocks when any Logical Processor is active on the Physical Core]
+  CoreIPC
+       [Instructions Per Cycle (per physical core)]
+  CoreIPC_SMT
+       [Instructions Per Cycle (per physical core)]
+  SMT_2T_Utilization
+       [Fraction of cycles where both hardware Logical Processors were active]
+Summary:
+  CLKS
+       [Per-Logical Processor actual clocks when the Logical Processor is active]
+  CPI
+       [Cycles Per Instruction (per Logical Processor)]
+  CPU_Utilization
+       [Average CPU Utilization]
+  GFLOPs
+       [Giga Floating Point Operations Per Second]
+  Instructions
+       [Total number of retired Instructions]
+  Kernel_Utilization
+       [Fraction of cycles spent in Kernel mode]
+  SMT_2T_Utilization
+       [Fraction of cycles where both hardware Logical Processors were active]
+TLB:
+  Page_Walks_Utilization
+       [Utilization of the core's Page Walker(s) serving STLB misses triggered by instruction/Load/Store accesses]
+TLB_SMT:
+  Page_Walks_Utilization_SMT
+       [Utilization of the core's Page Walker(s) serving STLB misses triggered by instruction/Load/Store accesses]
+TopDownL1:
+  IPC
+       [Instructions Per Cycle (per Logical Processor)]
+  SLOTS
+       [Total issue-pipeline slots (per-Physical Core)]
+TopDownL1_SMT:
+  SLOTS_SMT
+       [Total issue-pipeline slots (per-Physical Core)]
+TopdownL1:
+  Backend_Bound
+       [This category represents fraction of slots where no uops are being delivered due to a lack of required resources for accepting new uops in the Backend]
+  Bad_Speculation
+       [This category represents fraction of slots wasted due to incorrect speculations]
+  Frontend_Bound
+       [This category represents fraction of slots where the processor's Frontend undersupplies its Backend]
+  Retiring
+       [This category represents fraction of slots utilized by useful work i.e. issued uops that eventually get retired]
+TopdownL1_SMT:
+  Backend_Bound_SMT
+       [This category represents fraction of slots where no uops are being delivered due to a lack of required resources for accepting new uops in the Backend. SMT version; use when SMT is enabled and measuring per logical CPU]
+  Bad_Speculation_SMT
+       [This category represents fraction of slots wasted due to incorrect speculations. SMT version; use when SMT is enabled and measuring per logical CPU]
+  Frontend_Bound_SMT
+       [This category represents fraction of slots where the processor's Frontend undersupplies its Backend. SMT version; use when SMT is enabled and measuring per logical CPU]
+  Retiring_SMT
+       [This category represents fraction of slots utilized by useful work i.e. issued uops that eventually get retired. SMT version; use when SMT is enabled and measuring per logical CPU]

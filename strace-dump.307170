@@ -1,0 +1,38 @@
+17:17:23.825291 set_robust_list(0x7f4fc5e429e0, 24) = 0 <0.000061>
+17:17:23.826762 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000950>
+17:17:23.827773 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.001749>
+17:17:23.829624 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.001215>
+17:17:23.830915 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000401>
+17:17:23.831928 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000071>
+17:17:23.834183 write(1, "start thread 1 \n", 16) = 16 <0.000063>
+17:17:23.835182 futex(0x7f4fc605c4c0, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000068>
+17:17:23.835342 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.001498>
+17:17:23.836945 write(1, "start 3 \n", 9) = 9 <0.000085>
+17:17:23.837300 futex(0x7f4fc605c4c0, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000102>
+17:17:23.837484 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000060>
+17:17:23.837827 write(1, "end 3 \n", 7) = 7 <0.000031>
+17:17:23.837923 futex(0x7f4fc605c4c0, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000241>
+17:17:23.838262 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.001090>
+17:17:23.839410 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.002104>
+17:17:23.841584 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000389>
+17:17:23.842046 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000422>
+17:17:23.842536 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000372>
+17:17:23.842974 futex(0x7f4fc605c4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000659>
+17:17:23.843763 write(1, "start 4 \n", 9) = 9 <0.000153>
+17:17:23.844499 futex(0x7f4fc605c4c0, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000099>
+17:17:23.844747 write(1, "end 4 \n", 7) = 7 <0.000183>
+17:17:23.845268 write(1, "start 5 \n", 9) = 9 <0.000066>
+17:17:23.845624 write(1, "end 5 \n", 7) = 7 <0.000117>
+17:17:23.846018 write(1, "start 3 \n", 9) = 9 <0.000059>
+17:17:23.846350 write(1, "end 3 \n", 7) = 7 <0.000093>
+17:17:23.846696 write(1, "start 4 \n", 9) = 9 <0.000106>
+17:17:23.847095 write(1, "end 4 \n", 7) = 7 <0.000077>
+17:17:23.847438 write(1, "start 5 \n", 9) = 9 <0.000055>
+17:17:23.847748 write(1, "end 5 \n", 7) = 7 <0.000063>
+17:17:23.848083 write(1, "end thread 1 \n", 14) = 14 <0.000180>
+17:17:23.853110 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+17:17:23.853224 rt_sigreturn({mask=[]}) = 104868 <0.000073>
+17:17:23.856399 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+17:17:23.856679 rt_sigreturn({mask=[]}) = 169415 <0.000061>
+17:17:23.862520 futex(0x555baaa8e184, FUTEX_WAIT_PRIVATE, 0, NULL) = 0 <5.036864>
+17:17:28.901659 +++ killed by SIGPROF +++
