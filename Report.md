@@ -10,9 +10,11 @@ Parallel computing is a surging topic in science and engineer for faster applica
 
 OpenMP is a simple and flexible API for creating paralleled programs. Paralleled blocks in OpenMP typically start with the keyword **#pragma omp**. Inside such blocks, programmers can define tasks to parallelize. Creating an OpenMP program is easy, but the resulting code may not deliver the expected level of performance. Ideally, tasks defined in each OpenMP block will achieve nearly X times speed up with X computation resources (CPUs or cores). However, this is more often not the case.
 
-Lots of factors can negatively affect the performance of a parallel computing task, such as memory conflicts, synchronization overhead, load unbalancing, and limited shared resources. These problems appear on the code as bottlenecks, which refer to lines or blocks of code that constrain the parallel computing task to scale or speed up. Programmers can eliminate many of these bottlenecks if they know where these bottlenecks are. This project aims to find a way to locate potential bottlenecks in parallel programs and helps programmers improve the code.
+Lots of factors can negatively affect the performance of a parallel computing task, such as memory conflicts, synchronization overhead, load unbalancing, and limited shared resources. These problems appear on the code as bottlenecks, which refer to lines or blocks of code that constrain the parallel computing task to scale or speed up. Bottlenecks could cause the parallel program to not fully utilize the hardware resources, thus the overhead of thread management and synchronization could undermine the potential speedup or could even make the program run slower than its serial counterpart. Programmers can eliminate many of these bottlenecks and improve the efficiency of the program if they know where these bottlenecks might be.
 
-## Literature Survey
+This project aims to find a way to detect and locate potential bottlenecks in parallel programs and helps programmers improve the code. We mainly use several profiling tools to get the statistics of several events during the program's execution and use the data to determine what types of bottleneck might exist in the code. And then we would try to determine the location of the bottleneck by mapping the statistics to the source code to see which part of the code that takes up the most time.
+
+## Literature Review
 
 ### Reasons for Bottlenecks
 
