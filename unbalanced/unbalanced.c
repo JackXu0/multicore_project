@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         int pid = omp_get_thread_num();
         for(int i = left[pid]; i < right[pid]; i++) {
             b[i] = a[i];
-            // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
         }
 
         // printf("Thread %i duplicates %i integers\n", pid, right-left);

@@ -31,11 +31,13 @@ int main(int argc, char *argv[])
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel default(none) private(i) shared(a, b, size, nThreads)
+    #pragma omp parallel default(none) private(i) shared(a, b, size)
     {
         #pragma omp for
-        for (i = 0; i < size; i++)
+        for (i = 0; i < size; i++) {
             b[i] = a[i];
+            printf ("set %ith number in b which is %i\n", i, a[i]);
+        }
     }
 
     gettimeofday(&stop, NULL);

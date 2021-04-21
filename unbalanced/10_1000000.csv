@@ -1,8 +1,8 @@
-# started on Tue Apr 20 16:21:30 2021
+# started on Wed Apr 21 16:26:59 2021
 
-20.45,msec,task-clock,5.73%,20450460,100.00,1.226,CPUs utilized
-2054,,page-faults,0.03%,20450460,100.00,102700.000,M/sec
-29,,context-switches,0.86%,20450460,100.00,1430.000,M/sec
-18303640,,sched:sched_stat_runtime,8.24%,20450460,100.00,915182000.000,M/sec
-0,,sched:sched_wake_idle_without_ipi,0.00%,20450460,100.00,0.000,K/sec
-29,,syscalls:sys_enter_futex,0.00%,20450460,100.00,1450.000,M/sec
+21.98,msec,task-clock,14.40%,21982240,100.00,1.176,CPUs utilized
+102,,page-faults,0.37%,21982240,100.00,4731.481,M/sec
+412,,context-switches,17.30%,21982240,100.00,19064.815,M/sec
+33321740,,sched:sched_stat_runtime,13.53%,21982240,100.00,1542673148.148,M/sec
+4,,sched:sched_wake_idle_without_ipi,13.69%,21982240,100.00,185.185,M/sec
+829,,syscalls:sys_enter_futex,16.96%,21982240,100.00,38398.148,M/sec
