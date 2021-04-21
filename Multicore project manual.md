@@ -26,6 +26,12 @@ sudo apt-get install strace
 sudo apt-get install valgrind
 ```
 
+#### Switch on kernel flag for sharing scheduler statistics
+
+```bash
+sudo sysctl kernel.sched_schedstats=1
+```
+
 ## Locate Bottlenecks
 
 ```bash
@@ -89,15 +95,26 @@ paste -s -d+ futex.dump | bc
 
 ##### Perf
 
+We use perf to get all the statistics of events listed in our report. And user could modify the command according to their need.
 
+```bash
+sudo perf record -e task-clock,page-faults,context-switches,sched:sched_stat_blocked,sched:sched_stat_iowait,sched:sched_stat_runtime,sched:sched_stat_sleep,sched:sched_stat_wait,sched:sched_wait_task,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex,writeback:writeback_wait -s -g ./example ${number of threads} ${task data size} && sudo perf report -T --sort=dso > ${report_filename}
+
+sudo perf stat -e task-clock,page-faults,context-switches,sched:sched_stat_runtime,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex -r ${number of iteration} -x ${separator} -o ${output filename} ./example ${number of threads} ${task data size}
+```
+
+These two commands would give us the data we need for our analysis. Perf also provides an **annotate** tool that could map the statistics to the source code. To use this tool, first we need to add a flag **-ggdb** that would give us information for debugging. And after running the **record** command, **annotate** would use the generated data file to map to each code lines. But this tool only support a small number of events, such as task-clock. To use this tool simply type in the command
+
+```bash
+sudo perf annotate -d example
+```
 
 ##### Valgrind
 
+We use valgrind to get the information of cache and memory references and misses during the excution of the code. We only use the tool **cachegrind** though valgrind also provides a lot of tools for error detection and memory leaks detection.
 
+```bash
+sudo valgrind --tool=cachegrind ./example ${number of threads} ${task data size}
+```
 
-
-
-
-
-
-
+By all the data and information we have gathered from the above, with our analysis method presented in the report. We would get the basic idea of the bottlenecks in the given program.
