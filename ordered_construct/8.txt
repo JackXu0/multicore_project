@@ -1,0 +1,122 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock'
+# Event count (approx.): 496500000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    54.78%  libgomp.so.1.0.0 
+    43.81%  ordered_construct
+     1.26%  [kernel.kallsyms]
+     0.15%  libc-2.31.so     
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 580
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    86.03%  ordered_construct
+    13.62%  ld-2.31.so       
+     0.34%  [kernel.kallsyms]
+
+
+# Samples: 12  of event 'context-switches'
+# Event count (approx.): 12
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 76  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 505115700
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 3  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 3
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+   100.00%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  28148  28149                         0                         1                                  0                      0                      0                       0                  65877000                        0                         0                 1            0    66161400
+  28148  28153                         0                         0                                  0                      0                      0                       0                  63066000                        0                         0                 0            0    63382600
+  28148  28150                         0                         0                                  0                      0                      0                       0                  65087500                        0                         0                 2            0    65387800
+  28148  28154                         0                         0                                  0                      0                      0                       0                  62429000                        0                         0                 1            0    62711800
+  28148  28152                         0                         0                                  0                      0                      0                       0                  63723900                        0                         0                 2            0    63993400
+  28148  28151                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  28148  28155                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0

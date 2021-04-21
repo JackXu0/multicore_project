@@ -1,0 +1,123 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock'
+# Event count (approx.): 330750000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    74.53%  reference        
+    23.28%  libgomp.so.1.0.0 
+     1.81%  [kernel.kallsyms]
+     0.30%  libc-2.31.so     
+     0.08%  ld-2.31.so       
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 998
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    86.47%  reference        
+    13.33%  ld-2.31.so       
+     0.20%  [kernel.kallsyms]
+
+
+# Samples: 5  of event 'context-switches'
+# Event count (approx.): 5
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 50  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 341610800
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 3  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 3
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+   100.00%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  28870  28872                         0                         0                                  0                      0                      0                       0                  43307700                        0                         0                 1            0    44842400
+  28870  28874                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  28870  28871                         0                         2                                  0                      0                      0                       0                  44084400                        0                         0                 0            0           0
+  28870  28875                         0                         0                                  0                      0                      0                       0                  41400700                        0                         0                 0            0    42900800
+  28870  28876                         0                         0                                  0                      0                      0                       0                  40691400                        0                         0                 0            0    42200600
+  28870  28873                         0                         0                                  0                      0                      0                       0                  42697900                        0                         0                 2            0    44232500
+  28870  28877                         0                         1                                  0                      0                      0                       0                  39810700                        0                         0                 0            0    42645100

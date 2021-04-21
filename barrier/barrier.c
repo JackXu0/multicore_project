@@ -34,12 +34,11 @@ int main(int argc, char *argv[])
         for(int i = left[pid], count = 0; i < right[pid]; i++, count++) {
             
             b[i] = a[i];
+            fibo(i % 1000);
             if(count < batch) {
-                printf("thread %i has reached the barrier\n", pid);
+                // printf("thread %i has reached the barrier\n", pid);
                 # pragma omp barrier
             }
-        
-            // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
             
         }
     }

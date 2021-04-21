@@ -36,8 +36,9 @@ int main(int argc, char *argv[])
             {
                 // printf("thread %i has entered the critical region\n", pid);
                 b[i] = a[i];
+                fibo(i % 1000);
                 i++;
-                printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+                // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
             }
         }
     }

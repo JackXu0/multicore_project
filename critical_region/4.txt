@@ -1,0 +1,118 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'task-clock'
+# Event count (approx.): 524500000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    72.02%  libgomp.so.1.0.0 
+    27.07%  critical_region  
+     0.81%  [kernel.kallsyms]
+     0.10%  libc-2.31.so     
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 381
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    82.68%  libc-2.31.so     
+    16.54%  ld-2.31.so       
+     0.79%  [kernel.kallsyms]
+
+
+# Samples: 3  of event 'context-switches'
+# Event count (approx.): 3
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 59  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 513572600
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 4  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 4
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+   100.00%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  27638  27640                         0                         1                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  27638  27639                         0                         1                                  0                      0                      0                       0                 142453900                        0                         0                 1            0           0
+  27638  27641                         0                         1                                  0                      0                      0                       0                 141107000                        0                         0                 0            0   146664100

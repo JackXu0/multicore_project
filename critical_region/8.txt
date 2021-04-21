@@ -1,0 +1,122 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 4K of event 'task-clock'
+# Event count (approx.): 1193250000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    85.31%  libgomp.so.1.0.0 
+    13.85%  critical_region  
+     0.78%  [kernel.kallsyms]
+     0.06%  libc-2.31.so     
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 449
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    83.07%  critical_region  
+    16.26%  ld-2.31.so       
+     0.67%  [kernel.kallsyms]
+
+
+# Samples: 24  of event 'context-switches'
+# Event count (approx.): 24
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 150  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 1182666900
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 8  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 8
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+   100.00%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  27676  27678                         0                         1                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  27676  27679                         0                         0                                  0                      0                      0                       0                 170663000                        0                         0                 2            0   183695200
+  27676  27682                         0                         1                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  27676  27681                         0                         1                                  0                      0                      0                       0                 113271900                        0                         0                 5            0   113871900
+  27676  27680                         0                         1                                  0                      0                      0                       0                 131811100                        0                         0                 4            0   132339800
+  27676  27677                         0                         1                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  27676  27683                         0                         2                                  0                      0                      0                       0                  26553600                        0                         0                 1            0    26553800

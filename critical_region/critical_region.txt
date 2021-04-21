@@ -3,33 +3,34 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 373  of event 'task-clock'
-# Event count (approx.): 93250000
-#
-# Overhead  Shared Object    
-# ........  .................
-#
-    82.84%  libgomp.so.1.0.0 
-    14.48%  [kernel.kallsyms]
-     1.61%  critical_region  
-     0.80%  libc-2.31.so     
-     0.27%  ld-2.31.so       
-
-
-# Samples: 8  of event 'page-faults'
-# Event count (approx.): 572
+# Samples: 8K of event 'task-clock'
+# Event count (approx.): 2237000000
 #
 # Overhead  Shared Object     
 # ........  ..................
 #
-    50.52%  libpthread-2.31.so
-    39.86%  libc-2.31.so      
-     9.09%  ld-2.31.so        
-     0.52%  [kernel.kallsyms] 
+    68.08%  [kernel.kallsyms] 
+    26.27%  libgomp.so.1.0.0  
+     4.74%  libc-2.31.so      
+     0.69%  critical_region   
+     0.20%  libpthread-2.31.so
+     0.01%  ld-2.31.so        
 
 
-# Samples: 76  of event 'context-switches'
-# Event count (approx.): 88
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 689
+#
+# Overhead  Shared Object     
+# ........  ..................
+#
+    58.93%  libpthread-2.31.so
+    34.83%  libc-2.31.so      
+     5.81%  ld-2.31.so        
+     0.44%  [kernel.kallsyms] 
+
+
+# Samples: 6K of event 'context-switches'
+# Event count (approx.): 64848
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -53,8 +54,8 @@
 #
 
 
-# Samples: 120  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 105831900
+# Samples: 40K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 2983747600
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -86,8 +87,8 @@
 #
 
 
-# Samples: 1  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 1
+# Samples: 3K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 3590
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -95,8 +96,8 @@
    100.00%  [kernel.kallsyms]
 
 
-# Samples: 480  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 480
+# Samples: 113K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 113610
 #
 # Overhead  Shared Object   
 # ........  ................
@@ -116,12 +117,14 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  17298  17299                         0                        46                                  1                      0                      0                       0                     56700                        0                         0                 1            0      267100
-  17298  17303                         0                        37                                  0                      0                      0                       0                   8406900                        0                         0                 7            0     8400400
-  17298  17302                         0                        54                                  0                      0                      0                       0                   6532400                        0                         0                 6            0      251200
-  17298  17300                         0                        53                                  0                      0                      0                       0                  12882900                        0                         0                11            0    11466700
-  17298  17298                       297                        57                                  0                      0               11150101                       0                  10146900                        0                  10887200                 1            0     5699100
-  17298  17307                         0                        26                                  0                      0                      0                       0                  10670200                        0                         0                 2            0     8733800
-  17298  17305                         0                        36                                  0                      0                      0                       0                   2824500                        0                         0                 6            0     3171700
-  17298  17304                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0       29100
-  17298  17306                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  24835  24837                   3619476                   3552021                            2424112                3916841                4932012                 4386521                 188013717                  6305425                   1209413           1444062      1100366   142304973
+  24835  24839                   3537885                   3537818                            2031677                2967237                4522417                 8361947                 172133936                  4823334                   1261104           4651041      2100770   128295014
+  24835  24841                   1461438                   2892373                            4307616                3722831                4050839                 7863436                 194101216                  4734925                   2473440           3740453       614018   150083186
+  24835  24838                   2785284                   2131573                             571682                2510100                1970116                 2421810                 177256701                  2697809                    955392            579928        91300   134451391
+  24835  24840                   1633922                   3352615                            3670432                2558925                3229425                 5527332                 193535619                  3564326                   2107062           2508293      1315761   149403869
+  24835  24843                   4097824                   2107149                            2345735                2147321                7455434                 4178926                 180927340                  3602917                   2553723           1493015      2407559   138565663
+  24835  24842                    896413                   9012580                            2104444                2797744               17773166                14016003                 197438015                  7295057                  12405826           4630861      1670399   150651618
+  24835  24846                   1784427                   3306419                            2839713                2224024                3701621                 3832117                 213220031                  4445134                   1363459           1014459      3458092   134305867
+  24835  24836                   1354317                      6574                                255                     44                1212918                 2318223                 185494630                  2510400                    790368            910917      2485170   114625877
+  24835  24844                         5                      6435                                224                     32                 330224                 1013120                 174461523                  1832026                   2557319           1593588      1615363   108470788
+  24835  24845                         0                      6541                                195                      0                1583200                 3269500                 169454100                  2598600                   1285400           2873212      2592504   133832132

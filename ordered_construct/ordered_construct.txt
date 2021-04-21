@@ -3,32 +3,33 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 14K of event 'task-clock'
-# Event count (approx.): 3721250000
+# Samples: 28K of event 'task-clock'
+# Event count (approx.): 7110250000
+#
+# Overhead  Shared Object     
+# ........  ..................
+#
+    85.76%  [kernel.kallsyms] 
+    10.00%  libgomp.so.1.0.0  
+     3.44%  libc-2.31.so      
+     0.56%  ordered_construct 
+     0.25%  libpthread-2.31.so
+
+
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 354
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    79.47%  [kernel.kallsyms]
-    19.62%  libgomp.so.1.0.0 
-     0.87%  ordered_construct
-     0.03%  libc-2.31.so     
+    82.49%  libdl-2.31.so    
+    16.10%  ld-2.31.so       
+     0.85%  [kernel.kallsyms]
+     0.56%  libc-2.31.so     
 
 
-# Samples: 11  of event 'page-faults'
-# Event count (approx.): 306
-#
-# Overhead  Shared Object    
-# ........  .................
-#
-    70.59%  ordered_construct
-    27.45%  ld-2.31.so       
-     1.63%  [kernel.kallsyms]
-     0.33%  libc-2.31.so     
-
-
-# Samples: 40K of event 'context-switches'
-# Event count (approx.): 153549
+# Samples: 26K of event 'context-switches'
+# Event count (approx.): 267156
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,8 +53,8 @@
 #
 
 
-# Samples: 100K of event 'sched:sched_stat_runtime'
-# Event count (approx.): 6740638900
+# Samples: 135K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 10621222700
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -85,8 +86,8 @@
 #
 
 
-# Samples: 1K of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 1145
+# Samples: 8K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 8237
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -94,13 +95,14 @@
    100.00%  [kernel.kallsyms]
 
 
-# Samples: 199K of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 199926
+# Samples: 269K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 269161
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-   100.00%  libgomp.so.1.0.0
+    74.10%  libgomp.so.1.0.0
+    25.90%  libc-2.31.so    
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -115,12 +117,14 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  17467  17469                         0                     19856                                119                      0                      0                       0                 513677600                        0                         0              7743            0   288936700
-  17467  17472                         0                     19985                                108                      0                      0                       0                 498220100                        0                         0              7365            0   277254700
-  17467  17470                       108                  14023865                                 99                   1254                     54                 7802483                 421196000                  7484705                   2285900           7021120            0   255914915
-  17467  17471                         0                     17709                                155                      0                      0                       0                 325869000                        0                         0              7548            0   277862800
-  17467  17468                         0                     19133                                126                      0                      0                       0                 463385800                        0                         0              6851            0   258252700
-  17467  17467                  24167204                  18461271                                289                   1844               23720200                10556501                 347791400                 14307605                         7          12238251      3115825   227823863
-  17467  17476                         0                     12972                                 43                      0                      0                       0                 429977000                        0                         0              6481            0   241507600
-  17467  17474                         0                     14117                                 56                      0                      0                       0                 476031000                        0                         0              7057            0   265429900
-  17467  17475                         0                     12760                                 99                      0                      0                       0                 424163800                        0                         0              6378            0   237163200
+  25150  25153                   8749230                  11590377                            7458778                9555697               15114108                20985809                 727512304                 19127008                   6346711           8730257      4215584   413131752
+  25150  25158                   8313831                  17264527                            6659577               14018997               15093406                26694613                 728292205                 25540213                   6484714           9691023      3433957   416525762
+  25150  25152                   7585574                  15751377                            3338567                9893720               13238489                25491014                 733593403                 15024512                   5415501           9772434           86   426540143
+  25150  25154                   4469638                  10315228                            9159689               12492946                7449306                 9292611                 628251412                 11700212                       116              7950          227   335577823
+  25150  25151                   3897254                   7480297                            5826215                7192731                6804902                11638705                 758766101                 10351206                   2525807           4378203      2685848   432712593
+  25150  25150                   5844595                   9503036                            4210729                9866056               22225007                19361508                 629520404                 17351110                  14889061           8762765      3517808   428239448
+  25150  25159                   9665667                  14036499                            5284538                8246789                6537003                 9386208                 535334704                  5730804                   4637645           5827832      7041637   368185120
+  25150  25160                  14046606                  14858702                            3538143                    320                9272314                10584914                 491453205                 13768615                   5865133           8806981      5635890   344216494
+  25150  25156                       187                     11729                                464                    215                7740309                10033915                 322271300                  9846200                       275              1500          132   137994450
+  25150  25155                       220                     12114                                561                    259                6010401                 4140700                 338827700                  5261600                       225              2637          176   136415978
+  25150  25161                         0                      5254                                160                      0                      0                       0                 208837800                        0                       150              2894          132   140713528

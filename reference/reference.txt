@@ -3,32 +3,32 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 116  of event 'task-clock'
-# Event count (approx.): 29000000
+# Samples: 11K of event 'task-clock'
+# Event count (approx.): 2936250000
+#
+# Overhead  Shared Object     
+# ........  ..................
+#
+    93.90%  [kernel.kallsyms] 
+     5.61%  libc-2.31.so      
+     0.34%  reference         
+     0.14%  libpthread-2.31.so
+     0.01%  ld-2.31.so        
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 376
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    47.41%  libgomp.so.1.0.0 
-    43.97%  [kernel.kallsyms]
-     4.31%  reference        
-     3.45%  libc-2.31.so     
-     0.86%  ld-2.31.so       
+    81.65%  libc-2.31.so     
+    17.55%  ld-2.31.so       
+     0.80%  [kernel.kallsyms]
 
 
-# Samples: 9  of event 'page-faults'
-# Event count (approx.): 372
-#
-# Overhead  Shared Object    
-# ........  .................
-#
-    70.70%  reference        
-    28.49%  ld-2.31.so       
-     0.81%  [kernel.kallsyms]
-
-
-# Samples: 28  of event 'context-switches'
-# Event count (approx.): 29
+# Samples: 9K of event 'context-switches'
+# Event count (approx.): 152083
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -52,8 +52,8 @@
 #
 
 
-# Samples: 49  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 31525500
+# Samples: 58K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 4371136100
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -85,21 +85,23 @@
 #
 
 
-# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 0
+# Samples: 6K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 6895
 #
-# Overhead  Shared Object
-# ........  .............
+# Overhead  Shared Object    
+# ........  .................
 #
+   100.00%  [kernel.kallsyms]
 
 
-# Samples: 29  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 29
+# Samples: 117K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 117741
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-   100.00%  libgomp.so.1.0.0
+    99.96%  libc-2.31.so    
+     0.04%  libgomp.so.1.0.0
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -114,12 +116,14 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  16981  16985                         0                         3                                  0                      0                      0                       0                   2426300                        0                         0                 3            0     3120200
-  16981  16987                         0                         3                                  0                      0                      0                       0                   2349300                        0                         0                 3            0     2799100
-  16981  16988                         0                         3                                  0                      0                      0                       0                    308000                        0                         0                 2            0      293500
-  16981  16984                         0                         3                                  0                      0                      0                       0                   2320400                        0                         0                 3            0     3066900
-  16981  16981                         0                         1                           12176101                      0                      0                       0                  13752100                        0                         0                 1          297     1437900
-  16981  16982                         0                         3                                  0                      0                      0                       0                   2504400                        0                         0                 3            0     3606100
-  16981  16990                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  16981  16989                         0                         3                                  0                      0                      0                       0                    234900                        0                         0                 3            0       89600
-  16981  16986                         0                         3                                  0                      0                      0                       0                   2378800                        0                         0                 4            0     4406000
+  25694  25696                   4034753                   2385743                             889319                7631487                4142718                 1655338                 236155726                  5296262                    309900            716044       578626   150901182
+  25694  25698                    421240                   6908708                            5853328                6685670                4947147                 4347160                 244803031                  5150241                   3685413           3723069       849174   167749977
+  25694  25699                   5971463                   6271666                            1239184                3962869                8007654                 3754068                 251690632                  2215551                   2164442           6833890      1130853   151449514
+  25694  25697                   1816898                   2494760                            3948449                1028121                8080542                 8188545                 261237317                   439155                   6015350           5159598       259894   170301529
+  25694  25695                    762033                    413724                             505181                1180926                 540608                  240303                 300272423                   593107                    310526            153908       819713   180914644
+  25694  25701                   5740331                   9270505                            8583303                8752784                6333645                19637757                 295125575                  6675795                   1186600           8163983      3454615   148180631
+  25694  25700                   2116315                   9903252                            3589178                7020491                3724847                11343370                 284757254                 18682400                   1249463           2293602      3496601   157935279
+  25694  25694                  14322948                   9201378                            5514605                7979707               15922058                 6405219                 224062168                  5686523                   1571907           4203393      2366346   153357621
+  25694  25702                        38                      5531                                321                     16                4217919                  788118                 205749004                   904429                    334718           1200078        90846   137362438
+  25694  25703                        13                      4932                                591                     37                 351607                  188507                 192583403                  2325312                    218519            118874        90352   131903488
+  25694  25705                        31                      7147                                411                     62                1624339                 2797150                 258811951                  1661253                   1218766           2108616      3149719   177665003

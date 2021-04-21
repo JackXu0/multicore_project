@@ -31,7 +31,8 @@ int main(int argc, char *argv[])
     #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic) ordered
     for(int i = 0; i < size; i++) {
         b[i] = a[i];
-        printf ("thread %i set %ith number in b which is %i\n", omp_get_thread_num(), i, a[i]);
+        fibo(i % 1000);
+        // printf ("thread %i set %ith number in b which is %i\n", omp_get_thread_num(), i, a[i]);
     }
     
     gettimeofday(&stop, NULL);

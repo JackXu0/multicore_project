@@ -24,3 +24,16 @@ void checkCorrectness(int *a, int *b, int size) {
     for (int i=0; i<size; i++)
         assert(a[i] == b[i]);
 }
+
+void fibo(int n) {
+    int t1 = 0, t2 = 1;
+    int nextTerm;
+
+    for (int i = 1; i <= n; ++i) {
+        // printf("%d, ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+    }
+
+}

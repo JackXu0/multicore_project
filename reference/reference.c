@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
         #pragma omp for
         for (i = 0; i < size; i++) {
             b[i] = a[i];
-            printf ("set %ith number in b which is %i\n", i, a[i]);
+            fibo(i % 1000);
+            // printf ("set %ith number in b which is %i\n", i, a[i]);
         }
     }
 

@@ -3,31 +3,33 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 65  of event 'task-clock'
-# Event count (approx.): 16250000
+# Samples: 11K of event 'task-clock'
+# Event count (approx.): 2805000000
+#
+# Overhead  Shared Object     
+# ........  ..................
+#
+    93.49%  [kernel.kallsyms] 
+     6.01%  libc-2.31.so      
+     0.29%  unbalanced        
+     0.18%  libpthread-2.31.so
+     0.03%  libgomp.so.1.0.0  
+     0.01%  ld-2.31.so        
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 942
 #
 # Overhead  Shared Object    
 # ........  .................
 #
-    87.69%  [kernel.kallsyms]
-     6.15%  libc-2.31.so     
-     4.62%  unbalanced       
-     1.54%  ld-2.31.so       
+    87.15%  unbalanced       
+    12.63%  ld-2.31.so       
+     0.21%  [kernel.kallsyms]
 
 
-# Samples: 8  of event 'page-faults'
-# Event count (approx.): 302
-#
-# Overhead  Shared Object    
-# ........  .................
-#
-    59.27%  unbalanced       
-    39.74%  ld-2.31.so       
-     0.99%  [kernel.kallsyms]
-
-
-# Samples: 27  of event 'context-switches'
-# Event count (approx.): 27
+# Samples: 8K of event 'context-switches'
+# Event count (approx.): 68085
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -51,8 +53,8 @@
 #
 
 
-# Samples: 39  of event 'sched:sched_stat_runtime'
-# Event count (approx.): 18859400
+# Samples: 54K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 4172917800
 #
 # Overhead  Shared Object    
 # ........  .................
@@ -84,21 +86,23 @@
 #
 
 
-# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
-# Event count (approx.): 0
+# Samples: 8K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 8958
 #
-# Overhead  Shared Object
-# ........  .............
+# Overhead  Shared Object    
+# ........  .................
 #
+   100.00%  [kernel.kallsyms]
 
 
-# Samples: 29  of event 'syscalls:sys_enter_futex'
-# Event count (approx.): 29
+# Samples: 111K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 111062
 #
 # Overhead  Shared Object   
 # ........  ................
 #
-   100.00%  libgomp.so.1.0.0
+    99.97%  libc-2.31.so    
+     0.03%  libgomp.so.1.0.0
 
 
 # Samples: 0  of event 'writeback:writeback_wait'
@@ -113,12 +117,14 @@
 # (Cannot load tips.txt file, please install perf!)
 #
 #   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
-  17625  17629                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  17625  17630                         0                         3                                  0                      0                      0                       0                    436500                        0                         0                 3            0      186000
-  17625  17627                         0                         3                                  0                      0                      0                       0                    293300                        0                         0                 3            0      211800
-  17625  17628                         0                         3                                  0                      0                      0                       0                         0                        0                         0                 2            0      255400
-  17625  17631                         0                         2                                  0                      0                      0                       0                    181400                        0                         0                 2            0       68300
-  17625  17632                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
-  17625  17633                         0                         3                                  0                      0                      0                       0                    400700                        0                         0                 3            0      110200
-  17625  17634                         0                         3                                  0                      0                      0                       0                    509500                        0                         0                 2            0      332100
-  17625  17626                         0                         1                                  0                      0                      0                       0                     93600                        0                         0                 1            0       41600
+  25430  25431                    260111                    317656                             319812                 759311                 474008                  741909                  93751101                   908507                    103606            344045         9523    56321823
+  25430  25433                   3391979                   1088624                            2097955                3999531                5482515                 2245726                 147360411                  3956411                   2263175            793516       377264    99825622
+  25430  25434                     12502                    525577                               2827                 485507                  47500                  555604                 576665000                   652007                         2           1402420            0   216805712
+  25430  25430                   1982933                   1043713                           10484053                 766313                1128401                 1792819                 238395601                   596804                     21654            561077        14416   150408525
+  25430  25435                    461704                   1071126                            2737304                3655024                 497502                 1432107                 259905704                  3307705                    119011            440882       342645   174488185
+  25430  25436                         0                    607730                             536520                  60001                1587706                 1289907                 498358503                  1094509                   1421700           1045775        36714   339558502
+  25430  25439                         0                   3323826                            1928509                4226370                1481023                 6997862                 401402314                  3342019                    888700           2818355      1340451   275041615
+  25430  25440                     50302                   1494468                             201085                1861731                  50401                 1641204                 285632000                  1132002                     34902            181671            6   170334647
+  25430  25441                    149201                   2889658                             444003                1569016                  12901                 2978213                 305776223                 11484914                     12304            840364      2965311   219153347
+  25430  25437                   1256327                    582322                            1177892                 881717                4987612                 2946421                  98090512                   982711                   4086137           2210475       168232    65326223
+  25430  25438                    287805                    254637                             250034                 424308                1938610                  685419                  70590408                   198001                   1496207            198013       401506    47121712

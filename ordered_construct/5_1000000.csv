@@ -1,8 +1,0 @@
-# started on Tue Apr 20 16:08:31 2021
-
-859.22,msec,task-clock,0.67%,859222400,100.00,4.736,CPUs utilized
-2042,,page-faults,0.01%,859222400,100.00,2378.202,M/sec
-2,,context-switches,31.18%,859222400,100.00,2.795,M/sec
-821225240,,sched:sched_stat_runtime,0.82%,859222400,100.00,956247368.421,M/sec
-0,,sched:sched_wake_idle_without_ipi,0.00%,859222400,100.00,0.000,K/sec
-3,,syscalls:sys_enter_futex,0.00%,859222400,100.00,3.493,M/sec
