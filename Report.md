@@ -106,7 +106,23 @@ We would also conduct experiments with different hyperparameters like task data 
 
 And in our experiment we have found that some types of bottlenecks shares very similar traits. We would also map all the statistics to the call graph of the code's excution to see the distribution of the number of events to every function. And this level of detail would give us the better chance to determine the types of bottleneck in the program.
 
-## Experimental Setup
+### Analysis on several bottlenecks
+
+#### Barrier
+
+Barrier is a scheme to synchronize all threads in a team; all threads pause at the barrier, until all threads execute the barrier. So we could easily guess each would be spending on sleeping or waiting in order to wait for all other threads hit the barrier. Therefore we could use thread's total waiting time or total sleeping time to help us find out whether there are barrier in the code.
+
+#### Unbalanced
+
+It is pretty difficult to determine whether a parallel program is unbalanced since it does not show any obvious trace for us to detect. Theoretically speaking, code with unbalanced task for each thread would execute slower than the balanced thread. One perspective to determine the unbalanced problem is to check whether there are huge disparity between each threads.
+
+#### Ordered Construct
+
+Ordered construct have the potential that could specifies the code under a parallelized for loop should be executed like a sequential loop. So empirically speaking there would be a lot of threads that are waiting for their task. So we could check the statistics of each thread's state to get the general direction. And the some profiling tools would also give us the data on how threads are waked during the execution. We could use the call graph to see where the threads spent time waiting the most.
+
+#### Critical Region
+
+The problem of critical region shares a lot of similarity to the problem of ordered construct. Except this problem would involve thread acquiring the mutex lock. So this would be our main focus to determine this type of bottleneck.
 
 ### Profiling tools
 
@@ -118,17 +134,33 @@ perf is a standard profiling infrastructure on Linux. It supports a huge number 
 >
 > - task-clock: time spent on the profiled task
 >
-> - context-switches: storing a state of a process.
+> - page-faults: a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process
 >
-> - mutex_acquired: number of times threads tried to acquire mutex.
+> - context-switches: storing a state of a process in order to switch to another thread that is in ready state
 >
-> - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory.
+> - sched:sched_stat_blocked: thread being blocked
 >
-> - sched:sched_stat_wait: time spent in waiting states
+> - sched:sched_stat_iowait: thread waiting for I/O
+>
+> - sched:sched_stat_runtime: time spend in thread's running state
+>
+> - sched:sched_stat_sleep: time spent in thread's sleeping state
+>
+> - sched:sched_stat_wait: time spent in waiting state
+>
+> - sched:sched_wait_task: time spend in waiting for task
+>
+> - sched:sched_wake_idle_without_ipi: thread waking without inter process interruption
+>
+> - syscalls:sys_enter_futex: thread use futex system call
 >
 > - etc...
+>
+<!-- > - mutex_acquired: number of times threads tried to acquire mutex.
+>
+> - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory. -->
 
-We could use the statistics of some events to determine the type of bottleneck in the provided task.
+We could use the statistics of events listed above to determine the type of bottleneck in the provided task. And also 
 
 Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
 
@@ -141,6 +173,8 @@ Perf also has a feature called **annotate** which allows our to observe the stat
 - #### valgrind
 
 - #### gprof
+
+## Experimental Setup
 
 ## Experiments & Analysis
 
