@@ -84,7 +84,7 @@ Perf is a performance profiling tool that provides all three functionalities. It
 
 ## Proposed Idea
 
-Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the matrix. The Matrix provides insights to programmers to help them understand why their progras does not run fast enough.
+Parallel programs written in OpenMP can be divided into two parts. One part contains serial codes, and the other part contains parallel blocks. The first step is to check whether each parallel block speeds up while the cores and threads increase. This step roughly locates the bottlenecks. The second step is to run profiling tools and get the metrics. The metrics provides insights to programmers to help them understand why their progras does not run fast enough.
 
 From all the research we have done, we have listed multiple types of bottleneck that could theoretically have a negative influence on the program.
 
@@ -96,11 +96,15 @@ From all the research we have done, we have listed multiple types of bottleneck 
 > - Ordered constructs
 > - Unbalanced loops
 
-For each potential bottleneck we construct a example that contains this bottleneck. Then we use profiling tools to get the statistics of the execution of each program. With all the profiling statistics we have we could extract the characteristics of each type of bottleneck and use them to determine whether a provided multi-thread program have them or not.
+We would analyze the bottleneck and use our insight to determine what kind of events that would occur unusually frequent than they should be in an ideal environment. Then we would measure all those events we have gathered using profiling tools to get the data we need to confirm our judgement.
+
+For each potential bottleneck we construct a example that contains this type of bottleneck. Then we use profiling tools to get the statistics of the execution of each program. With all the profiling statistics we have we could extract the characteristics of each type of bottleneck and use them to determine whether a provided multi-thread program have them or not.
 
 To prove the accuracy of our method, we then construct another program with several parallel section, each presents a different type of bottleneck. Then we analyze this program with our method as an experiment to see if we can correctly get all the bottleneck types presented in this file.
 
-We would also conduct experiments with different hyperparameters like task size and number of threads if applicable, and using the tendency of the speedup to determine what the bottlenecks in the program.
+We would also conduct experiments with different hyperparameters like task data size and number of threads if applicable. The trend of the speed up would also be a factor that could help us to make the decision.
+
+And in our experiment we have found that some types of bottlenecks shares very similar traits. We would also map all the statistics to the call graph of the code's excution to see the distribution of the number of events to every function. And this level of detail would give us the better chance to determine the types of bottleneck in the program.
 
 ## Experimental Setup
 
