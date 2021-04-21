@@ -28,12 +28,12 @@ int main(int argc, char *argv[])
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic)
+    #pragma omp parallel num_threads(num_of_threads)
     {
         int pid = omp_get_thread_num();
-        #pragma omp for nowait
         for (int i = left[pid]; i < right[pid]; i++) {
             b[i] = a[i];
+            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
         }
     }
 
