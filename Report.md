@@ -124,6 +124,10 @@ Ordered construct have the potential that could specifies the code under a paral
 
 The problem of critical region shares a lot of similarity to the problem of ordered construct. Except this problem would involve thread acquiring the mutex lock. So this would be our main focus to determine this type of bottleneck.
 
+#### Bad Memory Access
+
+According to data locality, if the code tries to access the data that close to the data it have just accessed, there is a very high probabilty that it is in the same cache block that contains the previous data so it could still be in the cache. Therefore a bad memory access pattern would result in a large number of cache miss, which would cause huge I/O overhead for system to transfer data from RAM to cache.
+
 ### Profiling tools
 
 - #### Perf
@@ -171,6 +175,8 @@ Perf also has a feature called **annotate** which allows our to observe the stat
 > ``` sudo perf stat -e task-clock,page-faults,context-switches,sched:sched_stat_runtime,sched:sched_wake_idle_without_ipi,syscalls:sys_enter_futex ${executable} ${number of threads} ```
 
 - #### valgrind
+
+Valgrind is also a framework that would allow us to analyze the code's execution that could help us to improve our program. It provides us with a lot of tools for us to detect memory leaks, cache misses and other events and errors. In this project, we mainly use the **Cachegrind** tool it provides us to get the data of cache references and cache misses during an execution.
 
 - #### gprof
 
