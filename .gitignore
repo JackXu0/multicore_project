@@ -56,3 +56,6 @@ dkms.conf
 
 # cachegrind data
 *.out.*
+
+# csv data
+*.csv

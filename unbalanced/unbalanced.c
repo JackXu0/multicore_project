@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel num_threads(num_of_threads)
+    #pragma omp parallel num_threads(num_of_threads) shared(left, right)
     {
         int pid = omp_get_thread_num();
         for(int i = left[pid]; i < right[pid]; i++) {
             b[i] = a[i];
-            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+            // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
         }
 
         // printf("Thread %i duplicates %i integers\n", pid, right-left);

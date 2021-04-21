@@ -164,7 +164,7 @@ perf is a standard profiling infrastructure on Linux. It supports a huge number 
 >
 > - cache-misses: application makes a request to retrieve data from a cache, but that specific data is not currently in cache memory. -->
 
-We could use the statistics of events listed above to determine the type of bottleneck in the provided task. And also 
+We could use the statistics of events listed above to determine the type of bottleneck in the provided task.
 
 Perf also has a feature called **annotate** which allows our to observe the statistics mapped to compiled instructions or even source code.
 
@@ -217,6 +217,13 @@ The statistics from our experiment on unbalanced task for each threads show us t
 
 - higher running time
 - more time in waiting state
+
+### Bad Memory Access
+
+For this bottleneck we create two test file, one file accesses a integer matrix in a way that complies with data locality principal and the other doesn't. From our experiment data we can see that the bad memory access file would appear
+
+- run slightly slower
+- significantly more cache misses
 
 ## Conclusions
 

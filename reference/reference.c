@@ -4,6 +4,7 @@ int main(int argc, char *argv[])
 {
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
+    int i;
 
     int a[size], b[size];
 
@@ -25,16 +26,16 @@ int main(int argc, char *argv[])
 
     printf ("%s \n", "start");
 
+    omp_set_num_threads(num_of_threads);
+
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel num_threads(num_of_threads)
+    #pragma omp parallel default(none) private(i) shared(a, b, size, nThreads)
     {
-        int pid = omp_get_thread_num();
-        for (int i = left[pid]; i < right[pid]; i++) {
+        #pragma omp for
+        for (i = 0; i < size; i++)
             b[i] = a[i];
-            printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
-        }
     }
 
     gettimeofday(&stop, NULL);
