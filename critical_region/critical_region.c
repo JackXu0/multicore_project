@@ -23,21 +23,21 @@ int main(int argc, char *argv[])
         right[j] = temp;
     }
 
-    struct timeval stop, start;
-
-    gettimeofday(&start, NULL);
     printf ("%s \n", "start");
+    
+    struct timeval stop, start;
+    gettimeofday(&start, NULL);
 
-    #pragma omp parallel num_threads(num_of_threads) private(i)
+    #pragma omp parallel num_threads(num_of_threads)
     {
         int pid = omp_get_thread_num();
         for(int i = left[pid]; i < right[pid];) {
             #pragma omp critical
             {
-                printf("thread %i has entered the critical region\n", pid);
+                // printf("thread %i has entered the critical region\n", pid);
                 b[i] = a[i];
                 i++;
-                // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
+                printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
             }
         }
     }

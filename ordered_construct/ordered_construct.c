@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
         right[j] = temp;
     }
 
-    struct timeval stop, start;
-
-    gettimeofday(&start, NULL);
     printf ("%s \n", "start");
+    
+    struct timeval stop, start;
+    gettimeofday(&start, NULL);
 
     #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic) ordered
     for(int i = 0; i < size; i++) {

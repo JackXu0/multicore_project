@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
         right[j] = temp;
     }
 
-    struct timeval stop, start;
-
-    gettimeofday(&start, NULL);
     printf ("%s \n", "start");
+
+    struct timeval stop, start;
+    gettimeofday(&start, NULL);
 
     #pragma omp parallel num_threads(num_of_threads) shared(left, right)
     {
@@ -46,8 +46,6 @@ int main(int argc, char *argv[])
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
-
-    printf("Out of parallel section\n");
 
     checkCorrectness(a, b, size);
 

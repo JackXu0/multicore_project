@@ -23,16 +23,15 @@ int main(int argc, char *argv[])
         left[j] = (j == 0)? 0: assign[j-1];
         right[j] = (j == num_of_threads - 1)? size: assign[j];
     }
+    
+    printf("%s \n", "start");
 
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    printf("%s \n", "start");
-
-    #pragma omp parallel num_threads(num_of_threads) private(i, pid, left, right)
+    #pragma omp parallel num_threads(num_of_threads)
     {
         int pid = omp_get_thread_num();
-        
         for(int i = left[pid]; i < right[pid]; i++) {
             b[i] = a[i];
             printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
