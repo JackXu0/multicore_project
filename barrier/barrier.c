@@ -5,43 +5,52 @@ int main(int argc, char *argv[])
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
 
-    struct timeval stop, start;
-    gettimeofday(&start, NULL);
-
-    printf ("%s \n", "start");
-
-    int i;
     int a[size], b[size];
 
-    for (i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         a[i] = rand();
-        // printf("%d\n", a[i]);
     }
 
-    #pragma omp parallel num_threads(num_of_threads) private(i)
+    int batch = size / num_of_threads;
+    int mod = size % num_of_threads;
+
+    int left[num_of_threads];
+    int right[num_of_threads];
+
+    for (int j = 0, temp = 0; j < num_of_threads; j++) {
+        left[j] = temp;
+        temp = (j < mod)? temp + batch + 1: temp + batch;
+        right[j] = temp;
+    }
+
+    struct timeval stop, start;
+
+    gettimeofday(&start, NULL);
+    printf ("%s \n", "start");
+
+    #pragma omp parallel num_threads(num_of_threads) shared(left, right)
     {
         int pid = omp_get_thread_num();
-        int batch = size / num_of_threads;
-        int start = pid * batch;
-        int end = (pid+1) * batch;
-        for(i = start; i < end;) {
+        for(int i = left[pid], count = 0; i < right[pid]; i++, count++) {
             
             b[i] = a[i];
-            // printf("thread %i has reached the barrier 1\n", pid);
-            # pragma omp barrier
-            i++;
-            // printf("thread %i has reached the barrier 2\n", pid);
-            # pragma omp barrier
+            if(count < batch) {
+                printf("thread %i has reached the barrier\n", pid);
+                # pragma omp barrier
+            }
         
             // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
             
         }
     }
 
-    checkCorrectness(a, b, size);
-
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
+
+    printf("Out of parallel section\n");
+
+    checkCorrectness(a, b, size);
+
     printf ("%s \n", "end");
     return 0;
 }
