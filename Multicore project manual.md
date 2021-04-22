@@ -76,7 +76,7 @@ sudo strace -c -o example_log ./example
 
 Here is an example, the result indicates too much time is wasted on futex for this parallel block. 
 
-<img src="/Users/zhuocheng/Library/Application Support/typora-user-images/image-20210421154757154.png" alt="image-20210421154757154" style="zoom:50%;" />
+<img src="strace_example.png" alt="image-20210421154757154" style="zoom:50%;" />
 
 ###### Running Strace to get the time distribution of system calls for each thread
 
