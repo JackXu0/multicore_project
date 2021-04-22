@@ -1,0 +1,124 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 180  of event 'task-clock'
+# Event count (approx.): 45000000
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    66.11%  bad_memory       
+    25.00%  [kernel.kallsyms]
+     8.89%  libc-2.31.so     
+
+
+# Samples: 12  of event 'page-faults'
+# Event count (approx.): 2146
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    81.08%  bad_memory       
+    15.61%  libgomp.so.1.0.0 
+     3.17%  ld-2.31.so       
+     0.14%  [kernel.kallsyms]
+
+
+# Samples: 27  of event 'context-switches'
+# Event count (approx.): 27
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 46  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 44159300
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+   100.00%  [kernel.kallsyms]
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+# Samples: 29  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 29
+#
+# Overhead  Shared Object   
+# ........  ................
+#
+   100.00%  libgomp.so.1.0.0
+
+
+# Samples: 0  of event 'writeback:writeback_wait'
+# Event count (approx.): 0
+#
+# Overhead  Shared Object
+# ........  .............
+#
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  writeback:writeback_wait  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  17105  17109                         0                         3                                  0                      0                      0                       0                   2686300                        0                         0                 3            0     2619100
+  17105  17107                         0                         3                                  0                      0                      0                       0                    204500                        0                         0                 3            0     2526900
+  17105  17110                         0                         3                                  0                      0                      0                       0                   2604300                        0                         0                 0            0           0
+  17105  17106                         0                         3                                  0                      0                      0                       0                   2719500                        0                         0                 3            0     2723000
+  17105  17111                         0                         3                                  0                      0                      0                       0                   4822700                        0                         0                 3            0     2412700
+  17105  17114                         0                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  17105  17112                         0                         1                                  0                      0                      0                       0                     71900                        0                         0                 1            0       12500
+  17105  17113                         0                         3                                  0                      0                      0                       0                   2604100                        0                         0                 3            0     2493800
+  17105  17105                  17781301                         0                                  0                      0                      0                       0                         0                        0                      2054                 0            0           0
