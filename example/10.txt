@@ -1,0 +1,313 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 181K of event 'task-clock'
+# Event count (approx.): 45331250000
+#
+# Overhead  Command  Shared Object      Symbol                                  
+# ........  .......  .................  ........................................
+#
+    36.67%  example  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+    18.97%  example  example            [.] fibo
+    13.50%  example  libgomp.so.1.0.0   [.] 0x000000000001caa9
+     9.57%  example  libgomp.so.1.0.0   [.] 0x000000000001d2da
+     7.01%  example  [kernel.kallsyms]  [k] finish_task_switch
+     1.30%  example  libgomp.so.1.0.0   [.] 0x000000000001caa2
+     0.88%  example  libgomp.so.1.0.0   [.] 0x000000000001caad
+     0.67%  example  libgomp.so.1.0.0   [.] 0x000000000001ca7d
+     0.58%  example  libgomp.so.1.0.0   [.] 0x000000000001d2de
+     0.47%  example  [kernel.kallsyms]  [k] do_syscall_64
+     0.40%  example  [kernel.kallsyms]  [k] memcpy_erms
+     0.38%  example  [kernel.kallsyms]  [k] perf_output_begin_forward
+     0.38%  example  [kernel.kallsyms]  [k] perf_syscall_enter
+     0.37%  example  [kernel.kallsyms]  [k] syscall_trace_enter
+     0.34%  example  libgomp.so.1.0.0   [.] 0x000000000001d31c
+     0.33%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e2
+     0.32%  example  [kernel.kallsyms]  [k] __task_pid_nr_ns
+     0.31%  example  [kernel.kallsyms]  [k] futex_wait_setup
+     0.31%  example  example            [.] main._omp_fn.0
+     0.29%  example  [kernel.kallsyms]  [k] do_futex
+     0.29%  example  [kernel.kallsyms]  [k] futex_wait
+     0.25%  example  libgomp.so.1.0.0   [.] GOMP_barrier
+     0.24%  example  [kernel.kallsyms]  [k] __x64_sys_futex
+     0.21%  example  [kernel.kallsyms]  [k] plist_add
+     0.20%  example  [kernel.kallsyms]  [k] perf_output_copy
+     0.20%  example  [kernel.kallsyms]  [k] perf_prepare_sample
+     0.19%  example  libgomp.so.1.0.0   [.] 0x000000000001caa0
+     0.18%  example  libgomp.so.1.0.0   [.] 0x000000000001d2ec
+     0.18%  example  libgomp.so.1.0.0   [.] 0x000000000001d2e5
+     0.17%  example  [kernel.kallsyms]  [k] get_futex_key
+     0.17%  example  [kernel.kallsyms]  [k] perf_event_output_forward
+     0.15%  example  libgomp.so.1.0.0   [.] 0x000000000001d2e3
+     0.14%  example  [kernel.kallsyms]  [k] read_hv_clock_tsc
+     0.13%  example  [kernel.kallsyms]  [k] perf_tp_event_match
+     0.13%  example  [kernel.kallsyms]  [k] hash_futex
+     0.13%  example  [kernel.kallsyms]  [k] queued_spin_lock_slowpath
+     0.13%  example  [kernel.kallsyms]  [k] futex_wake
+     0.12%  example  [kernel.kallsyms]  [k] tracing_generic_entry_update
+     0.12%  example  libgomp.so.1.0.0   [.] 0x000000000001caa7
+     0.12%  example  [kernel.kallsyms]  [k] wake_up_q
+     0.11%  example  [kernel.kallsyms]  [k] perf_tp_event
+     0.11%  example  [kernel.kallsyms]  [k] __perf_event_overflow
+     0.11%  example  libgomp.so.1.0.0   [.] 0x000000000001d2ea
+     0.11%  example  [kernel.kallsyms]  [k] __list_add_valid
+     0.10%  example  [kernel.kallsyms]  [k] perf_output_sample
+     0.10%  example  libgomp.so.1.0.0   [.] GOMP_critical_end
+     0.10%  example  [kernel.kallsyms]  [k] perf_output_put_handle
+     0.09%  example  [kernel.kallsyms]  [k] futex_wait_queue_me
+     0.09%  example  libgomp.so.1.0.0   [.] GOMP_critical_start
+     0.09%  example  [kernel.kallsyms]  [k] perf_misc_flags
+     0.09%  example  [kernel.kallsyms]  [k] get_futex_value_locked
+     0.09%  example  [kernel.kallsyms]  [k] __perf_event_header__init_id.isra.92
+     0.09%  example  [kernel.kallsyms]  [k] __schedule
+     0.08%  example  [kernel.kallsyms]  [k] perf_swevent_overflow
+     0.08%  example  libgomp.so.1.0.0   [.] 0x000000000001cb1a
+     0.08%  example  [kernel.kallsyms]  [k] perf_event_pid_type
+     0.08%  example  example            [.] main._omp_fn.1
+     0.07%  example  [kernel.kallsyms]  [k] sched_clock_local
+     0.07%  example  [kernel.kallsyms]  [k] schedule
+     0.07%  example  libgomp.so.1.0.0   [.] 0x000000000001d2d8
+     0.07%  example  libgomp.so.1.0.0   [.] 0x000000000001d414
+     0.06%  example  [kernel.kallsyms]  [k] mark_wake_futex
+     0.06%  example  [kernel.kallsyms]  [k] memcpy
+     0.06%  example  [kernel.kallsyms]  [k] get_futex_key_refs.isra.7
+     0.06%  example  [kernel.kallsyms]  [k] syscall_slow_exit_work
+     0.06%  example  [kernel.kallsyms]  [k] drop_futex_key_refs.isra.11
+     0.06%  example  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.06%  example  libgomp.so.1.0.0   [.] 0x000000000001ca78
+     0.06%  example  libgomp.so.1.0.0   [.] 0x000000000001d320
+     0.06%  example  [kernel.kallsyms]  [k] __unqueue_futex
+     0.06%  example  [kernel.kallsyms]  [k] try_to_wake_up
+     0.05%  example  [kernel.kallsyms]  [k] perf_output_end
+     0.05%  example  [kernel.kallsyms]  [k] perf_instruction_pointer
+     0.04%  example  libgomp.so.1.0.0   [.] 0x000000000001cac3
+     0.04%  example  [kernel.kallsyms]  [k] __perf_event_account_interrupt
+     0.04%  example  example            [.] 0x0000000000001170
+     0.04%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e6
+     0.04%  example  libgomp.so.1.0.0   [.] 0x000000000001d2fd
+     0.04%  example  [kernel.kallsyms]  [k] 0x000049000000c003
+     0.03%  example  [kernel.kallsyms]  [k] perf_swevent_event
+     0.03%  example  [kernel.kallsyms]  [k] sched_clock_cpu
+     0.03%  example  [kernel.kallsyms]  [k] wake_q_add_safe
+     0.03%  example  example            [.] main._omp_fn.4
+     0.03%  example  libgomp.so.1.0.0   [.] 0x000000000001d3b6
+     0.03%  example  [kernel.kallsyms]  [k] __list_del_entry_valid
+     0.02%  example  [kernel.kallsyms]  [k] perf_swevent_get_recursion_context
+     0.02%  example  example            [.] main._omp_fn.3
+     0.02%  example  [kernel.kallsyms]  [k] perf_trace_buf_alloc
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001c9ed
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001ca7b
+     0.02%  example  [kernel.kallsyms]  [k] __softirqentry_text_start
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001d308
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001caf1
+     0.02%  example  [kernel.kallsyms]  [k] read_hv_sched_clock_tsc
+     0.02%  example  example            [.] main._omp_fn.2
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001d30e
+     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001ca88
+     0.02%  example  [kernel.kallsyms]  [k] exit_to_usermode_loop
+     0.02%  example  [kernel.kallsyms]  [k] __x86_indirect_thunk_rax
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001cb20
+     0.01%  example  [kernel.kallsyms]  [k] perf_trace_buf_update
+     0.01%  example  [kernel.kallsyms]  [k] perf_trace_init
+     0.01%  example  [kernel.kallsyms]  [k] local_clock
+     0.01%  example  [kernel.kallsyms]  [k] sched_clock
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001ca81
+     0.01%  example  [kernel.kallsyms]  [k] _raw_spin_lock_irqsave
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001caf0
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f9
+     0.01%  example  libgomp.so.1.0.0   [.] GOMP_ordered_start
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001d407
+     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001d2fc
+     0.00%  example  [kernel.kallsyms]  [k] plist_del
+     0.00%  example  [kernel.kallsyms]  [k] run_timer_softirq
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e0
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9eb
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca98
+     0.00%  example  example            [.] 0x00000000000011a0
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cab8
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001caf2
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001caf3
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2b7
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d38d
+     0.00%  example  [kernel.kallsyms]  [k] rebalance_domains
+     0.00%  example  example            [.] 0x0000000000001230
+     0.00%  example  libgomp.so.1.0.0   [.] GOMP_ordered_end
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cab2
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d416
+     0.00%  example  [kernel.kallsyms]  [k] free_page_and_swap_cache
+     0.00%  example  example            [.] 0x0000000000001200
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca59
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cb15
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2cb
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f0
+     0.00%  example  [kernel.kallsyms]  [k] native_apic_mem_read
+     0.00%  example  example            [.] 0x00000000000011a4
+     0.00%  example  example            [.] 0x00000000000011e0
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f2
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca09
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca5a
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca9d
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d302
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d304
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d360
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d36c
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d40c
+     0.00%  example  [kernel.kallsyms]  [k] __check_object_size
+     0.00%  example  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.00%  example  [kernel.kallsyms]  [k] __send_ipi_mask
+     0.00%  example  [kernel.kallsyms]  [k] arch_irq_work_raise
+     0.00%  example  [kernel.kallsyms]  [k] file_free_rcu
+     0.00%  example  [kernel.kallsyms]  [k] free_unref_page
+     0.00%  example  [kernel.kallsyms]  [k] get_user_pages_fast
+     0.00%  example  [kernel.kallsyms]  [k] hv_send_ipi_self
+     0.00%  example  [kernel.kallsyms]  [k] inet_gro_receive
+     0.00%  example  [kernel.kallsyms]  [k] irq_work_queue
+     0.00%  example  [kernel.kallsyms]  [k] native_apic_wait_icr_idle
+     0.00%  example  [kernel.kallsyms]  [k] vma_merge
+     0.00%  example  [kernel.kallsyms]  [k] vmap_page_range_noflush
+     0.00%  example  [kernel.kallsyms]  [k] 0x000049000000c000
+     0.00%  example  example            [.] 0x0000000000001234
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9a0
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9a4
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9b7
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9be
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9ce
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f5
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca34
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca6b
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ca96
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cabe
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cb00
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cb1e
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d126
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d280
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d28a
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2a5
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2be
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f2
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f5
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f8
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2fe
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d311
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d373
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d37a
+     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d40f
+
+
+# Samples: 9  of event 'page-faults'
+# Event count (approx.): 445
+#
+# Overhead  Command  Shared Object      Symbol                
+# ........  .......  .................  ......................
+#
+    82.70%  example  libc-2.31.so       [.] 0x00000000000799e0
+    12.58%  example  ld-2.31.so         [.] 0x00000000000077c0
+     2.92%  example  ld-2.31.so         [.] 0x000000000001c6f0
+     0.67%  example  ld-2.31.so         [.] 0x0000000000001100
+     0.45%  example  [kernel.kallsyms]  [k] __clear_user
+     0.22%  example  [kernel.kallsyms]  [k] load_elf_binary
+     0.22%  example  libc-2.31.so       [.] 0x000000000005e760
+     0.22%  example  libc-2.31.so       [.] 0x000000000009858b
+
+
+# Samples: 111K of event 'context-switches'
+# Event count (approx.): 2868603
+#
+# Overhead  Command  Shared Object      Symbol      
+# ........  .......  .................  ............
+#
+   100.00%  example  [kernel.kallsyms]  [k] schedule
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 1M of event 'sched:sched_stat_runtime'
+# Event count (approx.): 69270590700
+#
+# Overhead  Command  Shared Object      Symbol         
+# ........  .......  .................  ...............
+#
+   100.00%  example  [kernel.kallsyms]  [k] update_curr
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 19K of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 19453
+#
+# Overhead  Command  Shared Object      Symbol          
+# ........  .......  .................  ................
+#
+   100.00%  example  [kernel.kallsyms]  [k] resched_curr
+
+
+# Samples: 2M of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 2022415
+#
+# Overhead  Command  Shared Object     Symbol                
+# ........  .......  ................  ......................
+#
+    44.40%  example  libgomp.so.1.0.0  [.] 0x000000000001d31c
+    42.74%  example  libgomp.so.1.0.0  [.] 0x000000000001cb1a
+     7.50%  example  libgomp.so.1.0.0  [.] 0x000000000001cac3
+     4.94%  example  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+     0.41%  example  libgomp.so.1.0.0  [.] 0x000000000001ca34
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d14e
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001cf2d
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d0aa
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d75e
+     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d7ba
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#  PID   TID  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  1334  1336                  40943146                           84472699               84670478               23024156                67009311                4258477430                 45086900                  25632900          53049120          582  1457116794
+  1334  1338                  71400560                          115331669               67483301               76288469                65860534                4001703248                 66580051                  43724700          73226297     42826749  2168036707
+  1334  1335                  47744972                           58055871               65250310              196767466                35955056                6306372049                 57548561                  64165300          95572143     46645488  2857658649
+  1334  1337                 126286112                           94640396                   4795               45520953                60888291                4144443234                 28691016                  75750700          66368167     32236785  2078328765
+  1334  1340                  92497340                           66769781               45685639              173856736                58400644                6228026061                 58838700                 133854300         133302514     32599344  2701501609
+  1334  1334                  89726776                          157322227               92197762               42784585                67102240                4389004400                 55355600                  58404500          99208346     69502012  2641285105
+  1334  1343                    101551                                877                     18               28635718                37270133                3944790000                 31428600                         0             40993          524  2165605278
+  1334  1342                     68526                                657                     11                     18                      40                2639642300                        0                         0             34848          975  1881303092
+  1334  1341                     67208                                613                     46                      7                      27                2170981500                        0                         0             36624          892  1355354149

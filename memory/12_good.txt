@@ -1,0 +1,143 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 105  of event 'task-clock'
+# Event count (approx.): 26250000
+#
+# Overhead  Command      Shared Object      Symbol                                   
+# ........  ...........  .................  .........................................
+#
+    26.67%  good_memory  [kernel.kallsyms]  [k] perf_trace_init
+    20.95%  good_memory  good_memory        [.] main
+    12.38%  good_memory  good_memory        [.] main._omp_fn.0
+     9.52%  good_memory  libc-2.31.so       [.] random_r
+     6.67%  good_memory  libc-2.31.so       [.] random
+     3.81%  good_memory  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     2.86%  good_memory  [kernel.kallsyms]  [k] __do_page_fault
+     1.90%  good_memory  [kernel.kallsyms]  [k] get_page_from_freelist
+     1.90%  good_memory  [kernel.kallsyms]  [k] perf_iterate_ctx
+     1.90%  good_memory  [kernel.kallsyms]  [k] try_charge
+     0.95%  good_memory  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.95%  good_memory  [kernel.kallsyms]  [k] __srcu_read_lock
+     0.95%  good_memory  [kernel.kallsyms]  [k] do_group_exit
+     0.95%  good_memory  [kernel.kallsyms]  [k] free_pages_and_swap_cache
+     0.95%  good_memory  [kernel.kallsyms]  [k] handle_mm_fault
+     0.95%  good_memory  [kernel.kallsyms]  [k] insert_vmap_area_augment.constprop.57
+     0.95%  good_memory  [kernel.kallsyms]  [k] mmap_region
+     0.95%  good_memory  [kernel.kallsyms]  [k] rb_next
+     0.95%  good_memory  [kernel.kallsyms]  [k] remove_vma
+     0.95%  good_memory  [kernel.kallsyms]  [k] tty_buffer_space_avail
+     0.95%  good_memory  good_memory        [.] 0x0000000000001170
+     0.95%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d122
+
+
+# Samples: 11  of event 'page-faults'
+# Event count (approx.): 2429
+#
+# Overhead  Command      Shared Object       Symbol                        
+# ........  ...........  ..................  ..............................
+#
+    83.82%  good_memory  good_memory         [.] main
+    13.96%  good_memory  libpthread-2.31.so  [.] __pthread_tunables_init
+     1.61%  good_memory  ld-2.31.so          [.] 0x0000000000019b7c
+     0.41%  good_memory  ld-2.31.so          [.] 0x0000000000002128
+     0.08%  good_memory  [kernel.kallsyms]   [k] __clear_user
+     0.08%  good_memory  ld-2.31.so          [.] 0x0000000000001100
+     0.04%  good_memory  [kernel.kallsyms]   [k] copy_user_generic_unrolled
+
+
+# Samples: 34  of event 'context-switches'
+# Event count (approx.): 34
+#
+# Overhead  Command      Shared Object      Symbol      
+# ........  ...........  .................  ............
+#
+   100.00%  good_memory  [kernel.kallsyms]  [k] schedule
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 58  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 26083100
+#
+# Overhead  Command      Shared Object      Symbol         
+# ........  ...........  .................  ...............
+#
+   100.00%  good_memory  [kernel.kallsyms]  [k] update_curr
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 35  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 35
+#
+# Overhead  Command      Shared Object     Symbol                
+# ........  ...........  ................  ......................
+#
+    62.86%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d14e
+    31.43%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d31c
+     2.86%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+     2.86%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  30146  30149                         3                                  0                      0                      0                       0                    915000                        0                         0                 3            0       61400
+  30146  30147                         3                                  0                      0                      0                       0                    437800                        0                         0                 3            0      452600
+  30146  30152                         2                                  0                      0                      0                       0                     81200                        0                         0                 2            0      363800
+  30146  30146                         1                                  0                   2058               19223400                       0                         1                        0                         1                 0            0           0
+  30146  30151                         3                                  0                      0                      0                       0                         0                        0                         0                 0            0       12400
+  30146  30150                         3                                  0                      0                      0                       0                    714500                        0                         0                 2            0      388900
+  30146  30154                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  30146  30157                         3                                  0                      0                      0                       0                   1115900                        0                         0                 2            0      583900
+  30146  30153                         2                                  0                      0                      0                       0                    481200                        0                         0                 2            0      340000
+  30146  30156                         3                                  0                      0                      0                       0                    701300                        0                         0                 2            0       16400
+  30146  30155                         3                                  0                      0                      0                       0                    519700                        0                         0                 4            0      905200

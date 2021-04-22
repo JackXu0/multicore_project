@@ -1,0 +1,2836 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 63K of event 'task-clock'
+# Event count (approx.): 15973000000
+#
+# Children      Self  Command  Shared Object      Symbol                                  
+# ........  ........  .......  .................  ........................................
+#
+    68.68%     0.00%  example  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+                --68.18%--0x7f4e162d677e
+                          |          
+                          |--25.26%--0x7f4e162d89e2
+                          |          
+                          |--10.02%--main._omp_fn.0
+                          |          |          
+                          |           --9.96%--fibo
+                          |          
+                          |--8.25%--main._omp_fn.1
+                          |          |          
+                          |           --8.23%--fibo
+                          |          
+                          |--6.79%--main._omp_fn.4
+                          |          |          
+                          |           --6.74%--fibo
+                          |          
+                          |--6.35%--main._omp_fn.3
+                          |          |          
+                          |           --6.32%--fibo
+                          |          
+                          |--5.88%--main._omp_fn.2
+                          |          |          
+                          |           --5.84%--fibo
+                          |          
+                          |--1.80%--0x7f4e162d89ed
+                          |          
+                          |--1.25%--0x7f4e162d89e6
+                          |          
+                          |--0.68%--0x7f4e162d93b6
+                          |          |          
+                          |           --0.64%--entry_SYSCALL_64_after_hwframe
+                          |                     do_syscall_64
+                          |                     |          
+                          |                      --0.59%--syscall_trace_enter
+                          |                                |          
+                          |                                 --0.58%--perf_syscall_enter
+                          |                                           |          
+                          |                                            --0.56%--perf_tp_event
+                          |                                                      |          
+                          |                                                       --0.54%--perf_swevent_overflow
+                          |                                                                 |          
+                          |                                                                  --0.53%--__perf_event_overflow
+                          |                                                                            |          
+                          |                                                                             --0.52%--perf_event_output_forward
+                          |          
+                           --0.52%--0x7f4e162d89f9
+
+    68.18%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d677e
+            |
+            ---0x7f4e162d677e
+               |          
+               |--25.26%--0x7f4e162d89e2
+               |          
+               |--10.02%--main._omp_fn.0
+               |          |          
+               |           --9.96%--fibo
+               |          
+               |--8.25%--main._omp_fn.1
+               |          |          
+               |           --8.23%--fibo
+               |          
+               |--6.79%--main._omp_fn.4
+               |          |          
+               |           --6.74%--fibo
+               |          
+               |--6.35%--main._omp_fn.3
+               |          |          
+               |           --6.32%--fibo
+               |          
+               |--5.88%--main._omp_fn.2
+               |          |          
+               |           --5.84%--fibo
+               |          
+               |--1.80%--0x7f4e162d89ed
+               |          
+               |--1.25%--0x7f4e162d89e6
+               |          
+               |--0.68%--0x7f4e162d93b6
+               |          |          
+               |           --0.64%--entry_SYSCALL_64_after_hwframe
+               |                     do_syscall_64
+               |                     |          
+               |                      --0.59%--syscall_trace_enter
+               |                                |          
+               |                                 --0.58%--perf_syscall_enter
+               |                                           |          
+               |                                            --0.56%--perf_tp_event
+               |                                                      |          
+               |                                                       --0.54%--perf_swevent_overflow
+               |                                                                 |          
+               |                                                                  --0.53%--__perf_event_overflow
+               |                                                                            |          
+               |                                                                             --0.52%--perf_event_output_forward
+               |          
+                --0.52%--0x7f4e162d89f9
+
+    48.87%    48.85%  example  example            [.] fibo
+            |          
+            |--37.16%--0
+            |          0x7f4e162d677e
+            |          |          
+            |          |--9.95%--main._omp_fn.0
+            |          |          fibo
+            |          |          
+            |          |--8.23%--main._omp_fn.1
+            |          |          fibo
+            |          |          
+            |          |--6.74%--main._omp_fn.4
+            |          |          fibo
+            |          |          
+            |          |--6.32%--main._omp_fn.3
+            |          |          fibo
+            |          |          
+            |           --5.84%--main._omp_fn.2
+            |                     fibo
+            |          
+            |--5.55%--0xa92290009b7f3
+            |          0x7ffff11d29e0
+            |          GOMP_parallel
+            |          |          
+            |          |--3.28%--main._omp_fn.4
+            |          |          fibo
+            |          |          
+            |           --2.26%--main._omp_fn.3
+            |                     fibo
+            |          
+            |--4.61%--0x927c000061a80
+            |          0x7ffff11d29e0
+            |          GOMP_parallel
+            |          |          
+            |          |--2.38%--main._omp_fn.0
+            |          |          fibo
+            |          |          
+            |           --2.23%--main._omp_fn.1
+            |                     fibo
+            |          
+             --1.53%--0x7ffff11d29e0
+                       GOMP_parallel
+                       |          
+                        --1.52%--main._omp_fn.2
+                                  fibo
+
+    32.61%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e2
+            |
+            ---0x7f4e162d89e2
+
+    32.59%    32.59%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e2
+            |          
+            |--25.25%--0
+            |          0x7f4e162d677e
+            |          0x7f4e162d89e2
+            |          
+             --7.34%--0x927c000061a80
+                       0x7ffff11d29e0
+                       GOMP_parallel
+                       0x7f4e162d89e2
+
+    20.49%     0.00%  example  [unknown]          [.] 0x00007ffff11d29e0
+            |
+            ---0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--7.35%--0x7f4e162d89e2
+               |          
+               |--3.29%--main._omp_fn.4
+               |          |          
+               |           --3.28%--fibo
+               |          
+               |--2.39%--main._omp_fn.0
+               |          |          
+               |           --2.38%--fibo
+               |          
+               |--2.27%--main._omp_fn.3
+               |          |          
+               |           --2.26%--fibo
+               |          
+               |--2.24%--main._omp_fn.1
+               |          |          
+               |           --2.23%--fibo
+               |          
+               |--1.53%--main._omp_fn.2
+               |          |          
+               |           --1.52%--fibo
+               |          
+                --0.51%--0x7f4e162d89ed
+
+    20.49%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+               |--7.35%--0x7f4e162d89e2
+               |          
+               |--3.29%--main._omp_fn.4
+               |          |          
+               |           --3.28%--fibo
+               |          
+               |--2.39%--main._omp_fn.0
+               |          |          
+               |           --2.38%--fibo
+               |          
+               |--2.27%--main._omp_fn.3
+               |          |          
+               |           --2.26%--fibo
+               |          
+               |--2.24%--main._omp_fn.1
+               |          |          
+               |           --2.23%--fibo
+               |          
+               |--1.53%--main._omp_fn.2
+               |          |          
+               |           --1.52%--fibo
+               |          
+                --0.51%--0x7f4e162d89ed
+
+    13.37%     0.00%  example  [unknown]          [.] 0x000927c000061a80
+            |
+            ---0x927c000061a80
+               0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--7.35%--0x7f4e162d89e2
+               |          
+               |--2.39%--main._omp_fn.0
+               |          |          
+               |           --2.38%--fibo
+               |          
+               |--2.24%--main._omp_fn.1
+               |          |          
+               |           --2.23%--fibo
+               |          
+                --0.51%--0x7f4e162d89ed
+
+    12.41%     0.07%  example  example            [.] main._omp_fn.0
+            |          
+             --12.34%--main._omp_fn.0
+                       fibo
+
+    10.49%     0.03%  example  example            [.] main._omp_fn.1
+            |          
+             --10.46%--main._omp_fn.1
+                       fibo
+
+    10.09%     0.06%  example  example            [.] main._omp_fn.4
+            |          
+             --10.02%--main._omp_fn.4
+                       fibo
+
+     9.59%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92da
+            |
+            ---0x7f4e162d92da
+
+     9.58%     9.58%  example  libgomp.so.1.0.0   [.] 0x000000000001d2da
+            |
+            ---0x7f4e162d92da
+
+     8.62%     0.04%  example  example            [.] main._omp_fn.3
+            |          
+             --8.58%--main._omp_fn.3
+                       fibo
+
+     7.41%     0.04%  example  example            [.] main._omp_fn.2
+            |          
+             --7.37%--main._omp_fn.2
+                       fibo
+
+     5.58%     0.00%  example  [unknown]          [.] 0x000a92290009b7f3
+            |
+            ---0xa92290009b7f3
+               0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--3.29%--main._omp_fn.4
+               |          |          
+               |           --3.28%--fibo
+               |          
+                --2.27%--main._omp_fn.3
+                          |          
+                           --2.26%--fibo
+
+     2.31%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89ed
+            |
+            ---0x7f4e162d89ed
+
+     2.31%     2.31%  example  libgomp.so.1.0.0   [.] 0x000000000001c9ed
+            |          
+            |--1.80%--0
+            |          0x7f4e162d677e
+            |          0x7f4e162d89ed
+            |          
+             --0.51%--0x927c000061a80
+                       0x7ffff11d29e0
+                       GOMP_parallel
+                       0x7f4e162d89ed
+
+     1.65%     1.65%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e6
+            |          
+             --1.25%--0
+                       0x7f4e162d677e
+                       0x7f4e162d89e6
+
+     1.65%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e6
+            |
+            ---0x7f4e162d89e6
+
+     0.73%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d93b6
+            |
+            ---0x7f4e162d93b6
+               |          
+                --0.69%--entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          |          
+                           --0.63%--syscall_trace_enter
+                                     |          
+                                      --0.62%--perf_syscall_enter
+                                                |          
+                                                 --0.59%--perf_tp_event
+                                                           |          
+                                                            --0.57%--perf_swevent_overflow
+                                                                      |          
+                                                                       --0.56%--__perf_event_overflow
+                                                                                 |          
+                                                                                  --0.56%--perf_event_output_forward
+
+     0.72%     0.00%  example  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+                --0.63%--syscall_trace_enter
+                          |          
+                           --0.62%--perf_syscall_enter
+                                     |          
+                                      --0.60%--perf_tp_event
+                                                |          
+                                                 --0.57%--perf_swevent_overflow
+                                                           |          
+                                                            --0.57%--__perf_event_overflow
+                                                                      |          
+                                                                       --0.56%--perf_event_output_forward
+
+     0.72%     0.03%  example  [kernel.kallsyms]  [k] do_syscall_64
+            |          
+             --0.69%--do_syscall_64
+                       |          
+                        --0.63%--syscall_trace_enter
+                                  |          
+                                   --0.62%--perf_syscall_enter
+                                             |          
+                                              --0.60%--perf_tp_event
+                                                        |          
+                                                         --0.57%--perf_swevent_overflow
+                                                                   |          
+                                                                    --0.57%--__perf_event_overflow
+                                                                              |          
+                                                                               --0.56%--perf_event_output_forward
+
+     0.69%     0.69%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f9
+            |          
+             --0.52%--0
+                       0x7f4e162d677e
+                       0x7f4e162d89f9
+
+     0.69%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89f9
+            |
+            ---0x7f4e162d89f9
+
+     0.63%     0.01%  example  [kernel.kallsyms]  [k] syscall_trace_enter
+            |          
+             --0.62%--syscall_trace_enter
+                       perf_syscall_enter
+                       |          
+                        --0.60%--perf_tp_event
+                                  |          
+                                   --0.57%--perf_swevent_overflow
+                                             |          
+                                              --0.57%--__perf_event_overflow
+                                                        |          
+                                                         --0.56%--perf_event_output_forward
+
+     0.62%     0.02%  example  [kernel.kallsyms]  [k] perf_syscall_enter
+            |          
+             --0.60%--perf_syscall_enter
+                       |          
+                        --0.60%--perf_tp_event
+                                  |          
+                                   --0.57%--perf_swevent_overflow
+                                             |          
+                                              --0.57%--__perf_event_overflow
+                                                        |          
+                                                         --0.56%--perf_event_output_forward
+
+     0.60%     0.01%  example  [kernel.kallsyms]  [k] perf_tp_event
+            |          
+             --0.59%--perf_tp_event
+                       |          
+                        --0.57%--perf_swevent_overflow
+                                  |          
+                                   --0.57%--__perf_event_overflow
+                                             |          
+                                              --0.56%--perf_event_output_forward
+
+     0.57%     0.01%  example  [kernel.kallsyms]  [k] perf_swevent_overflow
+            |          
+             --0.57%--perf_swevent_overflow
+                       __perf_event_overflow
+                       |          
+                        --0.56%--perf_event_output_forward
+
+     0.57%     0.01%  example  [kernel.kallsyms]  [k] __perf_event_overflow
+            |          
+             --0.56%--__perf_event_overflow
+                       perf_event_output_forward
+
+     0.56%     0.01%  example  [kernel.kallsyms]  [k] perf_event_output_forward
+            |          
+             --0.55%--perf_event_output_forward
+
+     0.47%     0.47%  example  libgomp.so.1.0.0   [.] 0x000000000001d2de
+     0.47%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92de
+     0.47%     0.01%  example  [kernel.kallsyms]  [k] perf_prepare_sample
+     0.43%     0.43%  example  libgomp.so.1.0.0   [.] 0x000000000001cee2
+     0.43%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8ee2
+     0.42%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89eb
+     0.42%     0.42%  example  libgomp.so.1.0.0   [.] 0x000000000001c9eb
+     0.41%     0.00%  example  [kernel.kallsyms]  [k] perf_callchain
+     0.41%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92e5
+     0.41%     0.01%  example  [kernel.kallsyms]  [k] get_perf_callchain
+     0.41%     0.41%  example  libgomp.so.1.0.0   [.] 0x000000000001d2e5
+     0.29%     0.29%  example  [kernel.kallsyms]  [k] __softirqentry_text_end
+     0.25%     0.25%  example  libgomp.so.1.0.0   [.] 0x000000000001c9e0
+     0.25%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e0
+     0.24%     0.24%  example  libgomp.so.1.0.0   [.] GOMP_critical_end
+     0.23%     0.23%  example  libgomp.so.1.0.0   [.] 0x000000000001d414
+     0.23%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9414
+     0.23%     0.23%  example  libgomp.so.1.0.0   [.] GOMP_critical_start
+     0.15%     0.15%  example  libgomp.so.1.0.0   [.] 0x000000000001d2e3
+     0.15%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92e3
+     0.10%     0.10%  example  [kernel.kallsyms]  [k] perf_callchain_user
+     0.10%     0.10%  example  libgomp.so.1.0.0   [.] 0x000000000001d2d8
+     0.10%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92d8
+     0.07%     0.01%  example  [kernel.kallsyms]  [k] perf_output_sample
+     0.05%     0.03%  example  [kernel.kallsyms]  [k] perf_output_copy
+     0.04%     0.04%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f2
+     0.04%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89f2
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] irq_exit
+     0.04%     0.02%  example  [kernel.kallsyms]  [k] __softirqentry_text_start
+     0.04%     0.01%  example  [kernel.kallsyms]  [k] __perf_event_header__init_id.isra.92
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] hv_stimer0_callback_vector
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] hv_stimer0_vector_handler
+     0.04%     0.04%  example  libgomp.so.1.0.0   [.] 0x000000000001d2ec
+     0.04%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92ec
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_futex
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] 0x000000000001d122
+     0.03%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9122
+     0.03%     0.03%  example  [kernel.kallsyms]  [k] memcpy_erms
+     0.03%     0.00%  example  [kernel.kallsyms]  [k] do_futex
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] GOMP_barrier
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] 0x000000000001d407
+     0.03%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9407
+     0.03%     0.01%  example  [kernel.kallsyms]  [k] futex_wake
+     0.03%     0.00%  example  [kernel.kallsyms]  [k] sched_clock_cpu
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] GOMP_ordered_start
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] 0x000000000001c9f5
+     0.03%     0.03%  example  libgomp.so.1.0.0   [.] 0x000000000001d3b6
+     0.03%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89f5
+     0.02%     0.01%  example  [kernel.kallsyms]  [k] sched_clock_local
+     0.02%     0.02%  example  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     0.02%     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001cee6
+     0.02%     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001d2ea
+     0.02%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8ee6
+     0.02%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92ea
+     0.02%     0.00%  example  libc-2.31.so       [.] __clone
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_clone
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] _do_fork
+     0.02%     0.02%  example  [kernel.kallsyms]  [k] read_hv_clock_tsc
+     0.02%     0.02%  example  libgomp.so.1.0.0   [.] 0x000000000001ceed
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] copy_process
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] perf_event_init_task
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] rcu_core
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] sched_clock
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] read_hv_sched_clock_tsc
+     0.02%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8eed
+     0.01%     0.01%  example  [kernel.kallsyms]  [k] perf_trace_init
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] inherit_group.isra.120
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] inherit_event.isra.119
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] perf_event_alloc
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] perf_try_init_event
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] perf_tp_event_init
+     0.01%     0.01%  example  [kernel.kallsyms]  [k] 0x000049000000c003
+     0.01%     0.01%  example  [kernel.kallsyms]  [k] get_futex_key
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] 0xffffc90000009003
+     0.01%     0.01%  example  [kernel.kallsyms]  [k] tracing_generic_entry_update
+     0.01%     0.01%  example  example            [.] 0x00000000000011a0
+     0.01%     0.00%  example  example            [.] 0x000056135f1cb1a0
+     0.01%     0.01%  example  example            [.] 0x0000000000001170
+     0.01%     0.00%  example  [kernel.kallsyms]  [k] perf_event_pid_type
+     0.01%     0.01%  example  libgomp.so.1.0.0   [.] 0x000000000001d302
+     0.01%     0.00%  example  example            [.] 0x000056135f1cb170
+     0.01%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9302
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __task_pid_nr_ns
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] get_futex_key_refs.isra.7
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] hash_futex
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_tp_event_match
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] run_timer_softirq
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9be
+     0.00%     0.00%  example  example            [.] 0x0000000000001230
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001ceeb
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d38d
+     0.00%     0.00%  example  libc-2.31.so       [.] write
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ksys_write
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] vfs_write
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d28a
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2fc
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] tty_write
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] n_tty_write
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] pty_write
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2d0
+     0.00%     0.00%  example  example            [.] 0x000056135f1cb230
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89be
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d931c
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8eeb
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d928a
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92d0
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92fc
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d938d
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] memcpy
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_instruction_pointer
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_misc_flags
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_output_begin_forward
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_trace_buf_update
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_trace_buf_alloc
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9a0
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9ae
+     0.00%     0.00%  example  example            [.] 0x00000000000011e0
+     0.00%     0.00%  example  example            [.] 0x0000000000001200
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_ordered_end
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f0
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] hyperv_callback_vector
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] hyperv_vector_handler
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] net_rx_action
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] netvsc_poll
+     0.00%     0.00%  example  example            [.] 0x000056135f1cb1e0
+     0.00%     0.00%  example  example            [.] 0x000056135f1cb200
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89a0
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89ae
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92f0
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_output_end
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __bitmap_and
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] perf_swevent_event
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] rcu_segcblist_ready_cbs
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] filemap_map_pages
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] rb_next
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] update_blocked_averages
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] syscall_slow_exit_work
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d120
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d373
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d40f
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f8
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d416
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d419
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __do_page_fault
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] gro_normal_list.part.151
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __netif_receive_skb_list_core
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] handle_mm_fault
+     0.00%     0.00%  example  libc-2.31.so       [.] __libc_calloc
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2f2
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2fd
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] napi_complete_done
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] netif_receive_skb_list_internal
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_list_rcv
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_sublist_rcv
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_sublist_rcv_finish
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_local_deliver
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_local_deliver_finish
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] ip_protocol_deliver_rcu
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] page_fault
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] tcp_v4_rcv
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] tcp_v4_do_rcv
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] tcp_rcv_established
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] tcp_data_queue
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001c9a6
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d280
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2a5
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d300
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d304
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] rebalance_domains
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] sock_def_readable
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001cee0
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __wake_up_common_lock
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] load_balance
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x000000000001d2b7
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] note_gp_changes
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] run_rebalance_domains
+     0.00%     0.00%  example  ld-2.31.so         [.] 0x00007f4e16326c3b
+     0.00%     0.00%  example  ld-2.31.so         [.] 0x00007f4e1630e52a
+     0.00%     0.00%  example  ld-2.31.so         [.] 0x00007f4e163160eb
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] wake_up_new_task
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89a6
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8ee0
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9120
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9280
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92a5
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92b7
+     0.00%     0.00%  example  [unknown]          [k] 0x0a73752032373133
+     0.00%     0.00%  example  [unknown]          [k] 0x610a737520373237
+     0.00%     0.00%  example  [unknown]          [k] 0x6174732031206b63
+     0.00%     0.00%  example  [unknown]          [k] 0x41e589480000b264
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92f2
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92f8
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92fd
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9300
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9304
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9373
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d940f
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9416
+     0.00%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9419
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 358
+#
+# Children      Self  Command  Shared Object      Symbol                            
+# ........  ........  .......  .................  ..................................
+#
+    82.40%    82.40%  example  libc-2.31.so       [.] getenv
+            |
+            ---getenv
+
+    12.57%    12.57%  example  ld-2.31.so         [.] 0x00000000000076f0
+            |
+            ---0x7f4e1631461b
+               0x7f4e163116f0
+
+    12.57%     0.00%  example  ld-2.31.so         [.] 0x00007f4e1631461b
+            |
+            ---0x7f4e1631461b
+               0x7f4e163116f0
+
+    12.57%     0.00%  example  ld-2.31.so         [.] 0x00007f4e163116f0
+            |
+            ---0x7f4e163116f0
+
+     3.35%     3.35%  example  ld-2.31.so         [.] 0x000000000001c6f0
+            |
+            ---0x7f4e1630b108
+               0x7f4e163266f0
+
+     3.35%     0.00%  example  ld-2.31.so         [.] 0x00007f4e1630b108
+            |
+            ---0x7f4e1630b108
+               0x7f4e163266f0
+
+     3.35%     0.00%  example  ld-2.31.so         [.] 0x00007f4e163266f0
+            |
+            ---0x7f4e163266f0
+
+     0.84%     0.00%  example  [unknown]          [k] 0x00007f93ed3d22fb
+            |
+            ---0x7f93ed3d22fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] __do_execve_file.isra.41
+            |
+            ---__do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] search_binary_handler
+            |
+            ---search_binary_handler
+               load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.00%  example  [kernel.kallsyms]  [k] load_elf_binary
+            |
+            ---load_elf_binary
+               |          
+               |--0.56%--__clear_user
+               |          
+                --0.28%--copy_user_generic_unrolled
+
+     0.84%     0.84%  example  ld-2.31.so         [.] 0x0000000000001100
+            |
+            ---0x7f4e1630b100
+
+     0.84%     0.00%  example  ld-2.31.so         [.] 0x00007f4e1630b100
+            |
+            ---0x7f4e1630b100
+
+     0.56%     0.56%  example  [kernel.kallsyms]  [k] __clear_user
+            |
+            ---0x7f93ed3d22fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.28%     0.28%  example  [kernel.kallsyms]  [k] copy_user_generic_unrolled
+            |
+            ---0x7f93ed3d22fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               copy_user_generic_unrolled
+
+
+
+# Samples: 55  of event 'context-switches'
+# Event count (approx.): 55
+#
+# Children      Self  Command  Shared Object      Symbol                                        
+# ........  ........  .......  .................  ..............................................
+#
+   100.00%   100.00%  example  [kernel.kallsyms]  [k] schedule
+            |          
+            |--63.64%--0
+            |          |          
+            |          |--52.73%--0x7f4e162d677e
+            |          |          |          
+            |          |          |--16.36%--0x7f4e162d89e2
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--12.73%--main._omp_fn.0
+            |          |          |          fibo
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--5.45%--0x7f4e162d89e6
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--5.45%--main._omp_fn.1
+            |          |          |          fibo
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--3.64%--0x7f4e162d89ed
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--3.64%--main._omp_fn.4
+            |          |          |          fibo
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--1.82%--0x7f4e162d93b6
+            |          |          |          entry_SYSCALL_64_after_hwframe
+            |          |          |          do_syscall_64
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |          |--1.82%--main._omp_fn.3
+            |          |          |          fibo
+            |          |          |          swapgs_restore_regs_and_return_to_usermode
+            |          |          |          prepare_exit_to_usermode
+            |          |          |          exit_to_usermode_loop
+            |          |          |          schedule
+            |          |          |          schedule
+            |          |          |          
+            |          |           --1.82%--main._omp_fn.2
+            |          |                     fibo
+            |          |                     swapgs_restore_regs_and_return_to_usermode
+            |          |                     prepare_exit_to_usermode
+            |          |                     exit_to_usermode_loop
+            |          |                     schedule
+            |          |                     schedule
+            |          |          
+            |          |--7.27%--0x7f4e162d8f2d
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          schedule
+            |          |          
+            |           --3.64%--0x7f4e162d8ee2
+            |                     swapgs_restore_regs_and_return_to_usermode
+            |                     prepare_exit_to_usermode
+            |                     exit_to_usermode_loop
+            |                     schedule
+            |                     schedule
+            |          
+            |--27.27%--0x7f4e162d931c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--7.27%--0x7f4e162d92da
+            |          swapgs_restore_regs_and_return_to_usermode
+            |          prepare_exit_to_usermode
+            |          exit_to_usermode_loop
+            |          schedule
+            |          schedule
+            |          
+             --1.82%--0x927c000061a80
+                       0x7ffff11d29e0
+                       GOMP_parallel
+                       0x7f4e162d89e2
+                       swapgs_restore_regs_and_return_to_usermode
+                       prepare_exit_to_usermode
+                       exit_to_usermode_loop
+                       schedule
+                       schedule
+
+    65.45%     0.00%  example  [kernel.kallsyms]  [k] exit_to_usermode_loop
+            |
+            ---exit_to_usermode_loop
+               schedule
+               schedule
+
+    63.64%     0.00%  example  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--52.73%--0x7f4e162d677e
+               |          |          
+               |          |--16.36%--0x7f4e162d89e2
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--12.73%--main._omp_fn.0
+               |          |          fibo
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--5.45%--0x7f4e162d89e6
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--5.45%--main._omp_fn.1
+               |          |          fibo
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--3.64%--0x7f4e162d89ed
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--3.64%--main._omp_fn.4
+               |          |          fibo
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--1.82%--0x7f4e162d93b6
+               |          |          entry_SYSCALL_64_after_hwframe
+               |          |          do_syscall_64
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |          |--1.82%--main._omp_fn.3
+               |          |          fibo
+               |          |          swapgs_restore_regs_and_return_to_usermode
+               |          |          prepare_exit_to_usermode
+               |          |          exit_to_usermode_loop
+               |          |          schedule
+               |          |          schedule
+               |          |          
+               |           --1.82%--main._omp_fn.2
+               |                     fibo
+               |                     swapgs_restore_regs_and_return_to_usermode
+               |                     prepare_exit_to_usermode
+               |                     exit_to_usermode_loop
+               |                     schedule
+               |                     schedule
+               |          
+               |--7.27%--0x7f4e162d8f2d
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          __x64_sys_futex
+               |          do_futex
+               |          futex_wait
+               |          futex_wait_queue_me
+               |          schedule
+               |          schedule
+               |          
+                --3.64%--0x7f4e162d8ee2
+                          swapgs_restore_regs_and_return_to_usermode
+                          prepare_exit_to_usermode
+                          exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    63.64%     0.00%  example  [kernel.kallsyms]  [k] swapgs_restore_regs_and_return_to_usermode
+            |
+            ---swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    63.64%     0.00%  example  [kernel.kallsyms]  [k] prepare_exit_to_usermode
+            |
+            ---prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    52.73%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d677e
+            |
+            ---0x7f4e162d677e
+               |          
+               |--16.36%--0x7f4e162d89e2
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--12.73%--main._omp_fn.0
+               |          fibo
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--5.45%--0x7f4e162d89e6
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--5.45%--main._omp_fn.1
+               |          fibo
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--3.64%--0x7f4e162d89ed
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--3.64%--main._omp_fn.4
+               |          fibo
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--1.82%--0x7f4e162d93b6
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+               |--1.82%--main._omp_fn.3
+               |          fibo
+               |          swapgs_restore_regs_and_return_to_usermode
+               |          prepare_exit_to_usermode
+               |          exit_to_usermode_loop
+               |          schedule
+               |          schedule
+               |          
+                --1.82%--main._omp_fn.2
+                          fibo
+                          swapgs_restore_regs_and_return_to_usermode
+                          prepare_exit_to_usermode
+                          exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    36.36%     0.00%  example  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+               |--34.55%--__x64_sys_futex
+               |          do_futex
+               |          futex_wait
+               |          futex_wait_queue_me
+               |          schedule
+               |          schedule
+               |          
+                --1.82%--exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    36.36%     0.00%  example  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+               |--34.55%--__x64_sys_futex
+               |          do_futex
+               |          futex_wait
+               |          futex_wait_queue_me
+               |          schedule
+               |          schedule
+               |          
+                --1.82%--exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    34.55%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    34.55%     0.00%  example  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    34.55%     0.00%  example  [kernel.kallsyms]  [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    34.55%     0.00%  example  [kernel.kallsyms]  [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               schedule
+
+    27.27%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d931c
+            |
+            ---0x7f4e162d931c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    25.45%     0.00%  example  example            [.] fibo
+            |
+            ---fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    18.18%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e2
+            |
+            ---0x7f4e162d89e2
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    12.73%     0.00%  example  example            [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     7.27%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8f2d
+            |
+            ---0x7f4e162d8f2d
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     7.27%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92da
+            |
+            ---0x7f4e162d92da
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.45%     0.00%  example  example            [.] main._omp_fn.1
+            |
+            ---main._omp_fn.1
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.45%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e6
+            |
+            ---0x7f4e162d89e6
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     3.64%     0.00%  example  example            [.] main._omp_fn.4
+            |
+            ---main._omp_fn.4
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     3.64%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89ed
+            |
+            ---0x7f4e162d89ed
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     3.64%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8ee2
+            |
+            ---0x7f4e162d8ee2
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  example            [.] main._omp_fn.2
+            |
+            ---main._omp_fn.2
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  example            [.] main._omp_fn.3
+            |
+            ---main._omp_fn.3
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  [unknown]          [k] 0x000927c000061a80
+            |
+            ---0x927c000061a80
+               0x7ffff11d29e0
+               GOMP_parallel
+               0x7f4e162d89e2
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  [unknown]          [k] 0x00007ffff11d29e0
+            |
+            ---0x7ffff11d29e0
+               GOMP_parallel
+               0x7f4e162d89e2
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               0x7f4e162d89e2
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.82%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d93b6
+            |
+            ---0x7f4e162d93b6
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 1K of event 'sched:sched_stat_runtime'
+# Event count (approx.): 15972274800
+#
+# Children      Self  Command  Shared Object      Symbol                                        
+# ........  ........  .......  .................  ..............................................
+#
+   100.00%   100.00%  example  [kernel.kallsyms]  [k] update_curr
+            |          
+            |--69.49%--0
+            |          |          
+            |           --68.95%--0x7f4e162d677e
+            |                     |          
+            |                     |--25.10%--0x7f4e162d89e2
+            |                     |          |          
+            |                     |           --25.10%--hv_stimer0_callback_vector
+            |                     |                     hv_stimer0_vector_handler
+            |                     |                     |          
+            |                     |                      --25.10%--hrtimer_interrupt
+            |                     |                                __hrtimer_run_queues
+            |                     |                                tick_sched_timer
+            |                     |                                update_process_times
+            |                     |                                scheduler_tick
+            |                     |                                task_tick_fair
+            |                     |                                update_curr
+            |                     |                                update_curr
+            |                     |          
+            |                     |--10.61%--main._omp_fn.0
+            |                     |          |          
+            |                     |           --10.55%--fibo
+            |                     |                     |          
+            |                     |                      --10.55%--hv_stimer0_callback_vector
+            |                     |                                hv_stimer0_vector_handler
+            |                     |                                |          
+            |                     |                                 --10.55%--hrtimer_interrupt
+            |                     |                                           __hrtimer_run_queues
+            |                     |                                           tick_sched_timer
+            |                     |                                           update_process_times
+            |                     |                                           scheduler_tick
+            |                     |                                           task_tick_fair
+            |                     |                                           update_curr
+            |                     |                                           update_curr
+            |                     |          
+            |                     |--8.95%--main._omp_fn.1
+            |                     |          fibo
+            |                     |          hv_stimer0_callback_vector
+            |                     |          hv_stimer0_vector_handler
+            |                     |          |          
+            |                     |           --8.95%--hrtimer_interrupt
+            |                     |                     __hrtimer_run_queues
+            |                     |                     tick_sched_timer
+            |                     |                     update_process_times
+            |                     |                     scheduler_tick
+            |                     |                     task_tick_fair
+            |                     |                     update_curr
+            |                     |                     update_curr
+            |                     |          
+            |                     |--6.75%--main._omp_fn.4
+            |                     |          fibo
+            |                     |          |          
+            |                     |           --6.75%--hv_stimer0_callback_vector
+            |                     |                     hv_stimer0_vector_handler
+            |                     |                     |          
+            |                     |                      --6.75%--hrtimer_interrupt
+            |                     |                                __hrtimer_run_queues
+            |                     |                                tick_sched_timer
+            |                     |                                update_process_times
+            |                     |                                scheduler_tick
+            |                     |                                task_tick_fair
+            |                     |                                update_curr
+            |                     |                                update_curr
+            |                     |          
+            |                     |--6.25%--main._omp_fn.3
+            |                     |          fibo
+            |                     |          |          
+            |                     |           --6.25%--hv_stimer0_callback_vector
+            |                     |                     hv_stimer0_vector_handler
+            |                     |                     hrtimer_interrupt
+            |                     |                     __hrtimer_run_queues
+            |                     |                     tick_sched_timer
+            |                     |                     update_process_times
+            |                     |                     scheduler_tick
+            |                     |                     task_tick_fair
+            |                     |                     update_curr
+            |                     |                     update_curr
+            |                     |          
+            |                     |--5.83%--main._omp_fn.2
+            |                     |          |          
+            |                     |           --5.77%--fibo
+            |                     |                     |          
+            |                     |                      --5.77%--hv_stimer0_callback_vector
+            |                     |                                hv_stimer0_vector_handler
+            |                     |                                |          
+            |                     |                                 --5.77%--hrtimer_interrupt
+            |                     |                                           __hrtimer_run_queues
+            |                     |                                           tick_sched_timer
+            |                     |                                           update_process_times
+            |                     |                                           scheduler_tick
+            |                     |                                           task_tick_fair
+            |                     |                                           update_curr
+            |                     |                                           update_curr
+            |                     |          
+            |                     |--1.57%--0x7f4e162d89e6
+            |                     |          hv_stimer0_callback_vector
+            |                     |          hv_stimer0_vector_handler
+            |                     |          |          
+            |                     |           --1.56%--hrtimer_interrupt
+            |                     |                     __hrtimer_run_queues
+            |                     |                     tick_sched_timer
+            |                     |                     update_process_times
+            |                     |                     scheduler_tick
+            |                     |                     task_tick_fair
+            |                     |                     update_curr
+            |                     |                     update_curr
+            |                     |          
+            |                     |--1.44%--0x7f4e162d89ed
+            |                     |          hv_stimer0_callback_vector
+            |                     |          hv_stimer0_vector_handler
+            |                     |          |          
+            |                     |           --1.44%--hrtimer_interrupt
+            |                     |                     __hrtimer_run_queues
+            |                     |                     tick_sched_timer
+            |                     |                     update_process_times
+            |                     |                     scheduler_tick
+            |                     |                     task_tick_fair
+            |                     |                     update_curr
+            |                     |                     update_curr
+            |                     |          
+            |                      --0.88%--0x7f4e162d93b6
+            |                                |          
+            |                                 --0.81%--entry_SYSCALL_64_after_hwframe
+            |                                           do_syscall_64
+            |                                           |          
+            |                                            --0.75%--syscall_trace_enter
+            |                                                      perf_syscall_enter
+            |                                                      perf_tp_event
+            |                                                      |          
+            |                                                       --0.69%--perf_swevent_overflow
+            |                                                                 __perf_event_overflow
+            |                                                                 perf_event_output_forward
+            |                                                                 |          
+            |                                                                  --0.56%--perf_prepare_sample
+            |          
+            |--14.19%--0x927c000061a80
+            |          0x7ffff11d29e0
+            |          GOMP_parallel
+            |          |          
+            |          |--8.45%--0x7f4e162d89e2
+            |          |          hv_stimer0_callback_vector
+            |          |          hv_stimer0_vector_handler
+            |          |          |          
+            |          |           --8.45%--hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |          |--2.79%--main._omp_fn.0
+            |          |          |          
+            |          |           --2.73%--fibo
+            |          |                     hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     hrtimer_interrupt
+            |          |                     __hrtimer_run_queues
+            |          |                     tick_sched_timer
+            |          |                     update_process_times
+            |          |                     scheduler_tick
+            |          |                     task_tick_fair
+            |          |                     update_curr
+            |          |                     update_curr
+            |          |          
+            |          |--1.63%--main._omp_fn.1
+            |          |          fibo
+            |          |          hv_stimer0_callback_vector
+            |          |          hv_stimer0_vector_handler
+            |          |          hrtimer_interrupt
+            |          |          __hrtimer_run_queues
+            |          |          tick_sched_timer
+            |          |          update_process_times
+            |          |          scheduler_tick
+            |          |          task_tick_fair
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --0.50%--0x7f4e162d89e6
+            |                     hv_stimer0_callback_vector
+            |                     hv_stimer0_vector_handler
+            |                     hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     tick_sched_timer
+            |                     update_process_times
+            |                     scheduler_tick
+            |                     task_tick_fair
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--7.45%--0x7f4e162d92da
+            |          hv_stimer0_callback_vector
+            |          hv_stimer0_vector_handler
+            |          |          
+            |           --7.45%--hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     |          
+            |                      --7.42%--tick_sched_timer
+            |                                update_process_times
+            |                                scheduler_tick
+            |                                task_tick_fair
+            |                                update_curr
+            |                                update_curr
+            |          
+            |--5.52%--0xa92290009b7f3
+            |          0x7ffff11d29e0
+            |          GOMP_parallel
+            |          |          
+            |          |--3.27%--main._omp_fn.4
+            |          |          fibo
+            |          |          hv_stimer0_callback_vector
+            |          |          hv_stimer0_vector_handler
+            |          |          hrtimer_interrupt
+            |          |          __hrtimer_run_queues
+            |          |          tick_sched_timer
+            |          |          update_process_times
+            |          |          scheduler_tick
+            |          |          task_tick_fair
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --2.25%--main._omp_fn.3
+            |                     fibo
+            |                     hv_stimer0_callback_vector
+            |                     hv_stimer0_vector_handler
+            |                     hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     tick_sched_timer
+            |                     update_process_times
+            |                     scheduler_tick
+            |                     task_tick_fair
+            |                     update_curr
+            |                     update_curr
+            |          
+            |--1.57%--0x7ffff11d29e0
+            |          GOMP_parallel
+            |          |          
+            |           --1.44%--main._omp_fn.2
+            |                     fibo
+            |                     hv_stimer0_callback_vector
+            |                     hv_stimer0_vector_handler
+            |                     hrtimer_interrupt
+            |                     __hrtimer_run_queues
+            |                     tick_sched_timer
+            |                     update_process_times
+            |                     scheduler_tick
+            |                     task_tick_fair
+            |                     update_curr
+            |                     update_curr
+            |          
+             --0.60%--0x7f4e162d931c
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wait
+                       futex_wait_queue_me
+                       schedule
+                       __schedule
+                       dequeue_task_fair
+                       dequeue_entity
+                       update_curr
+                       update_curr
+
+    99.21%     0.00%  example  [kernel.kallsyms]  [k] hv_stimer0_callback_vector
+            |
+            ---hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --99.21%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                           --99.18%--tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    99.21%     0.00%  example  [kernel.kallsyms]  [k] hv_stimer0_vector_handler
+            |
+            ---hv_stimer0_vector_handler
+               |          
+                --99.21%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                           --99.18%--tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    99.21%     0.00%  example  [kernel.kallsyms]  [k] hrtimer_interrupt
+            |
+            ---hrtimer_interrupt
+               __hrtimer_run_queues
+               |          
+                --99.18%--tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    99.21%     0.00%  example  [kernel.kallsyms]  [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+               |          
+                --99.18%--tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    99.18%     0.00%  example  [kernel.kallsyms]  [k] tick_sched_timer
+            |
+            ---tick_sched_timer
+               update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    99.18%     0.00%  example  [kernel.kallsyms]  [k] update_process_times
+            |
+            ---update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    99.18%     0.00%  example  [kernel.kallsyms]  [k] scheduler_tick
+            |
+            ---scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    99.18%     0.00%  example  [kernel.kallsyms]  [k] task_tick_fair
+            |
+            ---task_tick_fair
+               update_curr
+               update_curr
+
+    69.49%     0.00%  example  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+                --68.95%--0x7f4e162d677e
+                          |          
+                          |--25.10%--0x7f4e162d89e2
+                          |          |          
+                          |           --25.10%--hv_stimer0_callback_vector
+                          |                     hv_stimer0_vector_handler
+                          |                     |          
+                          |                      --25.10%--hrtimer_interrupt
+                          |                                __hrtimer_run_queues
+                          |                                tick_sched_timer
+                          |                                update_process_times
+                          |                                scheduler_tick
+                          |                                task_tick_fair
+                          |                                update_curr
+                          |                                update_curr
+                          |          
+                          |--10.61%--main._omp_fn.0
+                          |          |          
+                          |           --10.55%--fibo
+                          |                     |          
+                          |                      --10.55%--hv_stimer0_callback_vector
+                          |                                hv_stimer0_vector_handler
+                          |                                |          
+                          |                                 --10.55%--hrtimer_interrupt
+                          |                                           __hrtimer_run_queues
+                          |                                           tick_sched_timer
+                          |                                           update_process_times
+                          |                                           scheduler_tick
+                          |                                           task_tick_fair
+                          |                                           update_curr
+                          |                                           update_curr
+                          |          
+                          |--8.95%--main._omp_fn.1
+                          |          fibo
+                          |          hv_stimer0_callback_vector
+                          |          hv_stimer0_vector_handler
+                          |          |          
+                          |           --8.95%--hrtimer_interrupt
+                          |                     __hrtimer_run_queues
+                          |                     tick_sched_timer
+                          |                     update_process_times
+                          |                     scheduler_tick
+                          |                     task_tick_fair
+                          |                     update_curr
+                          |                     update_curr
+                          |          
+                          |--6.75%--main._omp_fn.4
+                          |          fibo
+                          |          |          
+                          |           --6.75%--hv_stimer0_callback_vector
+                          |                     hv_stimer0_vector_handler
+                          |                     |          
+                          |                      --6.75%--hrtimer_interrupt
+                          |                                __hrtimer_run_queues
+                          |                                tick_sched_timer
+                          |                                update_process_times
+                          |                                scheduler_tick
+                          |                                task_tick_fair
+                          |                                update_curr
+                          |                                update_curr
+                          |          
+                          |--6.25%--main._omp_fn.3
+                          |          fibo
+                          |          |          
+                          |           --6.25%--hv_stimer0_callback_vector
+                          |                     hv_stimer0_vector_handler
+                          |                     hrtimer_interrupt
+                          |                     __hrtimer_run_queues
+                          |                     tick_sched_timer
+                          |                     update_process_times
+                          |                     scheduler_tick
+                          |                     task_tick_fair
+                          |                     update_curr
+                          |                     update_curr
+                          |          
+                          |--5.83%--main._omp_fn.2
+                          |          |          
+                          |           --5.77%--fibo
+                          |                     |          
+                          |                      --5.77%--hv_stimer0_callback_vector
+                          |                                hv_stimer0_vector_handler
+                          |                                |          
+                          |                                 --5.77%--hrtimer_interrupt
+                          |                                           __hrtimer_run_queues
+                          |                                           tick_sched_timer
+                          |                                           update_process_times
+                          |                                           scheduler_tick
+                          |                                           task_tick_fair
+                          |                                           update_curr
+                          |                                           update_curr
+                          |          
+                          |--1.57%--0x7f4e162d89e6
+                          |          hv_stimer0_callback_vector
+                          |          hv_stimer0_vector_handler
+                          |          |          
+                          |           --1.56%--hrtimer_interrupt
+                          |                     __hrtimer_run_queues
+                          |                     tick_sched_timer
+                          |                     update_process_times
+                          |                     scheduler_tick
+                          |                     task_tick_fair
+                          |                     update_curr
+                          |                     update_curr
+                          |          
+                          |--1.44%--0x7f4e162d89ed
+                          |          hv_stimer0_callback_vector
+                          |          hv_stimer0_vector_handler
+                          |          |          
+                          |           --1.44%--hrtimer_interrupt
+                          |                     __hrtimer_run_queues
+                          |                     tick_sched_timer
+                          |                     update_process_times
+                          |                     scheduler_tick
+                          |                     task_tick_fair
+                          |                     update_curr
+                          |                     update_curr
+                          |          
+                           --0.88%--0x7f4e162d93b6
+                                     |          
+                                      --0.81%--entry_SYSCALL_64_after_hwframe
+                                                do_syscall_64
+                                                |          
+                                                 --0.75%--syscall_trace_enter
+                                                           perf_syscall_enter
+                                                           perf_tp_event
+                                                           |          
+                                                            --0.69%--perf_swevent_overflow
+                                                                      __perf_event_overflow
+                                                                      perf_event_output_forward
+                                                                      |          
+                                                                       --0.56%--perf_prepare_sample
+
+    68.95%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d677e
+            |
+            ---0x7f4e162d677e
+               |          
+               |--25.10%--0x7f4e162d89e2
+               |          |          
+               |           --25.10%--hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     |          
+               |                      --25.10%--hrtimer_interrupt
+               |                                __hrtimer_run_queues
+               |                                tick_sched_timer
+               |                                update_process_times
+               |                                scheduler_tick
+               |                                task_tick_fair
+               |                                update_curr
+               |                                update_curr
+               |          
+               |--10.61%--main._omp_fn.0
+               |          |          
+               |           --10.55%--fibo
+               |                     |          
+               |                      --10.55%--hv_stimer0_callback_vector
+               |                                hv_stimer0_vector_handler
+               |                                |          
+               |                                 --10.55%--hrtimer_interrupt
+               |                                           __hrtimer_run_queues
+               |                                           tick_sched_timer
+               |                                           update_process_times
+               |                                           scheduler_tick
+               |                                           task_tick_fair
+               |                                           update_curr
+               |                                           update_curr
+               |          
+               |--8.95%--main._omp_fn.1
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --8.95%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--6.75%--main._omp_fn.4
+               |          fibo
+               |          |          
+               |           --6.75%--hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     |          
+               |                      --6.75%--hrtimer_interrupt
+               |                                __hrtimer_run_queues
+               |                                tick_sched_timer
+               |                                update_process_times
+               |                                scheduler_tick
+               |                                task_tick_fair
+               |                                update_curr
+               |                                update_curr
+               |          
+               |--6.25%--main._omp_fn.3
+               |          fibo
+               |          |          
+               |           --6.25%--hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--5.83%--main._omp_fn.2
+               |          |          
+               |           --5.77%--fibo
+               |                     |          
+               |                      --5.77%--hv_stimer0_callback_vector
+               |                                hv_stimer0_vector_handler
+               |                                |          
+               |                                 --5.77%--hrtimer_interrupt
+               |                                           __hrtimer_run_queues
+               |                                           tick_sched_timer
+               |                                           update_process_times
+               |                                           scheduler_tick
+               |                                           task_tick_fair
+               |                                           update_curr
+               |                                           update_curr
+               |          
+               |--1.57%--0x7f4e162d89e6
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --1.56%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--1.44%--0x7f4e162d89ed
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --1.44%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+                --0.88%--0x7f4e162d93b6
+                          |          
+                           --0.81%--entry_SYSCALL_64_after_hwframe
+                                     do_syscall_64
+                                     |          
+                                      --0.75%--syscall_trace_enter
+                                                perf_syscall_enter
+                                                perf_tp_event
+                                                |          
+                                                 --0.69%--perf_swevent_overflow
+                                                           __perf_event_overflow
+                                                           perf_event_output_forward
+                                                           |          
+                                                            --0.56%--perf_prepare_sample
+
+    49.65%     0.00%  example  example            [.] fibo
+            |
+            ---fibo
+               |          
+                --49.65%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --49.65%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    33.55%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e2
+            |
+            ---0x7f4e162d89e2
+               |          
+                --33.55%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --33.55%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    21.27%     0.00%  example  [unknown]          [k] 0x00007ffff11d29e0
+            |
+            ---0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--8.45%--0x7f4e162d89e2
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --8.45%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--3.27%--main._omp_fn.4
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--2.79%--main._omp_fn.0
+               |          |          
+               |           --2.73%--fibo
+               |                     hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--2.25%--main._omp_fn.3
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--1.63%--main._omp_fn.1
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--1.44%--main._omp_fn.2
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --0.50%--0x7f4e162d89e6
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    21.27%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+               |--8.45%--0x7f4e162d89e2
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --8.45%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--3.27%--main._omp_fn.4
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--2.79%--main._omp_fn.0
+               |          |          
+               |           --2.73%--fibo
+               |                     hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--2.25%--main._omp_fn.3
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--1.63%--main._omp_fn.1
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+               |--1.44%--main._omp_fn.2
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --0.50%--0x7f4e162d89e6
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    14.19%     0.00%  example  [unknown]          [k] 0x000927c000061a80
+            |
+            ---0x927c000061a80
+               0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--8.45%--0x7f4e162d89e2
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          |          
+               |           --8.45%--hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--2.79%--main._omp_fn.0
+               |          |          
+               |           --2.73%--fibo
+               |                     hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     hrtimer_interrupt
+               |                     __hrtimer_run_queues
+               |                     tick_sched_timer
+               |                     update_process_times
+               |                     scheduler_tick
+               |                     task_tick_fair
+               |                     update_curr
+               |                     update_curr
+               |          
+               |--1.63%--main._omp_fn.1
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --0.50%--0x7f4e162d89e6
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    13.41%     0.00%  example  example            [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               |          
+                --13.28%--fibo
+                          |          
+                           --13.28%--hv_stimer0_callback_vector
+                                     hv_stimer0_vector_handler
+                                     |          
+                                      --13.28%--hrtimer_interrupt
+                                                __hrtimer_run_queues
+                                                tick_sched_timer
+                                                update_process_times
+                                                scheduler_tick
+                                                task_tick_fair
+                                                update_curr
+                                                update_curr
+
+    10.58%     0.00%  example  example            [.] main._omp_fn.1
+            |
+            ---main._omp_fn.1
+               fibo
+               hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --10.58%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    10.02%     0.00%  example  example            [.] main._omp_fn.4
+            |
+            ---main._omp_fn.4
+               fibo
+               |          
+                --10.02%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --10.02%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+     8.50%     0.00%  example  example            [.] main._omp_fn.3
+            |
+            ---main._omp_fn.3
+               fibo
+               |          
+                --8.50%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     7.45%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92da
+            |
+            ---0x7f4e162d92da
+               hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --7.45%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                           --7.42%--tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+     7.27%     0.00%  example  example            [.] main._omp_fn.2
+            |
+            ---main._omp_fn.2
+               |          
+                --7.21%--fibo
+                          |          
+                           --7.21%--hv_stimer0_callback_vector
+                                     hv_stimer0_vector_handler
+                                     |          
+                                      --7.21%--hrtimer_interrupt
+                                                __hrtimer_run_queues
+                                                tick_sched_timer
+                                                update_process_times
+                                                scheduler_tick
+                                                task_tick_fair
+                                                update_curr
+                                                update_curr
+
+     5.52%     0.00%  example  [unknown]          [k] 0x000a92290009b7f3
+            |
+            ---0xa92290009b7f3
+               0x7ffff11d29e0
+               GOMP_parallel
+               |          
+               |--3.27%--main._omp_fn.4
+               |          fibo
+               |          hv_stimer0_callback_vector
+               |          hv_stimer0_vector_handler
+               |          hrtimer_interrupt
+               |          __hrtimer_run_queues
+               |          tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --2.25%--main._omp_fn.3
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     2.07%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e6
+            |
+            ---0x7f4e162d89e6
+               hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --2.07%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.97%     0.00%  example  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+               |--1.00%--syscall_trace_enter
+               |          perf_syscall_enter
+               |          perf_tp_event
+               |          |          
+               |           --0.94%--perf_swevent_overflow
+               |                     __perf_event_overflow
+               |                     perf_event_output_forward
+               |                     |          
+               |                      --0.81%--perf_prepare_sample
+               |                                |          
+               |                                 --0.69%--perf_callchain
+               |                                           get_perf_callchain
+               |          
+                --0.83%--__x64_sys_futex
+                          do_futex
+                          |          
+                           --0.77%--futex_wait
+                                     futex_wait_queue_me
+                                     schedule
+                                     __schedule
+                                     dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+     1.97%     0.00%  example  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+               |--1.00%--syscall_trace_enter
+               |          perf_syscall_enter
+               |          perf_tp_event
+               |          |          
+               |           --0.94%--perf_swevent_overflow
+               |                     __perf_event_overflow
+               |                     perf_event_output_forward
+               |                     |          
+               |                      --0.81%--perf_prepare_sample
+               |                                |          
+               |                                 --0.69%--perf_callchain
+               |                                           get_perf_callchain
+               |          
+                --0.83%--__x64_sys_futex
+                          do_futex
+                          |          
+                           --0.77%--futex_wait
+                                     futex_wait_queue_me
+                                     schedule
+                                     __schedule
+                                     dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+     1.69%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89ed
+            |
+            ---0x7f4e162d89ed
+               hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --1.69%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.32%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d93b6
+            |
+            ---0x7f4e162d93b6
+               |          
+                --1.19%--entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          |          
+                           --1.00%--syscall_trace_enter
+                                     perf_syscall_enter
+                                     perf_tp_event
+                                     |          
+                                      --0.94%--perf_swevent_overflow
+                                                __perf_event_overflow
+                                                perf_event_output_forward
+                                                |          
+                                                 --0.81%--perf_prepare_sample
+                                                           |          
+                                                            --0.69%--perf_callchain
+                                                                      get_perf_callchain
+
+     1.00%     0.00%  example  [kernel.kallsyms]  [k] syscall_trace_enter
+            |
+            ---syscall_trace_enter
+               perf_syscall_enter
+               perf_tp_event
+               |          
+                --0.94%--perf_swevent_overflow
+                          __perf_event_overflow
+                          perf_event_output_forward
+                          |          
+                           --0.81%--perf_prepare_sample
+                                     |          
+                                      --0.69%--perf_callchain
+                                                get_perf_callchain
+
+     1.00%     0.00%  example  [kernel.kallsyms]  [k] perf_syscall_enter
+            |
+            ---perf_syscall_enter
+               perf_tp_event
+               |          
+                --0.94%--perf_swevent_overflow
+                          __perf_event_overflow
+                          perf_event_output_forward
+                          |          
+                           --0.81%--perf_prepare_sample
+                                     |          
+                                      --0.69%--perf_callchain
+                                                get_perf_callchain
+
+     1.00%     0.00%  example  [kernel.kallsyms]  [k] perf_tp_event
+            |
+            ---perf_tp_event
+               |          
+                --0.94%--perf_swevent_overflow
+                          __perf_event_overflow
+                          perf_event_output_forward
+                          |          
+                           --0.81%--perf_prepare_sample
+                                     |          
+                                      --0.69%--perf_callchain
+                                                get_perf_callchain
+
+     0.94%     0.00%  example  [kernel.kallsyms]  [k] perf_swevent_overflow
+            |
+            ---perf_swevent_overflow
+               __perf_event_overflow
+               perf_event_output_forward
+               |          
+                --0.81%--perf_prepare_sample
+                          |          
+                           --0.69%--perf_callchain
+                                     get_perf_callchain
+
+     0.94%     0.00%  example  [kernel.kallsyms]  [k] __perf_event_overflow
+            |
+            ---__perf_event_overflow
+               perf_event_output_forward
+               |          
+                --0.81%--perf_prepare_sample
+                          |          
+                           --0.69%--perf_callchain
+                                     get_perf_callchain
+
+     0.94%     0.00%  example  [kernel.kallsyms]  [k] perf_event_output_forward
+            |
+            ---perf_event_output_forward
+               |          
+                --0.81%--perf_prepare_sample
+                          |          
+                           --0.69%--perf_callchain
+                                     get_perf_callchain
+
+     0.83%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               |          
+                --0.77%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     0.83%     0.00%  example  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               |          
+                --0.77%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     0.81%     0.00%  example  [kernel.kallsyms]  [k] perf_prepare_sample
+            |
+            ---perf_prepare_sample
+               |          
+                --0.69%--perf_callchain
+                          get_perf_callchain
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] schedule
+            |
+            ---schedule
+               __schedule
+               |          
+                --0.77%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] __schedule
+            |
+            ---__schedule
+               |          
+                --0.77%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               __schedule
+               dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] dequeue_task_fair
+            |
+            ---dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+     0.77%     0.00%  example  [kernel.kallsyms]  [k] dequeue_entity
+            |
+            ---dequeue_entity
+               update_curr
+               update_curr
+
+     0.69%     0.00%  example  [kernel.kallsyms]  [k] perf_callchain
+            |
+            ---perf_callchain
+               get_perf_callchain
+
+     0.69%     0.00%  example  [kernel.kallsyms]  [k] get_perf_callchain
+            |
+            ---get_perf_callchain
+
+     0.60%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d931c
+            |
+            ---0x7f4e162d931c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+     0.38%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89f9
+     0.38%     0.00%  example  [kernel.kallsyms]  [k] perf_callchain_user
+     0.38%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92e5
+     0.37%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92de
+     0.36%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8ee2
+     0.25%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9414
+     0.25%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_critical_end
+     0.25%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89eb
+     0.25%     0.00%  example  [kernel.kallsyms]  [k] __softirqentry_text_end
+     0.19%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d89e0
+     0.19%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92e3
+     0.17%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d8f2d
+     0.13%     0.00%  example  [kernel.kallsyms]  [k] __perf_event_header__init_id.isra.92
+     0.13%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_ordered_start
+     0.13%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92ec
+     0.12%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_barrier
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] perf_output_sample
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] perf_output_copy
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] local_clock
+     0.06%     0.00%  example  example            [.] 0x000056135f1cb170
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] futex_wake
+     0.06%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92d8
+     0.06%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d9407
+     0.06%     0.00%  example  libgomp.so.1.0.0   [.] GOMP_critical_start
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] perf_output_begin_forward
+     0.06%     0.00%  example  [kernel.kallsyms]  [k] sched_clock_cpu
+     0.06%     0.00%  example  libgomp.so.1.0.0   [.] 0x00007f4e162d92ea
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] try_to_wake_up
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] ttwu_do_activate
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] activate_task
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] enqueue_task_fair
+     0.04%     0.00%  example  [kernel.kallsyms]  [k] enqueue_entity
+     0.03%     0.00%  example  [kernel.kallsyms]  [k] hrtimer_wakeup
+     0.02%     0.00%  example  libc-2.31.so       [.] __clone
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] __x64_sys_clone
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] _do_fork
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] copy_process
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] sched_fork
+     0.02%     0.00%  example  [kernel.kallsyms]  [k] task_fork_fair
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] irq_exit
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __softirqentry_text_start
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] run_timer_softirq
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] call_timer_fn
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] __queue_work
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] swapgs_restore_regs_and_return_to_usermode
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] prepare_exit_to_usermode
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] exit_to_usermode_loop
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] put_prev_task_fair
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] put_prev_entity
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] pick_next_task_fair
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] rcu_core
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] swake_up_one
+     0.00%     0.00%  example  [kernel.kallsyms]  [k] swake_up_locked.part.4
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 200K of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 200046
+#
+# Children      Self  Command  Shared Object     Symbol                
+# ........  ........  .......  ................  ......................
+#
+    99.99%    99.99%  example  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+            |          
+            |--86.09%--0
+            |          |          
+            |           --86.08%--0x7f4e162d677e
+            |                     0x7f4e162d93b6
+            |          
+             --13.90%--0x927c000061a80
+                       0x7ffff11d29e0
+                       GOMP_parallel
+                       0x7f4e162d93b6
+
+    99.99%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d93b6
+            |
+            ---0x7f4e162d93b6
+
+    86.09%     0.00%  example  [unknown]         [.] 0000000000000000
+            |
+            ---0
+               |          
+                --86.08%--0x7f4e162d677e
+                          0x7f4e162d93b6
+
+    86.08%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d677e
+            |
+            ---0x7f4e162d677e
+               0x7f4e162d93b6
+
+    13.90%     0.00%  example  [unknown]         [.] 0x00007ffff11d29e0
+            |
+            ---0x7ffff11d29e0
+               GOMP_parallel
+               |          
+                --13.90%--0x7f4e162d93b6
+
+    13.90%     0.00%  example  libgomp.so.1.0.0  [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+                --13.90%--0x7f4e162d93b6
+
+    13.90%     0.00%  example  [unknown]         [.] 0x000927c000061a80
+            |
+            ---0x927c000061a80
+               0x7ffff11d29e0
+               GOMP_parallel
+               |          
+                --13.90%--0x7f4e162d93b6
+
+     0.01%     0.01%  example  libgomp.so.1.0.0  [.] 0x000000000001d31c
+     0.01%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d931c
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d91a7
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001cf2d
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d0aa
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d8f2d
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d90aa
+     0.00%     0.00%  example  [unknown]         [.] 0x000a92290009b7f3
+     0.00%     0.00%  example  [unknown]         [.] 0x0000000000030d40
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x000000000001d7ba
+     0.00%     0.00%  example  libgomp.so.1.0.0  [.] 0x00007f4e162d97ba
+     0.00%     0.00%  example  [unknown]         [.] 0x0000000000061a80
+     0.00%     0.00%  example  [unknown]         [.] 0x00000000000927c0
+     0.00%     0.00%  example  [unknown]         [.] 0x00000000000c3500
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#  PID   TID  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  2111  2113                     60855                                  0                      0                      0                       0                2668958600                        0                         0                 6            0           0
+  2111  2114                     34639                                  0                      0                      0                       0                1418502400                        0                         0                 6            0  1418392000
+  2111  2115                     50288                                  0                      0                      0                       0                3268340900                        0                         0                27            0           0
+  2111  2112                     26442                                  0                      0                      0                       0                3418991300                        0                         0                 9            0  3426967000

@@ -1,0 +1,1566 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 894  of event 'task-clock'
+# Event count (approx.): 223500000
+#
+# Children      Self  Command     Shared Object       Symbol                            
+# ........  ........  ..........  ..................  ..................................
+#
+    94.74%    94.74%  unbalanced  unbalanced          [.] fibo
+            |          
+            |--89.49%--0
+            |          0x7f519959377e
+            |          |          
+            |           --89.04%--main._omp_fn.0
+            |                     fibo
+            |          
+             --5.26%--0x66334873643c9869
+                       0x7fff8e6ff6b0
+                       GOMP_parallel
+                       main._omp_fn.0
+                       fibo
+
+    94.63%     0.34%  unbalanced  unbalanced          [.] main._omp_fn.0
+            |          
+             --94.30%--main._omp_fn.0
+                       fibo
+
+    93.62%     0.00%  unbalanced  [unknown]           [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--89.71%--0x7f519959377e
+               |          |          
+               |           --89.26%--main._omp_fn.0
+               |                     |          
+               |                      --89.04%--fibo
+               |          
+                --3.69%--__clone
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          __x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.36%--copy_process
+                                     |          
+                                      --3.13%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                perf_event_alloc
+                                                |          
+                                                 --3.02%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+    89.71%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f519959377e
+            |
+            ---0x7f519959377e
+               |          
+                --89.26%--main._omp_fn.0
+                          |          
+                           --89.04%--fibo
+
+     5.37%     0.00%  unbalanced  [unknown]           [.] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7fff8e6ff6b0
+               GOMP_parallel
+               main._omp_fn.0
+               |          
+                --5.26%--fibo
+
+     5.37%     0.00%  unbalanced  [unknown]           [.] 0x00007fff8e6ff6b0
+            |
+            ---0x7fff8e6ff6b0
+               GOMP_parallel
+               main._omp_fn.0
+               |          
+                --5.26%--fibo
+
+     5.37%     0.00%  unbalanced  libgomp.so.1.0.0    [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               main._omp_fn.0
+               |          
+                --5.26%--fibo
+
+     4.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+                --3.69%--__x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.36%--copy_process
+                                     |          
+                                      --3.13%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                perf_event_alloc
+                                                |          
+                                                 --3.02%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+     4.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+                --3.69%--__x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.36%--copy_process
+                                     |          
+                                      --3.13%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                perf_event_alloc
+                                                |          
+                                                 --3.02%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+     3.69%     0.00%  unbalanced  libc-2.31.so        [.] __clone
+            |
+            ---__clone
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_clone
+               _do_fork
+               |          
+                --3.36%--copy_process
+                          |          
+                           --3.13%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     perf_event_alloc
+                                     |          
+                                      --3.02%--perf_try_init_event
+                                                perf_tp_event_init
+                                                perf_trace_init
+
+     3.69%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_clone
+            |
+            ---__x64_sys_clone
+               _do_fork
+               |          
+                --3.36%--copy_process
+                          |          
+                           --3.13%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     perf_event_alloc
+                                     |          
+                                      --3.02%--perf_try_init_event
+                                                perf_tp_event_init
+                                                perf_trace_init
+
+     3.69%     0.00%  unbalanced  [kernel.kallsyms]   [k] _do_fork
+            |
+            ---_do_fork
+               |          
+                --3.36%--copy_process
+                          |          
+                           --3.13%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     perf_event_alloc
+                                     |          
+                                      --3.02%--perf_try_init_event
+                                                perf_tp_event_init
+                                                perf_trace_init
+
+     3.36%     0.00%  unbalanced  [kernel.kallsyms]   [k] copy_process
+            |
+            ---copy_process
+               |          
+                --3.13%--perf_event_init_task
+                          inherit_group.isra.120
+                          inherit_event.isra.119
+                          perf_event_alloc
+                          |          
+                           --3.02%--perf_try_init_event
+                                     perf_tp_event_init
+                                     perf_trace_init
+
+     3.13%     0.11%  unbalanced  [kernel.kallsyms]   [k] perf_event_alloc
+            |          
+             --3.02%--perf_event_alloc
+                       perf_try_init_event
+                       perf_tp_event_init
+                       perf_trace_init
+
+     3.13%     0.00%  unbalanced  [kernel.kallsyms]   [k] perf_event_init_task
+            |
+            ---perf_event_init_task
+               inherit_group.isra.120
+               inherit_event.isra.119
+               perf_event_alloc
+               |          
+                --3.02%--perf_try_init_event
+                          perf_tp_event_init
+                          perf_trace_init
+
+     3.13%     0.00%  unbalanced  [kernel.kallsyms]   [k] inherit_group.isra.120
+            |
+            ---inherit_group.isra.120
+               inherit_event.isra.119
+               perf_event_alloc
+               |          
+                --3.02%--perf_try_init_event
+                          perf_tp_event_init
+                          perf_trace_init
+
+     3.13%     0.00%  unbalanced  [kernel.kallsyms]   [k] inherit_event.isra.119
+            |
+            ---inherit_event.isra.119
+               perf_event_alloc
+               |          
+                --3.02%--perf_try_init_event
+                          perf_tp_event_init
+                          perf_trace_init
+
+     3.02%     3.02%  unbalanced  [kernel.kallsyms]   [k] perf_trace_init
+            |
+            ---0
+               __clone
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_clone
+               _do_fork
+               copy_process
+               perf_event_init_task
+               inherit_group.isra.120
+               inherit_event.isra.119
+               perf_event_alloc
+               perf_try_init_event
+               perf_tp_event_init
+               perf_trace_init
+
+     3.02%     0.00%  unbalanced  [kernel.kallsyms]   [k] perf_try_init_event
+            |
+            ---perf_try_init_event
+               perf_tp_event_init
+               perf_trace_init
+
+     3.02%     0.00%  unbalanced  [kernel.kallsyms]   [k] perf_tp_event_init
+            |
+            ---perf_tp_event_init
+               perf_trace_init
+
+     0.56%     0.00%  unbalanced  libc-2.31.so        [.] __libc_start_main
+            |
+            ---__libc_start_main
+
+     0.45%     0.45%  unbalanced  [kernel.kallsyms]   [k] _raw_spin_unlock_irqrestore
+     0.34%     0.11%  unbalanced  unbalanced          [.] main
+     0.34%     0.00%  unbalanced  [kernel.kallsyms]   [k] wake_up_new_task
+     0.22%     0.00%  unbalanced  [kernel.kallsyms]   [k] page_fault
+     0.22%     0.11%  unbalanced  [kernel.kallsyms]   [k] __handle_mm_fault
+     0.22%     0.00%  unbalanced  [kernel.kallsyms]   [k] __do_page_fault
+     0.22%     0.00%  unbalanced  [kernel.kallsyms]   [k] handle_mm_fault
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] alloc_vmap_area.isra.47
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] kmem_cache_alloc
+     0.11%     0.00%  unbalanced  ld-2.31.so          [.] 0x00007f51995e6176
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] cgroup_can_fork
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] try_charge
+     0.11%     0.00%  unbalanced  libc-2.31.so        [.] 0x00007f51993adf60
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] ksys_mmap_pgoff
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] do_group_exit
+     0.11%     0.11%  unbalanced  [kernel.kallsyms]   [k] perf_syscall_enter
+     0.11%     0.00%  unbalanced  libc-2.31.so        [.] _exit
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_mmap
+     0.11%     0.11%  unbalanced  unbalanced          [.] checkCorrectness
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] __vmalloc_node_range
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] mem_cgroup_try_charge_delay
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] mmap_region
+     0.11%     0.11%  unbalanced  libc-2.31.so        [.] random
+     0.11%     0.11%  unbalanced  libpthread-2.31.so  [.] create_thread
+     0.11%     0.11%  unbalanced  unbalanced          [.] 0x0000000000001150
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] __get_vm_area_node.isra.48
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_exit_group
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_futex
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_futex
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] futex_wake
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] mem_cgroup_try_charge
+     0.11%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f519959631c
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] syscall_trace_enter
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] try_to_wake_up
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] vm_mmap_pgoff
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] vm_area_alloc
+     0.11%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f51995963b6
+     0.11%     0.00%  unbalanced  [kernel.kallsyms]   [k] wake_up_q
+     0.11%     0.00%  unbalanced  unbalanced          [.] 0x0000556bae34d150
+
+
+# Samples: 8  of event 'page-faults'
+# Event count (approx.): 541
+#
+# Children      Self  Command     Shared Object      Symbol                            
+# ........  ........  ..........  .................  ..................................
+#
+    62.66%    62.66%  unbalanced  unbalanced         [.] main
+            |
+            ---__libc_start_main
+               main
+
+    62.66%     0.00%  unbalanced  libc-2.31.so       [.] __libc_start_main
+            |
+            ---__libc_start_main
+               main
+
+    30.87%    30.87%  unbalanced  ld-2.31.so         [.] 0x0000000000013375
+            |
+            ---0x14ee
+               0x7f51995da375
+
+    30.87%     0.00%  unbalanced  [unknown]          [.] 0x00000000000014ee
+            |
+            ---0x14ee
+               0x7f51995da375
+
+    30.87%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995da375
+            |
+            ---0x7f51995da375
+
+     4.25%     4.25%  unbalanced  ld-2.31.so         [.] 0x0000000000003110
+            |
+            ---0x41e589480000b264
+               0x7f51995e3c3b
+               0x7f51995ca110
+
+     4.25%     0.00%  unbalanced  [unknown]          [.] 0x41e589480000b264
+            |
+            ---0x41e589480000b264
+               0x7f51995e3c3b
+               0x7f51995ca110
+
+     4.25%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995e3c3b
+            |
+            ---0x7f51995e3c3b
+               0x7f51995ca110
+
+     4.25%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995ca110
+            |
+            ---0x7f51995ca110
+
+     1.29%     1.29%  unbalanced  ld-2.31.so         [.] 0x0000000000002128
+            |
+            ---0x7f51995c8108
+               0x7f51995c9128
+
+     1.29%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995c8108
+            |
+            ---0x7f51995c8108
+               0x7f51995c9128
+
+     1.29%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995c9128
+            |
+            ---0x7f51995c9128
+
+     0.55%     0.00%  unbalanced  [unknown]          [k] 0x00007fd5526872fb
+            |
+            ---0x7fd5526872fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.55%     0.18%  unbalanced  [kernel.kallsyms]  [k] load_elf_binary
+            |          
+             --0.37%--load_elf_binary
+                       __clear_user
+
+     0.55%     0.00%  unbalanced  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.55%     0.00%  unbalanced  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.55%     0.00%  unbalanced  [kernel.kallsyms]  [k] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.55%     0.00%  unbalanced  [kernel.kallsyms]  [k] __do_execve_file.isra.41
+            |
+            ---__do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.55%     0.00%  unbalanced  [kernel.kallsyms]  [k] search_binary_handler
+            |
+            ---search_binary_handler
+               load_elf_binary
+               |          
+                --0.37%--__clear_user
+
+     0.37%     0.37%  unbalanced  [kernel.kallsyms]  [k] __clear_user
+            |
+            ---0x7fd5526872fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.37%     0.37%  unbalanced  ld-2.31.so         [.] 0x0000000000001100
+            |
+            ---0x7f51995c8100
+
+     0.37%     0.00%  unbalanced  ld-2.31.so         [.] 0x00007f51995c8100
+            |
+            ---0x7f51995c8100
+
+
+
+# Samples: 36  of event 'context-switches'
+# Event count (approx.): 36
+#
+# Children      Self  Command     Shared Object      Symbol                                        
+# ........  ........  ..........  .................  ..............................................
+#
+   100.00%   100.00%  unbalanced  [kernel.kallsyms]  [k] schedule
+            |          
+            |--38.89%--0
+            |          |          
+            |          |--33.33%--0x7f519959614e
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          schedule
+            |          |          
+            |           --5.56%--0x7f519959377e
+            |                     main._omp_fn.0
+            |                     fibo
+            |                     swapgs_restore_regs_and_return_to_usermode
+            |                     prepare_exit_to_usermode
+            |                     exit_to_usermode_loop
+            |                     schedule
+            |                     schedule
+            |          
+            |--30.56%--0x7f519959631c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--27.78%--0x7f519959614e
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+             --2.78%--0x66334873643c9869
+                       0x7fff8e6ff6b0
+                       GOMP_parallel
+                       0x7f519959614e
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wait
+                       futex_wait_queue_me
+                       schedule
+                       schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    94.44%     0.00%  unbalanced  [kernel.kallsyms]  [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               schedule
+
+    63.89%     0.00%  unbalanced  libgomp.so.1.0.0   [.] 0x00007f519959614e
+            |
+            ---0x7f519959614e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    38.89%     0.00%  unbalanced  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--33.33%--0x7f519959614e
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          __x64_sys_futex
+               |          do_futex
+               |          futex_wait
+               |          futex_wait_queue_me
+               |          schedule
+               |          schedule
+               |          
+                --5.56%--0x7f519959377e
+                          main._omp_fn.0
+                          fibo
+                          swapgs_restore_regs_and_return_to_usermode
+                          prepare_exit_to_usermode
+                          exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    30.56%     0.00%  unbalanced  libgomp.so.1.0.0   [.] 0x00007f519959631c
+            |
+            ---0x7f519959631c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  libgomp.so.1.0.0   [.] 0x00007f519959377e
+            |
+            ---0x7f519959377e
+               main._omp_fn.0
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  unbalanced         [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  unbalanced         [.] fibo
+            |
+            ---fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  [kernel.kallsyms]  [k] swapgs_restore_regs_and_return_to_usermode
+            |
+            ---swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  [kernel.kallsyms]  [k] prepare_exit_to_usermode
+            |
+            ---prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+     5.56%     0.00%  unbalanced  [kernel.kallsyms]  [k] exit_to_usermode_loop
+            |
+            ---exit_to_usermode_loop
+               schedule
+               schedule
+
+     2.78%     0.00%  unbalanced  [unknown]          [k] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7fff8e6ff6b0
+               GOMP_parallel
+               0x7f519959614e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     2.78%     0.00%  unbalanced  [unknown]          [k] 0x00007fff8e6ff6b0
+            |
+            ---0x7fff8e6ff6b0
+               GOMP_parallel
+               0x7f519959614e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     2.78%     0.00%  unbalanced  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               0x7f519959614e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 87  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 238571700
+#
+# Children      Self  Command     Shared Object       Symbol                                        
+# ........  ........  ..........  ..................  ..............................................
+#
+   100.00%   100.00%  unbalanced  [kernel.kallsyms]   [k] update_curr
+            |          
+            |--66.51%--0
+            |          |          
+            |          |--59.48%--0x7f519959377e
+            |          |          main._omp_fn.0
+            |          |          fibo
+            |          |          |          
+            |          |           --59.48%--hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     |          
+            |          |                      --59.44%--hrtimer_interrupt
+            |          |                                __hrtimer_run_queues
+            |          |                                |          
+            |          |                                 --59.07%--tick_sched_timer
+            |          |                                           update_process_times
+            |          |                                           scheduler_tick
+            |          |                                           task_tick_fair
+            |          |                                           update_curr
+            |          |                                           update_curr
+            |          |          
+            |          |--4.08%--__clone
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_clone
+            |          |          _do_fork
+            |          |          copy_process
+            |          |          sched_fork
+            |          |          task_fork_fair
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --2.94%--0x7f519959614e
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_futex
+            |                     do_futex
+            |                     futex_wait
+            |                     futex_wait_queue_me
+            |                     schedule
+            |                     __schedule
+            |                     |          
+            |                      --2.93%--dequeue_task_fair
+            |                                dequeue_entity
+            |                                update_curr
+            |                                update_curr
+            |          
+            |--31.04%--0x7f519959631c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          |          
+            |          |--24.08%--dequeue_task_fair
+            |          |          dequeue_entity
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --6.95%--pick_next_task_fair
+            |                     newidle_balance
+            |                     load_balance
+            |                     |          
+            |                      --6.94%--dequeue_task_fair
+            |                                dequeue_entity
+            |                                update_curr
+            |                                update_curr
+            |          
+             --1.73%--0x66334873643c9869
+                       0x7fff8e6ff6b0
+                       GOMP_parallel
+                       |          
+                        --1.12%--main._omp_fn.0
+                                  fibo
+                                  hv_stimer0_callback_vector
+                                  hv_stimer0_vector_handler
+                                  hrtimer_interrupt
+                                  __hrtimer_run_queues
+                                  tick_sched_timer
+                                  update_process_times
+                                  scheduler_tick
+                                  task_tick_fair
+                                  update_curr
+                                  update_curr
+
+    66.51%     0.00%  unbalanced  [unknown]           [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--59.48%--0x7f519959377e
+               |          main._omp_fn.0
+               |          fibo
+               |          |          
+               |           --59.48%--hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     |          
+               |                      --59.44%--hrtimer_interrupt
+               |                                __hrtimer_run_queues
+               |                                |          
+               |                                 --59.07%--tick_sched_timer
+               |                                           update_process_times
+               |                                           scheduler_tick
+               |                                           task_tick_fair
+               |                                           update_curr
+               |                                           update_curr
+               |          
+               |--4.08%--__clone
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          __x64_sys_clone
+               |          _do_fork
+               |          copy_process
+               |          sched_fork
+               |          task_fork_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --2.94%--0x7f519959614e
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          __x64_sys_futex
+                          do_futex
+                          futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          |          
+                           --2.93%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    60.95%     0.00%  unbalanced  [kernel.kallsyms]   [k] hv_stimer0_callback_vector
+            |
+            ---hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --60.91%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                           --60.54%--tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    60.95%     0.00%  unbalanced  [kernel.kallsyms]   [k] hv_stimer0_vector_handler
+            |
+            ---hv_stimer0_vector_handler
+               |          
+                --60.91%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                           --60.54%--tick_sched_timer
+                                     update_process_times
+                                     scheduler_tick
+                                     task_tick_fair
+                                     update_curr
+                                     update_curr
+
+    60.91%     0.00%  unbalanced  [kernel.kallsyms]   [k] hrtimer_interrupt
+            |
+            ---hrtimer_interrupt
+               __hrtimer_run_queues
+               |          
+                --60.54%--tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    60.91%     0.00%  unbalanced  [kernel.kallsyms]   [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+               |          
+                --60.54%--tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+    60.60%     0.00%  unbalanced  unbalanced          [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               fibo
+               |          
+                --60.60%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --60.56%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                      --60.19%--tick_sched_timer
+                                                update_process_times
+                                                scheduler_tick
+                                                task_tick_fair
+                                                update_curr
+                                                update_curr
+
+    60.60%     0.00%  unbalanced  unbalanced          [.] fibo
+            |
+            ---fibo
+               |          
+                --60.60%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --60.56%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                      --60.19%--tick_sched_timer
+                                                update_process_times
+                                                scheduler_tick
+                                                task_tick_fair
+                                                update_curr
+                                                update_curr
+
+    60.54%     0.00%  unbalanced  [kernel.kallsyms]   [k] tick_sched_timer
+            |
+            ---tick_sched_timer
+               update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    60.54%     0.00%  unbalanced  [kernel.kallsyms]   [k] update_process_times
+            |
+            ---update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    60.54%     0.00%  unbalanced  [kernel.kallsyms]   [k] scheduler_tick
+            |
+            ---scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    60.54%     0.00%  unbalanced  [kernel.kallsyms]   [k] task_tick_fair
+            |
+            ---task_tick_fair
+               update_curr
+               update_curr
+
+    59.48%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f519959377e
+            |
+            ---0x7f519959377e
+               main._omp_fn.0
+               fibo
+               |          
+                --59.48%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --59.44%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                      --59.07%--tick_sched_timer
+                                                update_process_times
+                                                scheduler_tick
+                                                task_tick_fair
+                                                update_curr
+                                                update_curr
+
+    39.05%     0.00%  unbalanced  [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+               |--34.82%--__x64_sys_futex
+               |          do_futex
+               |          |          
+               |           --34.66%--futex_wait
+               |                     futex_wait_queue_me
+               |                     schedule
+               |                     __schedule
+               |                     |          
+               |                     |--27.70%--dequeue_task_fair
+               |                     |          dequeue_entity
+               |                     |          update_curr
+               |                     |          update_curr
+               |                     |          
+               |                      --6.95%--pick_next_task_fair
+               |                                newidle_balance
+               |                                load_balance
+               |                                |          
+               |                                 --6.94%--dequeue_task_fair
+               |                                           dequeue_entity
+               |                                           update_curr
+               |                                           update_curr
+               |          
+                --4.08%--__x64_sys_clone
+                          _do_fork
+                          copy_process
+                          sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+    39.05%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+               |--34.82%--__x64_sys_futex
+               |          do_futex
+               |          |          
+               |           --34.66%--futex_wait
+               |                     futex_wait_queue_me
+               |                     schedule
+               |                     __schedule
+               |                     |          
+               |                     |--27.70%--dequeue_task_fair
+               |                     |          dequeue_entity
+               |                     |          update_curr
+               |                     |          update_curr
+               |                     |          
+               |                      --6.95%--pick_next_task_fair
+               |                                newidle_balance
+               |                                load_balance
+               |                                |          
+               |                                 --6.94%--dequeue_task_fair
+               |                                           dequeue_entity
+               |                                           update_curr
+               |                                           update_curr
+               |          
+                --4.08%--__x64_sys_clone
+                          _do_fork
+                          copy_process
+                          sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+    34.82%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               |          
+                --34.66%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          |          
+                          |--27.70%--dequeue_task_fair
+                          |          dequeue_entity
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --6.95%--pick_next_task_fair
+                                     newidle_balance
+                                     load_balance
+                                     |          
+                                      --6.94%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    34.82%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_futex
+            |
+            ---do_futex
+               |          
+                --34.66%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          |          
+                          |--27.70%--dequeue_task_fair
+                          |          dequeue_entity
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --6.95%--pick_next_task_fair
+                                     newidle_balance
+                                     load_balance
+                                     |          
+                                      --6.94%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    34.67%     0.00%  unbalanced  [kernel.kallsyms]   [k] schedule
+            |
+            ---schedule
+               __schedule
+               |          
+               |--27.70%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --6.96%--pick_next_task_fair
+                          |          
+                           --6.95%--newidle_balance
+                                     load_balance
+                                     |          
+                                      --6.94%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    34.67%     0.00%  unbalanced  [kernel.kallsyms]   [k] __schedule
+            |
+            ---__schedule
+               |          
+               |--27.70%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --6.96%--pick_next_task_fair
+                          |          
+                           --6.95%--newidle_balance
+                                     load_balance
+                                     |          
+                                      --6.94%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    34.66%     0.00%  unbalanced  [kernel.kallsyms]   [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--27.70%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --6.95%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --6.94%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    34.66%     0.00%  unbalanced  [kernel.kallsyms]   [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--27.70%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --6.95%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --6.94%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    34.65%     0.00%  unbalanced  [kernel.kallsyms]   [k] dequeue_task_fair
+            |
+            ---dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+    34.65%     0.00%  unbalanced  [kernel.kallsyms]   [k] dequeue_entity
+            |
+            ---dequeue_entity
+               update_curr
+               update_curr
+
+    31.04%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f519959631c
+            |
+            ---0x7f519959631c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--24.08%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --6.95%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --6.94%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+     6.96%     0.00%  unbalanced  [kernel.kallsyms]   [k] pick_next_task_fair
+            |
+            ---pick_next_task_fair
+               |          
+                --6.95%--newidle_balance
+                          load_balance
+                          |          
+                           --6.94%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+     6.95%     0.00%  unbalanced  [kernel.kallsyms]   [k] newidle_balance
+            |
+            ---newidle_balance
+               load_balance
+               |          
+                --6.94%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     6.95%     0.00%  unbalanced  [kernel.kallsyms]   [k] load_balance
+            |
+            ---load_balance
+               |          
+                --6.94%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     4.08%     0.00%  unbalanced  libc-2.31.so        [.] __clone
+            |
+            ---__clone
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_clone
+               _do_fork
+               copy_process
+               sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     4.08%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_clone
+            |
+            ---__x64_sys_clone
+               _do_fork
+               copy_process
+               sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     4.08%     0.00%  unbalanced  [kernel.kallsyms]   [k] _do_fork
+            |
+            ---_do_fork
+               copy_process
+               sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     4.08%     0.00%  unbalanced  [kernel.kallsyms]   [k] copy_process
+            |
+            ---copy_process
+               sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     4.08%     0.00%  unbalanced  [kernel.kallsyms]   [k] sched_fork
+            |
+            ---sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     4.08%     0.00%  unbalanced  [kernel.kallsyms]   [k] task_fork_fair
+            |
+            ---task_fork_fair
+               update_curr
+               update_curr
+
+     3.63%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f519959614e
+            |
+            ---0x7f519959614e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+                --3.62%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     1.73%     0.00%  unbalanced  [unknown]           [k] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7fff8e6ff6b0
+               GOMP_parallel
+               |          
+                --1.12%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.73%     0.00%  unbalanced  [unknown]           [k] 0x00007fff8e6ff6b0
+            |
+            ---0x7fff8e6ff6b0
+               GOMP_parallel
+               |          
+                --1.12%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.73%     0.00%  unbalanced  libgomp.so.1.0.0    [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+                --1.12%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     0.73%     0.00%  unbalanced  [kernel.kallsyms]   [k] activate_task
+            |
+            ---activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.73%     0.00%  unbalanced  [kernel.kallsyms]   [k] enqueue_task_fair
+            |
+            ---enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.73%     0.00%  unbalanced  [kernel.kallsyms]   [k] enqueue_entity
+            |
+            ---enqueue_entity
+               update_curr
+               update_curr
+
+     0.72%     0.00%  unbalanced  [kernel.kallsyms]   [k] try_to_wake_up
+            |
+            ---try_to_wake_up
+               ttwu_do_activate
+               activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.72%     0.00%  unbalanced  [kernel.kallsyms]   [k] ttwu_do_activate
+            |
+            ---ttwu_do_activate
+               activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.37%     0.00%  unbalanced  [kernel.kallsyms]   [k] hrtimer_wakeup
+     0.35%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f5199593ddb
+     0.35%     0.00%  unbalanced  libpthread-2.31.so  [.] pthread_create@@GLIBC_2.2.5
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] page_fault
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] __do_page_fault
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] handle_mm_fault
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] __handle_mm_fault
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] __anon_vma_prepare
+     0.35%     0.00%  unbalanced  [kernel.kallsyms]   [k] kmem_cache_alloc
+     0.15%     0.00%  unbalanced  libgomp.so.1.0.0    [.] 0x00007f51995961a7
+     0.15%     0.00%  unbalanced  [kernel.kallsyms]   [k] futex_wake
+     0.15%     0.00%  unbalanced  [kernel.kallsyms]   [k] wake_up_q
+     0.14%     0.00%  unbalanced  libc-2.31.so        [.] _exit
+     0.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] __x64_sys_exit_group
+     0.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] do_group_exit
+     0.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] zap_other_threads
+     0.14%     0.00%  unbalanced  [kernel.kallsyms]   [k] signal_wake_up_state
+     0.04%     0.00%  unbalanced  [kernel.kallsyms]   [k] irq_exit
+     0.04%     0.00%  unbalanced  [kernel.kallsyms]   [k] __softirqentry_text_start
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] attach_task
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] finish_task_switch
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] put_task_stack
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] queue_work_on
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] __queue_work
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] run_timer_softirq
+     0.01%     0.00%  unbalanced  [kernel.kallsyms]   [k] call_timer_fn
+     0.00%     0.00%  unbalanced  [kernel.kallsyms]   [k] swapgs_restore_regs_and_return_to_usermode
+     0.00%     0.00%  unbalanced  [kernel.kallsyms]   [k] prepare_exit_to_usermode
+     0.00%     0.00%  unbalanced  [kernel.kallsyms]   [k] exit_to_usermode_loop
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 35  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 35
+#
+# Children      Self  Command     Shared Object     Symbol                
+# ........  ........  ..........  ................  ......................
+#
+    62.86%    62.86%  unbalanced  libgomp.so.1.0.0  [.] 0x000000000001d14e
+            |          
+            |--31.43%--0
+            |          0x7f519959614e
+            |          
+            |--28.57%--0x7f519959614e
+            |          
+             --2.86%--0x66334873643c9869
+                       0x7fff8e6ff6b0
+                       GOMP_parallel
+                       0x7f519959614e
+
+    62.86%     0.00%  unbalanced  libgomp.so.1.0.0  [.] 0x00007f519959614e
+            |
+            ---0x7f519959614e
+
+    34.29%     0.00%  unbalanced  [unknown]         [.] 0000000000000000
+            |
+            ---0
+               |          
+               |--31.43%--0x7f519959614e
+               |          
+                --2.86%--0x7f51995963b6
+
+    31.43%    31.43%  unbalanced  libgomp.so.1.0.0  [.] 0x000000000001d31c
+            |
+            ---0x7f519959631c
+
+    31.43%     0.00%  unbalanced  libgomp.so.1.0.0  [.] 0x00007f519959631c
+            |
+            ---0x7f519959631c
+
+     2.86%     2.86%  unbalanced  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+            |
+            ---0x7f51995961a7
+
+     2.86%     2.86%  unbalanced  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+            |
+            ---0
+               0x7f51995963b6
+
+     2.86%     0.00%  unbalanced  [unknown]         [.] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7fff8e6ff6b0
+               GOMP_parallel
+               0x7f519959614e
+
+     2.86%     0.00%  unbalanced  [unknown]         [.] 0x00007fff8e6ff6b0
+            |
+            ---0x7fff8e6ff6b0
+               GOMP_parallel
+               0x7f519959614e
+
+     2.86%     0.00%  unbalanced  libgomp.so.1.0.0  [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               0x7f519959614e
+
+     2.86%     0.00%  unbalanced  libgomp.so.1.0.0  [.] 0x00007f51995961a7
+            |
+            ---0x7f51995961a7
+
+     2.86%     0.00%  unbalanced  libgomp.so.1.0.0  [.] 0x00007f51995963b6
+            |
+            ---0x7f51995963b6
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

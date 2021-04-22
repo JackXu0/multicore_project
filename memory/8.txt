@@ -1,0 +1,139 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 445  of event 'task-clock'
+# Event count (approx.): 111250000
+#
+# Overhead  Command      Shared Object      Symbol                         
+# ........  ...........  .................  ...............................
+#
+    43.15%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d122
+    22.92%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d2da
+     5.39%  good_memory  [kernel.kallsyms]  [k] perf_trace_init
+     4.72%  good_memory  good_memory        [.] main
+     4.49%  good_memory  good_memory        [.] main._omp_fn.0
+     3.15%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d126
+     2.25%  good_memory  libc-2.31.so       [.] random
+     2.25%  good_memory  libc-2.31.so       [.] random_r
+     2.02%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d2de
+     1.57%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d12d
+     1.12%  good_memory  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     0.90%  good_memory  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.67%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d2e3
+     0.45%  good_memory  [kernel.kallsyms]  [k] get_signal
+     0.45%  good_memory  [kernel.kallsyms]  [k] perf_iterate_ctx
+     0.45%  good_memory  [kernel.kallsyms]  [k] unmap_page_range
+     0.45%  good_memory  good_memory        [.] 0x0000000000001170
+     0.45%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d12b
+     0.22%  good_memory  [kernel.kallsyms]  [k] __do_page_fault
+     0.22%  good_memory  [kernel.kallsyms]  [k] __mutex_init
+     0.22%  good_memory  [kernel.kallsyms]  [k] __page_set_anon_rmap
+     0.22%  good_memory  [kernel.kallsyms]  [k] exit_to_usermode_loop
+     0.22%  good_memory  [kernel.kallsyms]  [k] expand_downwards
+     0.22%  good_memory  [kernel.kallsyms]  [k] filemap_map_pages
+     0.22%  good_memory  [kernel.kallsyms]  [k] free_pcp_prepare
+     0.22%  good_memory  [kernel.kallsyms]  [k] free_unref_page_list
+     0.22%  good_memory  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.22%  good_memory  [kernel.kallsyms]  [k] perf_try_init_event
+     0.22%  good_memory  [kernel.kallsyms]  [k] vma_link
+     0.22%  good_memory  ld-2.31.so         [.] 0x000000000000773e
+     0.22%  good_memory  libc-2.31.so       [.] rand
+     0.22%  good_memory  libgomp.so.1.0.0   [.] 0x000000000001d2e5
+
+
+# Samples: 13  of event 'page-faults'
+# Event count (approx.): 2258
+#
+# Overhead  Command      Shared Object      Symbol                        
+# ........  ...........  .................  ..............................
+#
+    85.74%  good_memory  good_memory        [.] main
+    12.18%  good_memory  libc-2.31.so       [.] __gettimeofday
+     1.46%  good_memory  ld-2.31.so         [.] 0x0000000000011066
+     0.40%  good_memory  ld-2.31.so         [.] 0x0000000000002128
+     0.09%  good_memory  [kernel.kallsyms]  [k] __clear_user
+     0.09%  good_memory  ld-2.31.so         [.] 0x0000000000001100
+     0.04%  good_memory  [kernel.kallsyms]  [k] copy_user_generic_unrolled
+
+
+# Samples: 6  of event 'context-switches'
+# Event count (approx.): 6
+#
+# Overhead  Command      Shared Object      Symbol      
+# ........  ...........  .................  ............
+#
+   100.00%  good_memory  [kernel.kallsyms]  [k] schedule
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 23  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 87113500
+#
+# Overhead  Command      Shared Object      Symbol         
+# ........  ...........  .................  ...............
+#
+   100.00%  good_memory  [kernel.kallsyms]  [k] update_curr
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 2  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 2
+#
+# Overhead  Command      Shared Object     Symbol                
+# ........  ...........  ................  ......................
+#
+    50.00%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+    50.00%  good_memory  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

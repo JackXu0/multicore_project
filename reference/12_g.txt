@@ -1,0 +1,1815 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock'
+# Event count (approx.): 250500000
+#
+# Children      Self  Command    Shared Object       Symbol                                        
+# ........  ........  .........  ..................  ..............................................
+#
+    95.11%     0.70%  reference  reference           [.] main._omp_fn.0
+            |          
+            |--94.41%--main._omp_fn.0
+            |          fibo
+            |          
+             --0.70%--0
+                       0x7efcdc65677e
+                       main._omp_fn.0
+
+    94.51%    94.31%  reference  reference           [.] fibo
+            |          
+            |--87.62%--0
+            |          0x7efcdc65677e
+            |          |          
+            |           --87.52%--main._omp_fn.0
+            |                     fibo
+            |          
+             --6.69%--0x66334873643c9869
+                       0x7ffcd0d32ca0
+                       GOMP_parallel
+                       main._omp_fn.0
+                       fibo
+
+    92.12%     0.00%  reference  [unknown]           [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--88.62%--0x7efcdc65677e
+               |          |          
+               |           --88.42%--main._omp_fn.0
+               |                     |          
+               |                      --87.72%--fibo
+               |          
+                --3.49%--__clone
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          __x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.39%--copy_process
+                                     |          
+                                      --3.29%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                |          
+                                                 --2.99%--perf_event_alloc
+                                                           |          
+                                                            --2.59%--perf_try_init_event
+                                                                      perf_tp_event_init
+                                                                      perf_trace_init
+
+    88.62%     0.00%  reference  libgomp.so.1.0.0    [.] 0x00007efcdc65677e
+            |
+            ---0x7efcdc65677e
+               |          
+                --88.42%--main._omp_fn.0
+                          |          
+                           --87.72%--fibo
+
+     6.69%     0.00%  reference  [unknown]           [.] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7ffcd0d32ca0
+               GOMP_parallel
+               main._omp_fn.0
+               fibo
+
+     6.69%     0.00%  reference  [unknown]           [.] 0x00007ffcd0d32ca0
+            |
+            ---0x7ffcd0d32ca0
+               GOMP_parallel
+               main._omp_fn.0
+               fibo
+
+     6.69%     0.00%  reference  libgomp.so.1.0.0    [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               main._omp_fn.0
+               fibo
+
+     3.99%     0.00%  reference  [kernel.kallsyms]   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+                --3.49%--__x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.39%--copy_process
+                                     |          
+                                      --3.29%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                |          
+                                                 --2.99%--perf_event_alloc
+                                                           |          
+                                                            --2.59%--perf_try_init_event
+                                                                      perf_tp_event_init
+                                                                      perf_trace_init
+
+     3.99%     0.00%  reference  [kernel.kallsyms]   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+                --3.49%--__x64_sys_clone
+                          _do_fork
+                          |          
+                           --3.39%--copy_process
+                                     |          
+                                      --3.29%--perf_event_init_task
+                                                inherit_group.isra.120
+                                                inherit_event.isra.119
+                                                |          
+                                                 --2.99%--perf_event_alloc
+                                                           |          
+                                                            --2.59%--perf_try_init_event
+                                                                      perf_tp_event_init
+                                                                      perf_trace_init
+
+     3.49%     0.00%  reference  libc-2.31.so        [.] __clone
+            |
+            ---__clone
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_clone
+               _do_fork
+               |          
+                --3.39%--copy_process
+                          |          
+                           --3.29%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     |          
+                                      --2.99%--perf_event_alloc
+                                                |          
+                                                 --2.59%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+     3.49%     0.00%  reference  [kernel.kallsyms]   [k] __x64_sys_clone
+            |
+            ---__x64_sys_clone
+               _do_fork
+               |          
+                --3.39%--copy_process
+                          |          
+                           --3.29%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     |          
+                                      --2.99%--perf_event_alloc
+                                                |          
+                                                 --2.59%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+     3.49%     0.00%  reference  [kernel.kallsyms]   [k] _do_fork
+            |
+            ---_do_fork
+               |          
+                --3.39%--copy_process
+                          |          
+                           --3.29%--perf_event_init_task
+                                     inherit_group.isra.120
+                                     inherit_event.isra.119
+                                     |          
+                                      --2.99%--perf_event_alloc
+                                                |          
+                                                 --2.59%--perf_try_init_event
+                                                           perf_tp_event_init
+                                                           perf_trace_init
+
+     3.39%     0.00%  reference  [kernel.kallsyms]   [k] copy_process
+            |
+            ---copy_process
+               |          
+                --3.29%--perf_event_init_task
+                          inherit_group.isra.120
+                          inherit_event.isra.119
+                          |          
+                           --2.99%--perf_event_alloc
+                                     |          
+                                      --2.59%--perf_try_init_event
+                                                perf_tp_event_init
+                                                perf_trace_init
+
+     3.29%     0.00%  reference  [kernel.kallsyms]   [k] perf_event_init_task
+            |
+            ---perf_event_init_task
+               inherit_group.isra.120
+               inherit_event.isra.119
+               |          
+                --2.99%--perf_event_alloc
+                          |          
+                           --2.59%--perf_try_init_event
+                                     perf_tp_event_init
+                                     perf_trace_init
+
+     3.29%     0.00%  reference  [kernel.kallsyms]   [k] inherit_group.isra.120
+            |
+            ---inherit_group.isra.120
+               inherit_event.isra.119
+               |          
+                --2.99%--perf_event_alloc
+                          |          
+                           --2.59%--perf_try_init_event
+                                     perf_tp_event_init
+                                     perf_trace_init
+
+     3.29%     0.00%  reference  [kernel.kallsyms]   [k] inherit_event.isra.119
+            |
+            ---inherit_event.isra.119
+               |          
+                --2.99%--perf_event_alloc
+                          |          
+                           --2.59%--perf_try_init_event
+                                     perf_tp_event_init
+                                     perf_trace_init
+
+     2.99%     0.00%  reference  [kernel.kallsyms]   [k] perf_event_alloc
+            |
+            ---perf_event_alloc
+               |          
+                --2.59%--perf_try_init_event
+                          perf_tp_event_init
+                          perf_trace_init
+
+     2.59%     2.50%  reference  [kernel.kallsyms]   [k] perf_trace_init
+            |          
+             --2.50%--0
+                       __clone
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_clone
+                       _do_fork
+                       copy_process
+                       perf_event_init_task
+                       inherit_group.isra.120
+                       inherit_event.isra.119
+                       perf_event_alloc
+                       perf_try_init_event
+                       perf_tp_event_init
+                       perf_trace_init
+
+     2.59%     0.00%  reference  [kernel.kallsyms]   [k] perf_try_init_event
+            |
+            ---perf_try_init_event
+               perf_tp_event_init
+               perf_trace_init
+
+     2.59%     0.00%  reference  [kernel.kallsyms]   [k] perf_tp_event_init
+            |
+            ---perf_tp_event_init
+               perf_trace_init
+
+     0.70%     0.00%  reference  libc-2.31.so        [.] __libc_start_main
+            |
+            ---__libc_start_main
+
+     0.50%     0.10%  reference  reference           [.] main
+     0.40%     0.10%  reference  [kernel.kallsyms]   [k] kmem_cache_alloc_trace
+     0.30%     0.30%  reference  [kernel.kallsyms]   [k] new_slab
+     0.30%     0.30%  reference  [kernel.kallsyms]   [k] __list_add_valid
+     0.30%     0.00%  reference  [kernel.kallsyms]   [k] __slab_alloc.isra.89.constprop.92
+     0.30%     0.00%  reference  [kernel.kallsyms]   [k] ___slab_alloc.isra.88.constprop.93
+     0.20%     0.20%  reference  [kernel.kallsyms]   [k] _raw_spin_unlock_irqrestore
+     0.20%     0.10%  reference  [kernel.kallsyms]   [k] __handle_mm_fault
+     0.20%     0.00%  reference  [kernel.kallsyms]   [k] __do_page_fault
+     0.20%     0.20%  reference  reference           [.] checkCorrectness
+     0.20%     0.00%  reference  [kernel.kallsyms]   [k] exit_to_usermode_loop
+     0.20%     0.00%  reference  [kernel.kallsyms]   [k] page_fault
+     0.20%     0.00%  reference  [kernel.kallsyms]   [k] handle_mm_fault
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] __softirqentry_text_end
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] __radix_tree_lookup
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] __softirqentry_text_start
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] finish_task_switch
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] free_pgtables
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] mutex_lock
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] perf_iterate_ctx
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] get_page_from_freelist
+     0.10%     0.10%  reference  [kernel.kallsyms]   [k] mmap_region
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] __perf_event_overflow
+     0.10%     0.10%  reference  ld-2.31.so          [.] 0x000000000000de50
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] __schedule
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] __x64_sys_futex
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] __x64_sys_sched_getaffinity
+     0.10%     0.10%  reference  libc-2.31.so        [.] random_r
+     0.10%     0.10%  reference  reference           [.] 0x00000000000011b0
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] __alloc_pages_nodemask
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] do_signal
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] get_signal
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] do_group_exit
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] do_exit
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] do_futex
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] exit_mmap
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] find_task_by_vpid
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] futex_wake
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] hv_stimer0_callback_vector
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] hv_stimer0_vector_handler
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] irq_exit
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] mmput
+     0.10%     0.00%  reference  libgomp.so.1.0.0    [.] 0x00007efcdc65931c
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_syscall_enter
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_tp_event
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_swevent_overflow
+     0.10%     0.00%  reference  ld-2.31.so          [.] 0x00007efcdc6a9176
+     0.10%     0.00%  reference  libpthread-2.31.so  [.] pthread_getaffinity_np@@GLIBC_2.3.4
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_event_output_forward
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] ksys_mmap_pgoff
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_event_fork
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_prepare_sample
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_callchain
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_event_task
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] do_mmap
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] get_perf_callchain
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] perf_iterate_sb
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] swapgs_restore_regs_and_return_to_usermode
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] prepare_exit_to_usermode
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] syscall_trace_enter
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] sched_getaffinity
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] schedule
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] vm_mmap_pgoff
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] wake_up_new_task
+     0.10%     0.00%  reference  libgomp.so.1.0.0    [.] 0x00007efcdc6593b6
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] wake_up_q
+     0.10%     0.00%  reference  [kernel.kallsyms]   [k] try_to_wake_up
+     0.10%     0.00%  reference  [unknown]           [.] 0x41e589480000b264
+     0.10%     0.00%  reference  ld-2.31.so          [.] 0x00007efcdc6a6c3b
+     0.10%     0.00%  reference  ld-2.31.so          [.] 0x00007efcdc68e52a
+     0.10%     0.00%  reference  ld-2.31.so          [.] 0x00007efcdc697e50
+     0.10%     0.00%  reference  reference           [.] 0x000056405eb6b1b0
+
+
+# Samples: 7  of event 'page-faults'
+# Event count (approx.): 515
+#
+# Children      Self  Command    Shared Object      Symbol                            
+# ........  ........  .........  .................  ..................................
+#
+    88.16%    88.16%  reference  libgomp.so.1.0.0   [.] 0x0000000000009000
+            |
+            ---0x7efcdc645000
+
+    88.16%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc645000
+            |
+            ---0x7efcdc645000
+
+     9.90%     9.90%  reference  ld-2.31.so         [.] 0x0000000000002fa9
+            |
+            ---0x41e589480000b264
+               0x7efcdc6a6c3b
+               0x7efcdc68cfa9
+
+     9.90%     0.00%  reference  [unknown]          [.] 0x41e589480000b264
+            |
+            ---0x41e589480000b264
+               0x7efcdc6a6c3b
+               0x7efcdc68cfa9
+
+     9.90%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc6a6c3b
+            |
+            ---0x7efcdc6a6c3b
+               0x7efcdc68cfa9
+
+     9.90%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc68cfa9
+            |
+            ---0x7efcdc68cfa9
+
+     1.36%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc68b108
+            |
+            ---0x7efcdc68b108
+               |          
+               |--0.97%--0x7efcdc6a66f0
+               |          
+                --0.39%--0x7efcdc68be18
+
+     0.97%     0.97%  reference  ld-2.31.so         [.] 0x000000000001c6f0
+            |
+            ---0x7efcdc68b108
+               0x7efcdc6a66f0
+
+     0.97%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc6a66f0
+            |
+            ---0x7efcdc6a66f0
+
+     0.39%     0.39%  reference  [kernel.kallsyms]  [k] __clear_user
+            |
+            ---0x7f4820ceb2fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [unknown]          [k] 0x00007f4820ceb2fb
+            |
+            ---0x7f4820ceb2fb
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               __do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] __do_execve_file.isra.41
+            |
+            ---__do_execve_file.isra.41
+               search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] search_binary_handler
+            |
+            ---search_binary_handler
+               load_elf_binary
+               __clear_user
+
+     0.39%     0.39%  reference  ld-2.31.so         [.] 0x0000000000001e18
+            |
+            ---0x7efcdc68b108
+               0x7efcdc68be18
+
+     0.39%     0.00%  reference  [kernel.kallsyms]  [k] load_elf_binary
+            |
+            ---load_elf_binary
+               __clear_user
+
+     0.39%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc68be18
+            |
+            ---0x7efcdc68be18
+
+     0.19%     0.19%  reference  ld-2.31.so         [.] 0x0000000000001100
+     0.19%     0.00%  reference  ld-2.31.so         [.] 0x00007efcdc68b100
+
+
+# Samples: 51  of event 'context-switches'
+# Event count (approx.): 51
+#
+# Children      Self  Command    Shared Object      Symbol                                        
+# ........  ........  .........  .................  ..............................................
+#
+   100.00%   100.00%  reference  [kernel.kallsyms]  [k] schedule
+            |          
+            |--43.14%--0x7efcdc65931c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+            |--35.29%--0
+            |          |          
+            |          |--21.57%--0x7efcdc65914e
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_futex
+            |          |          do_futex
+            |          |          futex_wait
+            |          |          futex_wait_queue_me
+            |          |          schedule
+            |          |          schedule
+            |          |          
+            |           --13.73%--0x7efcdc65677e
+            |                     main._omp_fn.0
+            |                     fibo
+            |                     swapgs_restore_regs_and_return_to_usermode
+            |                     prepare_exit_to_usermode
+            |                     exit_to_usermode_loop
+            |                     schedule
+            |                     schedule
+            |          
+            |--19.61%--0x7efcdc65914e
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          schedule
+            |          
+             --1.96%--0x66334873643c9869
+                       0x7ffcd0d32ca0
+                       GOMP_parallel
+                       0x7efcdc65914e
+                       entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       __x64_sys_futex
+                       do_futex
+                       futex_wait
+                       futex_wait_queue_me
+                       schedule
+                       schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    86.27%     0.00%  reference  [kernel.kallsyms]  [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               schedule
+
+    43.14%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65914e
+            |
+            ---0x7efcdc65914e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    43.14%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65931c
+            |
+            ---0x7efcdc65931c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+    35.29%     0.00%  reference  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--21.57%--0x7efcdc65914e
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          __x64_sys_futex
+               |          do_futex
+               |          futex_wait
+               |          futex_wait_queue_me
+               |          schedule
+               |          schedule
+               |          
+                --13.73%--0x7efcdc65677e
+                          main._omp_fn.0
+                          fibo
+                          swapgs_restore_regs_and_return_to_usermode
+                          prepare_exit_to_usermode
+                          exit_to_usermode_loop
+                          schedule
+                          schedule
+
+    13.73%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65677e
+            |
+            ---0x7efcdc65677e
+               main._omp_fn.0
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    13.73%     0.00%  reference  reference          [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    13.73%     0.00%  reference  reference          [.] fibo
+            |
+            ---fibo
+               swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    13.73%     0.00%  reference  [kernel.kallsyms]  [k] swapgs_restore_regs_and_return_to_usermode
+            |
+            ---swapgs_restore_regs_and_return_to_usermode
+               prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    13.73%     0.00%  reference  [kernel.kallsyms]  [k] prepare_exit_to_usermode
+            |
+            ---prepare_exit_to_usermode
+               exit_to_usermode_loop
+               schedule
+               schedule
+
+    13.73%     0.00%  reference  [kernel.kallsyms]  [k] exit_to_usermode_loop
+            |
+            ---exit_to_usermode_loop
+               schedule
+               schedule
+
+     1.96%     0.00%  reference  [unknown]          [k] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7ffcd0d32ca0
+               GOMP_parallel
+               0x7efcdc65914e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     1.96%     0.00%  reference  [unknown]          [k] 0x00007ffcd0d32ca0
+            |
+            ---0x7ffcd0d32ca0
+               GOMP_parallel
+               0x7efcdc65914e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+     1.96%     0.00%  reference  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               0x7efcdc65914e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               schedule
+
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 105  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 255115200
+#
+# Children      Self  Command    Shared Object      Symbol                                        
+# ........  ........  .........  .................  ..............................................
+#
+   100.00%   100.00%  reference  [kernel.kallsyms]  [k] update_curr
+            |          
+            |--60.97%--0
+            |          |          
+            |          |--56.78%--0x7efcdc65677e
+            |          |          main._omp_fn.0
+            |          |          fibo
+            |          |          |          
+            |          |           --56.75%--hv_stimer0_callback_vector
+            |          |                     hv_stimer0_vector_handler
+            |          |                     |          
+            |          |                      --56.71%--hrtimer_interrupt
+            |          |                                __hrtimer_run_queues
+            |          |                                |          
+            |          |                                |--56.13%--tick_sched_timer
+            |          |                                |          update_process_times
+            |          |                                |          scheduler_tick
+            |          |                                |          task_tick_fair
+            |          |                                |          update_curr
+            |          |                                |          update_curr
+            |          |                                |          
+            |          |                                 --0.58%--hrtimer_wakeup
+            |          |                                           try_to_wake_up
+            |          |                                           ttwu_do_activate
+            |          |                                           activate_task
+            |          |                                           enqueue_task_fair
+            |          |                                           enqueue_entity
+            |          |                                           update_curr
+            |          |                                           update_curr
+            |          |          
+            |           --3.93%--__clone
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_clone
+            |                     _do_fork
+            |                     copy_process
+            |                     |          
+            |                      --3.86%--sched_fork
+            |                                task_fork_fair
+            |                                update_curr
+            |                                update_curr
+            |          
+            |--36.97%--0x7efcdc65931c
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wait
+            |          futex_wait_queue_me
+            |          schedule
+            |          __schedule
+            |          |          
+            |          |--25.49%--dequeue_task_fair
+            |          |          dequeue_entity
+            |          |          update_curr
+            |          |          update_curr
+            |          |          
+            |           --11.48%--pick_next_task_fair
+            |                     newidle_balance
+            |                     load_balance
+            |                     |          
+            |                      --11.46%--dequeue_task_fair
+            |                                dequeue_entity
+            |                                update_curr
+            |                                update_curr
+            |          
+             --1.54%--0x66334873643c9869
+                       0x7ffcd0d32ca0
+                       GOMP_parallel
+                       |          
+                        --1.09%--main._omp_fn.0
+                                  fibo
+                                  hv_stimer0_callback_vector
+                                  hv_stimer0_vector_handler
+                                  hrtimer_interrupt
+                                  __hrtimer_run_queues
+                                  tick_sched_timer
+                                  update_process_times
+                                  scheduler_tick
+                                  task_tick_fair
+                                  update_curr
+                                  update_curr
+
+    60.97%     0.00%  reference  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               |          
+               |--56.78%--0x7efcdc65677e
+               |          main._omp_fn.0
+               |          fibo
+               |          |          
+               |           --56.75%--hv_stimer0_callback_vector
+               |                     hv_stimer0_vector_handler
+               |                     |          
+               |                      --56.71%--hrtimer_interrupt
+               |                                __hrtimer_run_queues
+               |                                |          
+               |                                |--56.13%--tick_sched_timer
+               |                                |          update_process_times
+               |                                |          scheduler_tick
+               |                                |          task_tick_fair
+               |                                |          update_curr
+               |                                |          update_curr
+               |                                |          
+               |                                 --0.58%--hrtimer_wakeup
+               |                                           try_to_wake_up
+               |                                           ttwu_do_activate
+               |                                           activate_task
+               |                                           enqueue_task_fair
+               |                                           enqueue_entity
+               |                                           update_curr
+               |                                           update_curr
+               |          
+                --3.93%--__clone
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          __x64_sys_clone
+                          _do_fork
+                          copy_process
+                          |          
+                           --3.86%--sched_fork
+                                     task_fork_fair
+                                     update_curr
+                                     update_curr
+
+    57.92%     0.00%  reference  [kernel.kallsyms]  [k] hv_stimer0_callback_vector
+            |
+            ---hv_stimer0_callback_vector
+               hv_stimer0_vector_handler
+               |          
+                --57.87%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                          |--57.29%--tick_sched_timer
+                          |          update_process_times
+                          |          scheduler_tick
+                          |          task_tick_fair
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --0.58%--hrtimer_wakeup
+                                     try_to_wake_up
+                                     ttwu_do_activate
+                                     activate_task
+                                     enqueue_task_fair
+                                     enqueue_entity
+                                     update_curr
+                                     update_curr
+
+    57.92%     0.00%  reference  [kernel.kallsyms]  [k] hv_stimer0_vector_handler
+            |
+            ---hv_stimer0_vector_handler
+               |          
+                --57.87%--hrtimer_interrupt
+                          __hrtimer_run_queues
+                          |          
+                          |--57.29%--tick_sched_timer
+                          |          update_process_times
+                          |          scheduler_tick
+                          |          task_tick_fair
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --0.58%--hrtimer_wakeup
+                                     try_to_wake_up
+                                     ttwu_do_activate
+                                     activate_task
+                                     enqueue_task_fair
+                                     enqueue_entity
+                                     update_curr
+                                     update_curr
+
+    57.88%     0.00%  reference  reference          [.] main._omp_fn.0
+            |
+            ---main._omp_fn.0
+               fibo
+               |          
+                --57.84%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --57.80%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                     |--57.22%--tick_sched_timer
+                                     |          update_process_times
+                                     |          scheduler_tick
+                                     |          task_tick_fair
+                                     |          update_curr
+                                     |          update_curr
+                                     |          
+                                      --0.58%--hrtimer_wakeup
+                                                try_to_wake_up
+                                                ttwu_do_activate
+                                                activate_task
+                                                enqueue_task_fair
+                                                enqueue_entity
+                                                update_curr
+                                                update_curr
+
+    57.88%     0.00%  reference  reference          [.] fibo
+            |
+            ---fibo
+               |          
+                --57.84%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --57.80%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                     |--57.22%--tick_sched_timer
+                                     |          update_process_times
+                                     |          scheduler_tick
+                                     |          task_tick_fair
+                                     |          update_curr
+                                     |          update_curr
+                                     |          
+                                      --0.58%--hrtimer_wakeup
+                                                try_to_wake_up
+                                                ttwu_do_activate
+                                                activate_task
+                                                enqueue_task_fair
+                                                enqueue_entity
+                                                update_curr
+                                                update_curr
+
+    57.87%     0.00%  reference  [kernel.kallsyms]  [k] hrtimer_interrupt
+            |
+            ---hrtimer_interrupt
+               __hrtimer_run_queues
+               |          
+               |--57.29%--tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --0.58%--hrtimer_wakeup
+                          try_to_wake_up
+                          ttwu_do_activate
+                          activate_task
+                          enqueue_task_fair
+                          enqueue_entity
+                          update_curr
+                          update_curr
+
+    57.87%     0.00%  reference  [kernel.kallsyms]  [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+               |          
+               |--57.29%--tick_sched_timer
+               |          update_process_times
+               |          scheduler_tick
+               |          task_tick_fair
+               |          update_curr
+               |          update_curr
+               |          
+                --0.58%--hrtimer_wakeup
+                          try_to_wake_up
+                          ttwu_do_activate
+                          activate_task
+                          enqueue_task_fair
+                          enqueue_entity
+                          update_curr
+                          update_curr
+
+    57.29%     0.00%  reference  [kernel.kallsyms]  [k] tick_sched_timer
+            |
+            ---tick_sched_timer
+               update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    57.29%     0.00%  reference  [kernel.kallsyms]  [k] update_process_times
+            |
+            ---update_process_times
+               scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    57.29%     0.00%  reference  [kernel.kallsyms]  [k] scheduler_tick
+            |
+            ---scheduler_tick
+               task_tick_fair
+               update_curr
+               update_curr
+
+    57.29%     0.00%  reference  [kernel.kallsyms]  [k] task_tick_fair
+            |
+            ---task_tick_fair
+               update_curr
+               update_curr
+
+    56.78%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65677e
+            |
+            ---0x7efcdc65677e
+               main._omp_fn.0
+               fibo
+               |          
+                --56.75%--hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          |          
+                           --56.71%--hrtimer_interrupt
+                                     __hrtimer_run_queues
+                                     |          
+                                     |--56.13%--tick_sched_timer
+                                     |          update_process_times
+                                     |          scheduler_tick
+                                     |          task_tick_fair
+                                     |          update_curr
+                                     |          update_curr
+                                     |          
+                                      --0.58%--hrtimer_wakeup
+                                                try_to_wake_up
+                                                ttwu_do_activate
+                                                activate_task
+                                                enqueue_task_fair
+                                                enqueue_entity
+                                                update_curr
+                                                update_curr
+
+    42.12%     0.00%  reference  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+               |--38.12%--__x64_sys_futex
+               |          do_futex
+               |          |          
+               |           --37.96%--futex_wait
+               |                     futex_wait_queue_me
+               |                     schedule
+               |                     __schedule
+               |                     |          
+               |                     |--26.48%--dequeue_task_fair
+               |                     |          dequeue_entity
+               |                     |          update_curr
+               |                     |          update_curr
+               |                     |          
+               |                      --11.48%--pick_next_task_fair
+               |                                newidle_balance
+               |                                load_balance
+               |                                |          
+               |                                 --11.46%--dequeue_task_fair
+               |                                           dequeue_entity
+               |                                           update_curr
+               |                                           update_curr
+               |          
+                --3.93%--__x64_sys_clone
+                          _do_fork
+                          copy_process
+                          |          
+                           --3.86%--sched_fork
+                                     task_fork_fair
+                                     update_curr
+                                     update_curr
+
+    42.12%     0.00%  reference  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+               |--38.12%--__x64_sys_futex
+               |          do_futex
+               |          |          
+               |           --37.96%--futex_wait
+               |                     futex_wait_queue_me
+               |                     schedule
+               |                     __schedule
+               |                     |          
+               |                     |--26.48%--dequeue_task_fair
+               |                     |          dequeue_entity
+               |                     |          update_curr
+               |                     |          update_curr
+               |                     |          
+               |                      --11.48%--pick_next_task_fair
+               |                                newidle_balance
+               |                                load_balance
+               |                                |          
+               |                                 --11.46%--dequeue_task_fair
+               |                                           dequeue_entity
+               |                                           update_curr
+               |                                           update_curr
+               |          
+                --3.93%--__x64_sys_clone
+                          _do_fork
+                          copy_process
+                          |          
+                           --3.86%--sched_fork
+                                     task_fork_fair
+                                     update_curr
+                                     update_curr
+
+    38.12%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               |          
+                --37.96%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          |          
+                          |--26.48%--dequeue_task_fair
+                          |          dequeue_entity
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --11.48%--pick_next_task_fair
+                                     newidle_balance
+                                     load_balance
+                                     |          
+                                      --11.46%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    38.12%     0.00%  reference  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               |          
+                --37.96%--futex_wait
+                          futex_wait_queue_me
+                          schedule
+                          __schedule
+                          |          
+                          |--26.48%--dequeue_task_fair
+                          |          dequeue_entity
+                          |          update_curr
+                          |          update_curr
+                          |          
+                           --11.48%--pick_next_task_fair
+                                     newidle_balance
+                                     load_balance
+                                     |          
+                                      --11.46%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    37.99%     0.00%  reference  [kernel.kallsyms]  [k] schedule
+            |
+            ---schedule
+               __schedule
+               |          
+               |--26.48%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --11.51%--pick_next_task_fair
+                          |          
+                           --11.48%--newidle_balance
+                                     load_balance
+                                     |          
+                                      --11.46%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    37.99%     0.00%  reference  [kernel.kallsyms]  [k] __schedule
+            |
+            ---__schedule
+               |          
+               |--26.48%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --11.51%--pick_next_task_fair
+                          |          
+                           --11.48%--newidle_balance
+                                     load_balance
+                                     |          
+                                      --11.46%--dequeue_task_fair
+                                                dequeue_entity
+                                                update_curr
+                                                update_curr
+
+    37.96%     0.00%  reference  [kernel.kallsyms]  [k] futex_wait
+            |
+            ---futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--26.48%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --11.48%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --11.46%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    37.96%     0.00%  reference  [kernel.kallsyms]  [k] futex_wait_queue_me
+            |
+            ---futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--26.48%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --11.48%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --11.46%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    37.94%     0.00%  reference  [kernel.kallsyms]  [k] dequeue_task_fair
+            |
+            ---dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+    37.94%     0.00%  reference  [kernel.kallsyms]  [k] dequeue_entity
+            |
+            ---dequeue_entity
+               update_curr
+               update_curr
+
+    36.97%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65931c
+            |
+            ---0x7efcdc65931c
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               |          
+               |--25.49%--dequeue_task_fair
+               |          dequeue_entity
+               |          update_curr
+               |          update_curr
+               |          
+                --11.48%--pick_next_task_fair
+                          newidle_balance
+                          load_balance
+                          |          
+                           --11.46%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    11.51%     0.00%  reference  [kernel.kallsyms]  [k] pick_next_task_fair
+            |
+            ---pick_next_task_fair
+               |          
+                --11.48%--newidle_balance
+                          load_balance
+                          |          
+                           --11.46%--dequeue_task_fair
+                                     dequeue_entity
+                                     update_curr
+                                     update_curr
+
+    11.48%     0.00%  reference  [kernel.kallsyms]  [k] newidle_balance
+            |
+            ---newidle_balance
+               load_balance
+               |          
+                --11.46%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+    11.48%     0.00%  reference  [kernel.kallsyms]  [k] load_balance
+            |
+            ---load_balance
+               |          
+                --11.46%--dequeue_task_fair
+                          dequeue_entity
+                          update_curr
+                          update_curr
+
+     3.93%     0.00%  reference  libc-2.31.so       [.] __clone
+            |
+            ---__clone
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_clone
+               _do_fork
+               copy_process
+               |          
+                --3.86%--sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+     3.93%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_clone
+            |
+            ---__x64_sys_clone
+               _do_fork
+               copy_process
+               |          
+                --3.86%--sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+     3.93%     0.00%  reference  [kernel.kallsyms]  [k] _do_fork
+            |
+            ---_do_fork
+               copy_process
+               |          
+                --3.86%--sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+     3.93%     0.00%  reference  [kernel.kallsyms]  [k] copy_process
+            |
+            ---copy_process
+               |          
+                --3.86%--sched_fork
+                          task_fork_fair
+                          update_curr
+                          update_curr
+
+     3.86%     0.00%  reference  [kernel.kallsyms]  [k] sched_fork
+            |
+            ---sched_fork
+               task_fork_fair
+               update_curr
+               update_curr
+
+     3.86%     0.00%  reference  [kernel.kallsyms]  [k] task_fork_fair
+            |
+            ---task_fork_fair
+               update_curr
+               update_curr
+
+     1.54%     0.00%  reference  [unknown]          [k] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7ffcd0d32ca0
+               GOMP_parallel
+               |          
+                --1.09%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.54%     0.00%  reference  [unknown]          [k] 0x00007ffcd0d32ca0
+            |
+            ---0x7ffcd0d32ca0
+               GOMP_parallel
+               |          
+                --1.09%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     1.54%     0.00%  reference  libgomp.so.1.0.0   [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+                --1.09%--main._omp_fn.0
+                          fibo
+                          hv_stimer0_callback_vector
+                          hv_stimer0_vector_handler
+                          hrtimer_interrupt
+                          __hrtimer_run_queues
+                          tick_sched_timer
+                          update_process_times
+                          scheduler_tick
+                          task_tick_fair
+                          update_curr
+                          update_curr
+
+     0.98%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc65914e
+            |
+            ---0x7efcdc65914e
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __schedule
+               dequeue_task_fair
+               dequeue_entity
+               update_curr
+               update_curr
+
+     0.87%     0.00%  reference  [kernel.kallsyms]  [k] activate_task
+            |
+            ---activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.87%     0.00%  reference  [kernel.kallsyms]  [k] enqueue_task_fair
+            |
+            ---enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.87%     0.00%  reference  [kernel.kallsyms]  [k] enqueue_entity
+            |
+            ---enqueue_entity
+               update_curr
+               update_curr
+
+     0.86%     0.00%  reference  [kernel.kallsyms]  [k] try_to_wake_up
+            |
+            ---try_to_wake_up
+               ttwu_do_activate
+               activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.86%     0.00%  reference  [kernel.kallsyms]  [k] ttwu_do_activate
+            |
+            ---ttwu_do_activate
+               activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.58%     0.00%  reference  [kernel.kallsyms]  [k] hrtimer_wakeup
+            |
+            ---hrtimer_wakeup
+               try_to_wake_up
+               ttwu_do_activate
+               activate_task
+               enqueue_task_fair
+               enqueue_entity
+               update_curr
+               update_curr
+
+     0.17%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc6591a7
+     0.17%     0.00%  reference  [kernel.kallsyms]  [k] futex_wake
+     0.17%     0.00%  reference  [kernel.kallsyms]  [k] wake_up_q
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] perf_event_init_task
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] rb_next
+     0.07%     0.00%  reference  libc-2.31.so       [.] _exit
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_exit_group
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] do_group_exit
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] zap_other_threads
+     0.07%     0.00%  reference  [kernel.kallsyms]  [k] signal_wake_up_state
+     0.04%     0.00%  reference  [kernel.kallsyms]  [k] irq_exit
+     0.04%     0.00%  reference  [kernel.kallsyms]  [k] __softirqentry_text_start
+     0.03%     0.00%  reference  [kernel.kallsyms]  [k] swapgs_restore_regs_and_return_to_usermode
+     0.03%     0.00%  reference  [kernel.kallsyms]  [k] prepare_exit_to_usermode
+     0.03%     0.00%  reference  [kernel.kallsyms]  [k] exit_to_usermode_loop
+     0.02%     0.00%  reference  [kernel.kallsyms]  [k] run_timer_softirq
+     0.02%     0.00%  reference  [kernel.kallsyms]  [k] call_timer_fn
+     0.02%     0.00%  reference  [kernel.kallsyms]  [k] attach_task
+     0.01%     0.00%  reference  [kernel.kallsyms]  [k] __queue_work
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Children      Self  Command  Shared Object  Symbol
+# ........  ........  .......  .............  ......
+#
+
+
+# Samples: 1  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 1
+#
+# Children      Self  Command    Shared Object      Symbol                            
+# ........  ........  .........  .................  ..................................
+#
+   100.00%   100.00%  reference  [kernel.kallsyms]  [k] resched_curr
+            |
+            ---0
+               0x7efcdc6593b6
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [unknown]          [k] 0000000000000000
+            |
+            ---0
+               0x7efcdc6593b6
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  libgomp.so.1.0.0   [.] 0x00007efcdc6593b6
+            |
+            ---0x7efcdc6593b6
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] do_syscall_64
+            |
+            ---do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] __x64_sys_futex
+            |
+            ---__x64_sys_futex
+               do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] do_futex
+            |
+            ---do_futex
+               futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] futex_wake
+            |
+            ---futex_wake
+               wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] wake_up_q
+            |
+            ---wake_up_q
+               try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] try_to_wake_up
+            |
+            ---try_to_wake_up
+               ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] ttwu_do_wakeup
+            |
+            ---ttwu_do_wakeup
+               check_preempt_curr
+               resched_curr
+               resched_curr
+
+   100.00%     0.00%  reference  [kernel.kallsyms]  [k] check_preempt_curr
+            |
+            ---check_preempt_curr
+               resched_curr
+               resched_curr
+
+
+
+# Samples: 47  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 47
+#
+# Children      Self  Command    Shared Object     Symbol                
+# ........  ........  .........  ................  ......................
+#
+    46.81%    46.81%  reference  libgomp.so.1.0.0  [.] 0x000000000001d14e
+            |          
+            |--23.40%--0
+            |          0x7efcdc65914e
+            |          
+            |--21.28%--0x7efcdc65914e
+            |          
+             --2.13%--0x66334873643c9869
+                       0x7ffcd0d32ca0
+                       GOMP_parallel
+                       0x7efcdc65914e
+
+    46.81%    46.81%  reference  libgomp.so.1.0.0  [.] 0x000000000001d31c
+            |
+            ---0x7efcdc65931c
+
+    46.81%     0.00%  reference  libgomp.so.1.0.0  [.] 0x00007efcdc65914e
+            |
+            ---0x7efcdc65914e
+
+    46.81%     0.00%  reference  libgomp.so.1.0.0  [.] 0x00007efcdc65931c
+            |
+            ---0x7efcdc65931c
+
+    27.66%     0.00%  reference  [unknown]         [.] 0000000000000000
+            |
+            ---0
+               |          
+               |--23.40%--0x7efcdc65914e
+               |          
+               |--2.13%--0x7efcdc6593b6
+               |          
+                --2.13%--0x7efcdc65677e
+                          0x7efcdc6593b6
+
+     4.26%     4.26%  reference  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+            |
+            ---0
+               |          
+               |--2.13%--0x7efcdc6593b6
+               |          
+                --2.13%--0x7efcdc65677e
+                          0x7efcdc6593b6
+
+     4.26%     0.00%  reference  libgomp.so.1.0.0  [.] 0x00007efcdc6593b6
+            |
+            ---0x7efcdc6593b6
+
+     2.13%     2.13%  reference  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+            |
+            ---0x7efcdc6591a7
+
+     2.13%     0.00%  reference  libgomp.so.1.0.0  [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               0x7efcdc65914e
+
+     2.13%     0.00%  reference  libgomp.so.1.0.0  [.] 0x00007efcdc65677e
+            |
+            ---0x7efcdc65677e
+               0x7efcdc6593b6
+
+     2.13%     0.00%  reference  libgomp.so.1.0.0  [.] 0x00007efcdc6591a7
+            |
+            ---0x7efcdc6591a7
+
+     2.13%     0.00%  reference  [unknown]         [.] 0x66334873643c9869
+            |
+            ---0x66334873643c9869
+               0x7ffcd0d32ca0
+               GOMP_parallel
+               0x7efcdc65914e
+
+     2.13%     0.00%  reference  [unknown]         [.] 0x00007ffcd0d32ca0
+            |
+            ---0x7ffcd0d32ca0
+               GOMP_parallel
+               0x7efcdc65914e
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  29469  29471                         4                                  0                      0                      0                       0                  29885700                        0                         0                 1            0       77600
+  29469  29473                         4                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  29469  29472                         4                                  0                      0                      0                       0                   6159200                        0                         0                 1            0       84200
+  29469  29470                         4                                  0                      0                      0                       0                  14947100                        0                         0                 3            0    14975600
+  29469  29469                  11181501                                  1                      0                      0                       0                  10473200                        0                  10824400                 1            0    17642800
+  29469  29474                         2                                  0                      0                      0                       0                  14804700                        0                         0                 1            0    14872400
+  29469  29479                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  29469  29478                         1                                  0                      0                      0                       0                     48500                        0                         0                 1            0       20300
+  29469  29475                         1                                  0                      0                      0                       0                     68100                        0                         0                 1            0       25400
+  29469  29480                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0           0
+  29469  29477                         4                                  0                      0                      0                       0                  10430500                        0                         0                 4            0    17968300

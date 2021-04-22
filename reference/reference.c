@@ -31,16 +31,6 @@ int main(int argc, char *argv[])
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    // #pragma omp parallel default(none) private(i) shared(a, b, size)
-    // {
-    //     #pragma omp for
-    //     for (i = 0; i < size; i++) {
-    //         // b[i] = a[i];
-    //         fibo(i % 1000);
-    //         // printf ("set %ith number in b which is %i\n", i, a[i]);
-    //     }
-    // }
-
     #pragma omp parallel num_threads(num_of_threads)
     {
         int pid = omp_get_thread_num();

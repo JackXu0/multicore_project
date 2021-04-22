@@ -1,0 +1,145 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 176  of event 'task-clock'
+# Event count (approx.): 44000000
+#
+# Overhead  Command     Shared Object      Symbol                         
+# ........  ..........  .................  ...............................
+#
+    48.30%  bad_memory  bad_memory         [.] main._omp_fn.0
+    12.50%  bad_memory  [kernel.kallsyms]  [k] perf_trace_init
+    10.80%  bad_memory  bad_memory         [.] main
+     7.95%  bad_memory  libc-2.31.so       [.] random_r
+     3.98%  bad_memory  libc-2.31.so       [.] random
+     2.27%  bad_memory  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     1.14%  bad_memory  [kernel.kallsyms]  [k] __do_page_fault
+     1.14%  bad_memory  [kernel.kallsyms]  [k] _raw_spin_lock
+     1.14%  bad_memory  [kernel.kallsyms]  [k] alloc_vmap_area.isra.47
+     1.14%  bad_memory  [kernel.kallsyms]  [k] clear_page_erms
+     1.14%  bad_memory  [kernel.kallsyms]  [k] get_page_from_freelist
+     1.14%  bad_memory  [kernel.kallsyms]  [k] perf_event_alloc
+     1.14%  bad_memory  [kernel.kallsyms]  [k] perf_iterate_ctx
+     0.57%  bad_memory  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.57%  bad_memory  [kernel.kallsyms]  [k] __list_add_valid
+     0.57%  bad_memory  [kernel.kallsyms]  [k] do_group_exit
+     0.57%  bad_memory  [kernel.kallsyms]  [k] filemap_map_pages
+     0.57%  bad_memory  [kernel.kallsyms]  [k] free_unref_page_list
+     0.57%  bad_memory  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.57%  bad_memory  [kernel.kallsyms]  [k] get_signal
+     0.57%  bad_memory  [kernel.kallsyms]  [k] inherit_event.isra.119
+     0.57%  bad_memory  [kernel.kallsyms]  [k] release_pages
+     0.57%  bad_memory  [kernel.kallsyms]  [k] vma_interval_tree_insert
+     0.57%  bad_memory  libc-2.31.so       [.] rand
+
+
+# Samples: 13  of event 'page-faults'
+# Event count (approx.): 2259
+#
+# Overhead  Command     Shared Object      Symbol                        
+# ........  ..........  .................  ..............................
+#
+    81.45%  bad_memory  bad_memory         [.] main
+    10.00%  bad_memory  libc-2.31.so       [.] 0x000000000009b8bc
+     7.70%  bad_memory  ld-2.31.so         [.] 0x00000000000076f0
+     0.58%  bad_memory  ld-2.31.so         [.] 0x0000000000002128
+     0.13%  bad_memory  [kernel.kallsyms]  [k] load_elf_binary
+     0.09%  bad_memory  [kernel.kallsyms]  [k] __clear_user
+     0.04%  bad_memory  [kernel.kallsyms]  [k] copy_user_generic_unrolled
+
+
+# Samples: 34  of event 'context-switches'
+# Event count (approx.): 34
+#
+# Overhead  Command     Shared Object      Symbol      
+# ........  ..........  .................  ............
+#
+   100.00%  bad_memory  [kernel.kallsyms]  [k] schedule
+
+
+# Samples: 0  of event 'sched:sched_stat_blocked'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_iowait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 60  of event 'sched:sched_stat_runtime'
+# Event count (approx.): 44664200
+#
+# Overhead  Command     Shared Object      Symbol         
+# ........  ..........  .................  ...............
+#
+   100.00%  bad_memory  [kernel.kallsyms]  [k] update_curr
+
+
+# Samples: 0  of event 'sched:sched_stat_sleep'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_stat_wait'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wait_task'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'sched:sched_wake_idle_without_ipi'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 35  of event 'syscalls:sys_enter_futex'
+# Event count (approx.): 35
+#
+# Overhead  Command     Shared Object     Symbol                
+# ........  ..........  ................  ......................
+#
+    62.86%  bad_memory  libgomp.so.1.0.0  [.] 0x000000000001d14e
+    31.43%  bad_memory  libgomp.so.1.0.0  [.] 0x000000000001d31c
+     2.86%  bad_memory  libgomp.so.1.0.0  [.] 0x000000000001d1a7
+     2.86%  bad_memory  libgomp.so.1.0.0  [.] 0x000000000001d3b6
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
+#   PID    TID  syscalls:sys_enter_futex  sched:sched_wake_idle_without_ipi  sched:sched_wait_task  sched:sched_stat_wait  sched:sched_stat_sleep  sched:sched_stat_runtime  sched:sched_stat_iowait  sched:sched_stat_blocked  context-switches  page-faults  task-clock
+  30193  30194                         3                                  0                      0                      0                       0                    155100                        0                         0                 3            0     2363800
+  30193  30196                         3                                  0                      0                      0                       0                   4530800                        0                         0                 3            0     2355600
+  30193  30195                         3                                  0                      0                      0                       0                   2271200                        0                         0                 3            0     2291700
+  30193  30199                         3                                  0                      0                      0                       0                   2236400                        0                         0                 3            0     2180000
+  30193  30198                         0                                  0                      0                      0                       0                         0                        0                         0                 0            0       89700
+  30193  30193                  19172901                                  0                      1                      0                       0                   2776200                        0                  18981300                 1            0     5259557
+  30193  30203                         3                                  0                      0                      0                       0                    638400                        0                         0                 3            0      534500
+  30193  30201                         3                                  0                      0                      0                       0                   2428400                        0                         0                 3            0     2345500
+  30193  30204                         3                                  0                      0                      0                       0                   2967800                        0                         0                 2            0     2372800
+  30193  30200                         2                                  0                      0                      0                       0                   2210200                        0                         0                 2            0     2171700
+  30193  30202                         1                                  0                      0                      0                       0                     95200                        0                         0                 1            0      431400
