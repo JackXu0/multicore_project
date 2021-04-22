@@ -1,7 +1,5 @@
 #include "../general.h"
 
-int task
-
 int main(int argc, char *argv[])
 {
     int num_of_threads = atoi(argv[1]);
@@ -15,7 +13,7 @@ int main(int argc, char *argv[])
 
     int assign[num_of_threads];
 
-    allocate2(assign, num_of_threads, size);
+    allocate(assign, num_of_threads, size);
 
     int left[num_of_threads];
     int right[num_of_threads];

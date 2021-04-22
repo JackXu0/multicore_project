@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
 
-    checkCorrectness(a, b, size);
+    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;

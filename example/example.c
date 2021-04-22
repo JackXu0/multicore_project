@@ -76,6 +76,8 @@ int main(int argc, char *argv[])
 
     int assign[num_of_threads];
 
+    allocate(assign, num_of_threads, size);
+
     for (int j = 0; j < num_of_threads; j++) {
         left[j] = (j == 0)? 0: assign[j-1];
         right[j] = (j == num_of_threads - 1)? size: assign[j];
@@ -96,6 +98,22 @@ int main(int argc, char *argv[])
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
+
+    printf ("%s \n", "Bottleneck 5 start");
+
+    gettimeofday(&start, NULL);
+
+    #pragma omp parallel num_threads(num_of_threads)
+    {
+        int pid = omp_get_thread_num();
+        int i;
+        for(i = left[pid]; i < right[pid]; i++) {
+            fibo(i % 1000);
+        }
+    }
+
+    gettimeofday(&stop, NULL);
+    printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
 
     // checkCorrectness(a, b, size);
 
