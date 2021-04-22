@@ -7,12 +7,12 @@ int main(int argc, char *argv[])
 
     int a[size], b[size];
 
-    for (int i = 0; i < size; i++) {
-        a[i] = rand();
-    }
+    // for (int i = 0; i < size; i++) {
+    //     a[i] = rand();
+    // }
 
-    int batch = size / num_of_threads;
-    int mod = size % num_of_threads;
+    // int batch = size / num_of_threads;
+    // int mod = size % num_of_threads;
 
     int left[num_of_threads];
     int right[num_of_threads];
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
             #pragma omp critical
             {
                 // printf("thread %i has entered the critical region\n", pid);
-                b[i] = a[i];
+                // b[i] = a[i];
                 fibo(i % 1000);
                 i++;
                 // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
 
-    checkCorrectness(a, b, size);
+    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;

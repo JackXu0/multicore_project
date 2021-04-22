@@ -5,14 +5,14 @@ int main(int argc, char *argv[])
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
 
-    int a[size], b[size];
+    // int a[size], b[size];
 
-    for (int i = 0; i < size; i++) {
-        a[i] = rand();
-    }
+    // for (int i = 0; i < size; i++) {
+    //     a[i] = rand();
+    // }
 
-    int batch = size / num_of_threads;
-    int mod = size % num_of_threads;
+    // int batch = size / num_of_threads;
+    // int mod = size % num_of_threads;
 
     int left[num_of_threads];
     int right[num_of_threads];
@@ -28,17 +28,30 @@ int main(int argc, char *argv[])
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic) ordered
-    for(int i = 0; i < size; i++) {
-        b[i] = a[i];
-        fibo(i % 1000);
-        // printf ("thread %i set %ith number in b which is %i\n", omp_get_thread_num(), i, a[i]);
+    // #pragma omp parallel for num_threads(num_of_threads) schedule(dynamic) ordered
+    // for(int i = 0; i < size; i++) {
+    //     // b[i] = a[i];
+    //     fibo(i % 1000);
+    //     // printf ("thread %i set %ith number in b which is %i\n", omp_get_thread_num(), i, a[i]);
+    // }
+
+    #pragma omp parallel num_threads(num_of_threads)
+    {
+        // int pid = omp_get_thread_num();
+        #pragma omp for ordered
+        for(int i = 0; i<size; i++) 
+        {
+            #pragma omp ordered
+            {
+                fibo(i % 1000);
+            }
+        }
     }
     
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
 
-    checkCorrectness(a, b, size);
+    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;
