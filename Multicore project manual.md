@@ -38,6 +38,8 @@ sudo sysctl kernel.sched_schedstats=1
 gcc -fopenmp - Wall -std=c99 -pg -o example example.c
 ```
 
+We have put a Makefile under every subdirectory, so user could just use ``` make ``` to compile the source code.
+
 #### Step 1: Check whether each pragma section speeds up with the increased thread count
 
 This step coarsely locates the bottleneck to paralleled block level. If one paralleled block has bottleneck inside, it can hardly achieve speed up with the increase number of threads.
