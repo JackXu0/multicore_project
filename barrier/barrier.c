@@ -4,7 +4,6 @@ int main(int argc, char *argv[])
 {
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
-    int i;
 
     // int a[size], b[size];
 
@@ -26,34 +25,28 @@ int main(int argc, char *argv[])
 
     printf ("%s \n", "start");
 
-    omp_set_num_threads(num_of_threads);
-
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    // #pragma omp parallel default(none) private(i) shared(a, b, size)
-    // {
-    //     #pragma omp for
-    //     for (i = 0; i < size; i++) {
-    //         // b[i] = a[i];
-    //         fibo(i % 1000);
-    //         // printf ("set %ith number in b which is %i\n", i, a[i]);
-    //     }
-    // }
-
-    #pragma omp parallel num_threads(num_of_threads)
+    #pragma omp parallel num_threads(num_of_threads) shared(left, right)
     {
         int pid = omp_get_thread_num();
-        int i;
-        for(i = left[pid]; i < right[pid]; i++) {
+        for(int i = left[pid], count = 0; i < right[pid]; i++, count++) {
+            
+            // b[i] = a[i];
             fibo(i % 1000);
+            // if(count < batch) {
+                // printf("thread %i has reached the barrier\n", pid);
+                # pragma omp barrier
+            // }
+            
         }
     }
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
 
-    checkCorrectness(a, b, size);
+    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;
