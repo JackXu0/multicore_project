@@ -5,15 +5,9 @@ int main(int argc, char *argv[])
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
 
-    // int a[size], b[size];
-
-    // for (int i = 0; i < size; i++) {
-    //     a[i] = rand();
-    // }
-
     int assign[num_of_threads];
 
-    allocate2(assign, num_of_threads, size);
+    allocate(assign, num_of_threads, size);
 
     int left[num_of_threads];
     int right[num_of_threads];
@@ -33,22 +27,14 @@ int main(int argc, char *argv[])
     {
         int pid = omp_get_thread_num();
         for(int i = left[pid]; i < right[pid]; i++) {
-            // b[i] = a[i];
-            // printf ("Task %i step 1 finished\n", i);
-            // printf ("Task %i step 2 finished\n", i);
-            // printf ("Task %i step 3 finished\n", i);
             usleep(10);
+            // fibo(1000);
         }
         # pragma omp barrier
-        // printf ("Finish %i \n", pid);
-
-        // printf("Thread %i duplicates %i integers\n", pid, right-left);
     }
 
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
-
-    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;

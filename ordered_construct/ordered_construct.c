@@ -5,12 +5,6 @@ int main(int argc, char *argv[])
     int num_of_threads = atoi(argv[1]);
     int size = (argc == 2)? SIZE: atoi(argv[2]);
 
-    // int a[size], b[size];
-
-    // for (int i = 0; i < size; i++) {
-    //     a[i] = rand();
-    // }
-
     int batch = size / num_of_threads;
     int mod = size % num_of_threads;
 
@@ -31,34 +25,19 @@ int main(int argc, char *argv[])
 
     #pragma omp parallel num_threads(num_of_threads)
     {
-        // int pid = omp_get_thread_num();
         #pragma omp for ordered
         for(int i = 0; i<size; i++) 
         {
             #pragma omp ordered
             {
-                // printf("thread %i has entered the critical region\n", pid);
-                // b[i] = a[i];
-                // i++;
-                // printf ("thread %i set %ith number in b which is %i\n", pid, i, a[i]);
                 usleep(10);
-                // printf("i %i\n", i);
+                // fibo(1000);
             }
         }
     }
 
-    // #pragma omp parallel for num_threads(num_of_threads) 
-    // for(int i = 0; i < size; i++) {
-    //     usleep(10);
-    //     // b[i] = a[i];
-    //     // printf ("thread %i set %ith number in b which is %i\n", omp_get_thread_num(), i, a[i]);
-    // }
-    
-
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
-
-    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;

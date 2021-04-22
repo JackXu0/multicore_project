@@ -18,25 +18,24 @@ int main(int argc, char *argv[])
     }
 
     printf ("%s \n", "start");
-    
+
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    #pragma omp parallel num_threads(num_of_threads)
+    #pragma omp parallel num_threads(num_of_threads) shared(left, right)
     {
         int pid = omp_get_thread_num();
-        for(int i = left[pid]; i < right[pid];) {
-            #pragma omp critical
-            {
-                i++;
-                usleep(10);
-                // fibo(1000);
-            }
+        for(int i = left[pid], count = 0; i < right[pid]; i++, count++) {
+            usleep(10);
+            // fibo(i % 1000);
+            # pragma omp barrier            
         }
     }
-    
+
     gettimeofday(&stop, NULL);
     printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec); 
+
+    // checkCorrectness(a, b, size);
 
     printf ("%s \n", "end");
     return 0;
