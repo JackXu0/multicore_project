@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
         int pid = omp_get_thread_num();
         int i;
         for(i = left[pid]; i < right[pid]; i++) {
-            usleep(10);
-            // fibo(1000);
+            // usleep(10);
+            fibo(1000);
         }
     }
 

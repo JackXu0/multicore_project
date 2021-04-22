@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
             #pragma omp critical
             {
                 i++;
-                usleep(10);
-                // fibo(1000);
+                // usleep(10);
+                fibo(1000);
             }
         }
     }

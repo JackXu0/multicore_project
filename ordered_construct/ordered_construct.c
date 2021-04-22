@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
         left[j] = temp;
         temp = (j < mod)? temp + batch + 1: temp + batch;
         right[j] = temp;
-        printf("left %i right %i", left[j], right[j]);
     }
 
     printf ("%s \n", "start");
@@ -30,8 +29,8 @@ int main(int argc, char *argv[])
         {
             #pragma omp ordered
             {
-                usleep(10);
-                // fibo(1000);
+                // usleep(10);
+                fibo(1000);
             }
         }
     }

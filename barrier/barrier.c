@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
     {
         int pid = omp_get_thread_num();
         for(int i = left[pid], count = 0; i < right[pid]; i++, count++) {
-            usleep(10);
-            // fibo(i % 1000);
+            // usleep(10);
+            fibo(1000);
             # pragma omp barrier            
         }
     }
