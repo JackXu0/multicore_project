@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
     //     a[i] = rand();
     // }
 
-    // int batch = size / num_of_threads;
-    // int mod = size % num_of_threads;
+    int batch = size / num_of_threads;
+    int mod = size % num_of_threads;
 
     int left[num_of_threads];
     int right[num_of_threads];
